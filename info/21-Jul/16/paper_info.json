@@ -1,0 +1,318 @@
+[
+  {
+    "id": "arXiv:2107.06889",
+    "title": "Counting list homomorphisms from graphs of bounded treewidth: tight  complexity bounds",
+    "abstract": "The goal of this work is to give precise bounds on the counting complexity of a family of generalized coloring problems (list homomorphisms) on bounded-treewidth graphs. Given graphs $G$, $H$, and lists $L(v)\\subseteq V(H)$ for every $v\\in V(G)$, a {\\em list homomorphism} is a function $f:V(G)\\to V(H)$ that preserves the edges (i.e., $uv\\in E(G)$ implies $f(u)f(v)\\in E(H)$) and respects the lists (i.e., $f(v)\\in L(v))$. Standard techniques show that if $G$ is given with a tree decomposition of width $t$, then the number of list homomorphisms can be counted in time $|V(H)|^t\\cdot n^{\\mathcal{O}(1)}$. Our main result is determining, for every fixed graph $H$, how much the base $|V(H)|$ in the running time can be improved. For a connected graph $H$ we define $\\operatorname{irr}(H)$ the following way: if $H$ has a loop or is nonbipartite, then $\\operatorname{irr}(H)$ is the maximum size of a set $S\\subseteq V(H)$ where any two vertices have different neighborhoods; if $H$ is bipartite, then $\\operatorname{irr}(H)$ is the maximum size of such a set that is fully in one of the bipartition classes. For disconnected $H$, we define $\\operatorname{irr}(H)$ as the maximum of $\\operatorname{irr}(C)$ over every connected component $C$ of $H$. We show that, for every fixed graph $H$, the number of list homomorphisms from $(G,L)$ to $H$ * can be counted in time $\\operatorname{irr}(H)^t\\cdot n^{\\mathcal{O}(1)}$ if a tree decomposition of $G$ having width at most $t$ is given in the input, and * cannot be counted in time $(\\operatorname{irr}(H)-\\epsilon)^t\\cdot n^{\\mathcal{O}(1)}$ for any $\\epsilon>0$, even if a tree decomposition of $G$ having width at most $t$ is given in the input, unless the #SETH fails. Thereby we give a precise and complete complexity classification featuring matching upper and lower bounds for all target graphs with or without loops. ",
+    "url": "https://arxiv.org/abs/2107.06889",
+    "authors": [
+      "Jacob Focke",
+      "D\u00e1niel Marx",
+      "Pawe\u0142 Rz\u0105\u017cewski"
+    ],
+    "subjectives": [
+      "Computational Complexity (cs.CC)",
+      "Data Structures and Algorithms (cs.DS)"
+    ]
+  },
+  {
+    "id": "arXiv:2107.06941",
+    "title": "Mutually improved endoscopic image synthesis and landmark detection in  unpaired image-to-image translation",
+    "abstract": "The CycleGAN framework allows for unsupervised image-to-image translation of unpaired data. In a scenario of surgical training on a physical surgical simulator, this method can be used to transform endoscopic images of phantoms into images which more closely resemble the intra-operative appearance of the same surgical target structure. This can be viewed as a novel augmented reality approach, which we coined Hyperrealism in previous work. In this use case, it is of paramount importance to display objects like needles, sutures or instruments consistent in both domains while altering the style to a more tissue-like appearance. Segmentation of these objects would allow for a direct transfer, however, contouring of these, partly tiny and thin foreground objects is cumbersome and perhaps inaccurate. Instead, we propose to use landmark detection on the points when sutures pass into the tissue. This objective is directly incorporated into a CycleGAN framework by treating the performance of pre-trained detector models as an additional optimization goal. We show that a task defined on these sparse landmark labels improves consistency of synthesis by the generator network in both domains. Comparing a baseline CycleGAN architecture to our proposed extension (DetCycleGAN), mean precision (PPV) improved by +61.32, mean sensitivity (TPR) by +37.91, and mean F1 score by +0.4743. Furthermore, it could be shown that by dataset fusion, generated intra-operative images can be leveraged as additional training data for the detection network itself. The data is released within the scope of the AdaptOR MICCAI Challenge 2021 at https://adaptor2021.github.io/, and code at https://github.com/Cardio-AI/detcyclegan_pytorch. ",
+    "url": "https://arxiv.org/abs/2107.06941",
+    "authors": [
+      "Lalith Sharan",
+      "Gabriele Romano",
+      "Sven Koehler",
+      "Halvar Kelm",
+      "Matthias Karck",
+      "Raffaele De Simone",
+      "Sandy Engelhardt"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)",
+      "Artificial Intelligence (cs.AI)"
+    ]
+  },
+  {
+    "id": "arXiv:2107.06991",
+    "title": "Physics-informed generative neural network: an application to  troposphere temperature prediction",
+    "abstract": "The troposphere is one of the atmospheric layers where most weather phenomena occur. Temperature variations in the troposphere, especially at 500 hPa, a typical level of the middle troposphere, are significant indicators of future weather changes. Numerical weather prediction is effective for temperature prediction, but its computational complexity hinders a timely response. This paper proposes a novel temperature prediction approach in framework ofphysics-informed deep learning. The new model, called PGnet, builds upon a generative neural network with a mask matrix. The mask is designed to distinguish the low-quality predicted regions generated by the first physical stage. The generative neural network takes the mask as prior for the second-stage refined predictions. A mask-loss and a jump pattern strategy are developed to train the generative neural network without accumulating errors during making time-series predictions. Experiments on ERA5 demonstrate that PGnet can generate more refined temperature predictions than the state-of-the-art. ",
+    "url": "https://arxiv.org/abs/2107.06991",
+    "authors": [
+      "Zhihao Chen",
+      "Jie Gao",
+      "Weikai Wang",
+      "Zheng Yan"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Atmospheric and Oceanic Physics (physics.ao-ph)"
+    ]
+  },
+  {
+    "id": "arXiv:2107.07013",
+    "title": "Passive attention in artificial neural networks predicts human visual  selectivity",
+    "abstract": "Developments in machine learning interpretability techniques over the past decade have provided new tools to observe the image regions that are most informative for classification and localization in artificial neural networks (ANNs). Are the same regions similarly informative to human observers? Using data from 78 new experiments and 6,610 participants, we show that passive attention techniques reveal a significant overlap with human visual selectivity estimates derived from 6 distinct behavioral tasks including visual discrimination, spatial localization, recognizability, free-viewing, cued-object search, and saliency search fixations. We find that input visualizations derived from relatively simple ANN architectures probed using guided backpropagation methods are the best predictors of a shared component in the joint variability of the human measures. We validate these correlational results with causal manipulations using recognition experiments. We show that images masked with ANN attention maps were easier for humans to classify than control masks in a speeded recognition experiment. Similarly, we find that recognition performance in the same ANN models was likewise influenced by masking input images using human visual selectivity maps. This work contributes a new approach to evaluating the biological and psychological validity of leading ANNs as models of human vision: by examining their similarities and differences in terms of their visual selectivity to the information contained in images. ",
+    "url": "https://arxiv.org/abs/2107.07013",
+    "authors": [
+      "Thomas A. Langlois",
+      "H. Charles Zhao",
+      "Erin Grant",
+      "Ishita Dasgupta",
+      "Thomas L. Griffiths",
+      "Nori Jacoby"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)"
+    ]
+  },
+  {
+    "id": "arXiv:2107.07240",
+    "title": "Subnet Replacement: Deployment-stage backdoor attack against deep neural  networks in gray-box setting",
+    "abstract": "We study the realistic potential of conducting backdoor attack against deep neural networks (DNNs) during deployment stage. Specifically, our goal is to design a deployment-stage backdoor attack algorithm that is both threatening and realistically implementable. To this end, we propose Subnet Replacement Attack (SRA), which is capable of embedding backdoor into DNNs by directly modifying a limited number of model parameters. Considering the realistic practicability, we abandon the strong white-box assumption widely adopted in existing studies, instead, our algorithm works in a gray-box setting, where architecture information of the victim model is available but the adversaries do not have any knowledge of parameter values. The key philosophy underlying our approach is -- given any neural network instance (regardless of its specific parameter values) of a certain architecture, we can always embed a backdoor into that model instance, by replacing a very narrow subnet of a benign model (without backdoor) with a malicious backdoor subnet, which is designed to be sensitive (fire large activation value) to a particular backdoor trigger pattern. ",
+    "url": "https://arxiv.org/abs/2107.07240",
+    "authors": [
+      "Xiangyu Qi",
+      "Jifeng Zhu",
+      "Chulin Xie",
+      "Yong Yang"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Cryptography and Security (cs.CR)"
+    ]
+  },
+  {
+    "id": "arXiv:2107.07282",
+    "title": "On the stability of robust dynamical low-rank approximations for  hyperbolic problems",
+    "abstract": "The dynamical low-rank approximation (DLRA) is used to treat high-dimensional problems that arise in such diverse fields as kinetic transport and uncertainty quantification. Even though it is well known that certain spatial and temporal discretizations when combined with the DLRA approach can result in numerical instability, this phenomenon is poorly understood. In this paper we perform a $L^2$ stability analysis for the corresponding nonlinear equations of motion. This reveals the source of the instability for the projector splitting integrator when first discretizing the equations and then applying the DLRA. Based on this we propose a projector splitting integrator, based on applying DLRA to the continuous system before performing the discretization, that recovers the classic CFL condition. We also show that the unconventional integrator has more favorable stability properties and explain why the projector splitting integrator performs better when approximating higher moments, while the unconventional integrator is generally superior for first order moments. Furthermore, an efficient and stable dynamical low-rank update for the scattering term in kinetic transport is proposed. Numerical experiments for kinetic transport and uncertainty quantification, which confirm the results of the stability analysis, are presented. ",
+    "url": "https://arxiv.org/abs/2107.07282",
+    "authors": [
+      "Jonas Kusch",
+      "Lukas Einkemmer",
+      "Gianluca Ceruti"
+    ],
+    "subjectives": [
+      "Numerical Analysis (math.NA)"
+    ]
+  },
+  {
+    "id": "arXiv:2107.07305",
+    "title": "Training for temporal sparsity in deep neural networks, application in  video processing",
+    "abstract": "Activation sparsity improves compute efficiency and resource utilization in sparsity-aware neural network accelerators. As the predominant operation in DNNs is multiply-accumulate (MAC) of activations with weights to compute inner products, skipping operations where (at least) one of the two operands is zero can make inference more efficient in terms of latency and power. Spatial sparsification of activations is a popular topic in DNN literature and several methods have already been established to bias a DNN for it. On the other hand, temporal sparsity is an inherent feature of bio-inspired spiking neural networks (SNNs), which neuromorphic processing exploits for hardware efficiency. Introducing and exploiting spatio-temporal sparsity, is a topic much less explored in DNN literature, but in perfect resonance with the trend in DNN, to shift from static signal processing to more streaming signal processing. Towards this goal, in this paper we introduce a new DNN layer (called Delta Activation Layer), whose sole purpose is to promote temporal sparsity of activations during training. A Delta Activation Layer casts temporal sparsity into spatial activation sparsity to be exploited when performing sparse tensor multiplications in hardware. By employing delta inference and ``the usual'' spatial sparsification heuristics during training, the resulting model learns to exploit not only spatial but also temporal activation sparsity (for a given input data distribution). One may use the Delta Activation Layer either during vanilla training or during a refinement phase. We have implemented Delta Activation Layer as an extension of the standard Tensoflow-Keras library, and applied it to train deep neural networks on the Human Action Recognition (UCF101) dataset. We report an almost 3x improvement of activation sparsity, with recoverable loss of model accuracy after longer training. ",
+    "url": "https://arxiv.org/abs/2107.07305",
+    "authors": [
+      "Amirreza Yousefzadeh",
+      "Manolis Sifalakis"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)",
+      "Machine Learning (cs.LG)",
+      "Image and Video Processing (eess.IV)"
+    ]
+  },
+  {
+    "id": "arXiv:2107.07347",
+    "title": "Sparse Fourier Transform by traversing Cooley-Tukey FFT computation  graphs",
+    "abstract": "Computing the dominant Fourier coefficients of a vector is a common task in many fields, such as signal processing, learning theory, and computational complexity. In the Sparse Fast Fourier Transform (Sparse FFT) problem, one is given oracle access to a $d$-dimensional vector $x$ of size $N$, and is asked to compute the best $k$-term approximation of its Discrete Fourier Transform, quickly and using few samples of the input vector $x$. While the sample complexity of this problem is quite well understood, all previous approaches either suffer from an exponential dependence of runtime on the dimension $d$ or can only tolerate a trivial amount of noise. This is in sharp contrast with the classical FFT algorithm of Cooley and Tukey, which is stable and completely insensitive to the dimension of the input vector: its runtime is $O(N\\log N)$ in any dimension $d$. In this work, we introduce a new high-dimensional Sparse FFT toolkit and use it to obtain new algorithms, both on the exact, as well as in the case of bounded $\\ell_2$ noise. This toolkit includes i) a new strategy for exploring a pruned FFT computation tree that reduces the cost of filtering, ii) new structural properties of adaptive aliasing filters recently introduced by Kapralov, Velingker and Zandieh'SODA'19, and iii) a novel lazy estimation argument, suited to reducing the cost of estimation in FFT tree-traversal approaches. Our robust algorithm can be viewed as a highly optimized sparse, stable extension of the Cooley-Tukey FFT algorithm. Finally, we explain the barriers we have faced by proving a conditional quadratic lower bound on the running time of the well-studied non-equispaced Fourier transform problem. This resolves a natural and frequently asked question in computational Fourier transforms. Lastly, we provide a preliminary experimental evaluation comparing the runtime of our algorithm to FFTW and SFFT 2.0. ",
+    "url": "https://arxiv.org/abs/2107.07347",
+    "authors": [
+      "Karl Bringmann",
+      "Michael Kapralov",
+      "Mikhail Makarov",
+      "Vasileios Nakos",
+      "Amir Yagudin",
+      "Amir Zandieh"
+    ],
+    "subjectives": [
+      "Data Structures and Algorithms (cs.DS)"
+    ]
+  },
+  {
+    "id": "arXiv:2107.07432",
+    "title": "Hierarchical graph neural nets can capture long-range interactions",
+    "abstract": "Graph neural networks (GNNs) based on message passing between neighboring nodes are known to be insufficient for capturing long-range interactions in graphs. In this project we study hierarchical message passing models that leverage a multi-resolution representation of a given graph. This facilitates learning of features that span large receptive fields without loss of local information, an aspect not studied in preceding work on hierarchical GNNs. We introduce Hierarchical Graph Net (HGNet), which for any two connected nodes guarantees existence of message-passing paths of at most logarithmic length w.r.t. the input graph size. Yet, under mild assumptions, its internal hierarchy maintains asymptotic size equivalent to that of the input graph. We observe that our HGNet outperforms conventional stacking of GCN layers particularly in molecular property prediction benchmarks. Finally, we propose two benchmarking tasks designed to elucidate capability of GNNs to leverage long-range interactions in graphs. ",
+    "url": "https://arxiv.org/abs/2107.07432",
+    "authors": [
+      "Ladislav Ramp\u00e1\u0161ek",
+      "Guy Wolf"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Machine Learning (stat.ML)"
+    ]
+  },
+  {
+    "id": "arXiv:2107.07489",
+    "title": "Clustering of heterogeneous populations of networks",
+    "abstract": "Statistical methods for reconstructing networks from repeated measurements typically assume that all measurements are generated from the same underlying network structure. This need not be the case, however. People's social networks might be different on weekdays and weekends, for instance. Brain networks may differ between healthy patients and those with dementia or other conditions. Here we describe a Bayesian analysis framework for such data that allows for the fact that network measurements may be reflective of multiple possible structures. We define a finite mixture model of the measurement process and derive a fast Gibbs sampling procedure that samples exactly from the full posterior distribution of model parameters. The end result is a clustering of the measured networks into groups with similar structure. We demonstrate the method on both real and synthetic network populations. ",
+    "url": "https://arxiv.org/abs/2107.07489",
+    "authors": [
+      "Jean-Gabriel Young",
+      "Alec Kirkley",
+      "M. E. J. Newman"
+    ],
+    "subjectives": [
+      "Social and Information Networks (cs.SI)",
+      "Physics and Society (physics.soc-ph)",
+      "Applications (stat.AP)"
+    ]
+  },
+  {
+    "id": "arXiv:2107.06898",
+    "title": "Towards quantifying information flows: relative entropy in deep neural  networks and the renormalization group",
+    "abstract": "We investigate the analogy between the renormalization group (RG) and deep neural networks, wherein subsequent layers of neurons are analogous to successive steps along the RG. In particular, we quantify the flow of information by explicitly computing the relative entropy or Kullback-Leibler divergence in both the one- and two-dimensional Ising models under decimation RG, as well as in a feedforward neural network as a function of depth. We observe qualitatively identical behavior characterized by the monotonic increase to a parameter-dependent asymptotic value. On the quantum field theory side, the monotonic increase confirms the connection between the relative entropy and the c-theorem. For the neural networks, the asymptotic behavior may have implications for various information maximization methods in machine learning, as well as for disentangling compactness and generalizability. Furthermore, while both the two-dimensional Ising model and the random neural networks we consider exhibit non-trivial critical points, the relative entropy appears insensitive to the phase structure of either system. In this sense, more refined probes are required in order to fully elucidate the flow of information in these models. ",
+    "url": "https://arxiv.org/abs/2107.06898",
+    "authors": [
+      "Johanna Erdmenger",
+      "Kevin T. Grosvenor",
+      "Ro Jefferson"
+    ],
+    "subjectives": [
+      "High Energy Physics - Theory (hep-th)",
+      "Disordered Systems and Neural Networks (cond-mat.dis-nn)",
+      "Statistical Mechanics (cond-mat.stat-mech)",
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2101.10072",
+    "title": "Agents.jl: A performant and feature-full agent based modelling software  of minimal code complexity",
+    "abstract": " Title: Agents.jl: A performant and feature-full agent based modelling software  of minimal code complexity ",
+    "url": "https://arxiv.org/abs/2101.10072",
+    "authors": [
+      "George Datseris",
+      "Ali R. Vahdati",
+      "Timothy C. DuBois"
+    ],
+    "subjectives": [
+      "Multiagent Systems (cs.MA)",
+      "Cellular Automata and Lattice Gases (nlin.CG)"
+    ]
+  },
+  {
+    "id": "arXiv:2102.00760",
+    "title": "Fast rates in structured prediction",
+    "abstract": " Comments: 14 main pages, 3 main figures, 43 pages, 4 figures (with appendix) ",
+    "url": "https://arxiv.org/abs/2102.00760",
+    "authors": [
+      "Vivien Cabannes",
+      "Alessandro Rudi",
+      "Francis Bach"
+    ],
+    "subjectives": [
+      "Machine Learning (stat.ML)",
+      "Artificial Intelligence (cs.AI)",
+      "Machine Learning (cs.LG)",
+      "Statistics Theory (math.ST)"
+    ]
+  },
+  {
+    "id": "arXiv:2103.11850",
+    "title": "Triage and diagnosis of COVID-19 from medical social media",
+    "abstract": " Comments: 13 pages, 6 figrues ",
+    "url": "https://arxiv.org/abs/2103.11850",
+    "authors": [
+      "Abul Hasan",
+      "Mark Levene",
+      "David Weston",
+      "Renate Fromson",
+      "Nicolas Koslover",
+      "Tamara Levene"
+    ],
+    "subjectives": [
+      "Computation and Language (cs.CL)"
+    ]
+  },
+  {
+    "id": "arXiv:2105.00287",
+    "title": "The complexity of approximating the complex-valued Ising model on  bounded degree graphs",
+    "abstract": " Comments: 49 pages, 9 figures ",
+    "url": "https://arxiv.org/abs/2105.00287",
+    "authors": [
+      "Andreas Galanis",
+      "Leslie Ann Goldberg",
+      "Andr\u00e9s Herrera-Poyatos"
+    ],
+    "subjectives": [
+      "Computational Complexity (cs.CC)",
+      "Combinatorics (math.CO)"
+    ]
+  },
+  {
+    "id": "arXiv:2105.13309",
+    "title": "Concept drift detection and adaptation for federated and continual  learning",
+    "abstract": " Title: Concept drift detection and adaptation for federated and continual  learning ",
+    "url": "https://arxiv.org/abs/2105.13309",
+    "authors": [
+      "Fernando E. Casado",
+      "Dylan Lema",
+      "Marcos F. Criado",
+      "Roberto Iglesias",
+      "Carlos V. Regueiro",
+      "Sen\u00e9n Barro"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2106.04575",
+    "title": "DNS attack mitigation Using OpenStack Isolation",
+    "abstract": " Comments: 6 pages, 3 figures, and 2 tables ",
+    "url": "https://arxiv.org/abs/2106.04575",
+    "authors": [
+      "Hassnain ul hassan",
+      "Rizal Mohd Nor",
+      "Md Amiruzzaman",
+      "Sharyar Wani"
+    ],
+    "subjectives": [
+      "Cryptography and Security (cs.CR)"
+    ]
+  },
+  {
+    "id": "arXiv:2106.15543",
+    "title": "BOTTER: A framework to analyze social bots in Twitter",
+    "abstract": " Title: BOTTER: A framework to analyze social bots in Twitter ",
+    "url": "https://arxiv.org/abs/2106.15543",
+    "authors": [
+      "Javier Pastor-Galindo",
+      "F\u00e9lix G\u00f3mez M\u00e1rmol",
+      "Gregorio Mart\u00ednez P\u00e9rez"
+    ],
+    "subjectives": [
+      "Social and Information Networks (cs.SI)"
+    ]
+  },
+  {
+    "id": "arXiv:2107.01386",
+    "title": "An asymptotically compatible probabilistic collocation method for  randomly heterogeneous nonlocal problems",
+    "abstract": " Title: An asymptotically compatible probabilistic collocation method for  randomly heterogeneous nonlocal problems ",
+    "url": "https://arxiv.org/abs/2107.01386",
+    "authors": [
+      "Yiming Fan",
+      "Xiaochuan Tian",
+      "Xiu Yang",
+      "Xingjie Li",
+      "Clayton Webster",
+      "Yue Yu"
+    ],
+    "subjectives": [
+      "Numerical Analysis (math.NA)",
+      "Analysis of PDEs (math.AP)"
+    ]
+  },
+  {
+    "id": "arXiv:2107.06695",
+    "title": "Solving discrete constrained problems on de Rham complex",
+    "abstract": " Title: Solving discrete constrained problems on de Rham complex ",
+    "url": "https://arxiv.org/abs/2107.06695",
+    "authors": [
+      "Zhongjie Lu"
+    ],
+    "subjectives": [
+      "Numerical Analysis (math.NA)"
+    ]
+  }
+]
