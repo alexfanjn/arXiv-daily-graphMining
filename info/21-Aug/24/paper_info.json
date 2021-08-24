@@ -1,0 +1,347 @@
+[
+  {
+    "id": "arXiv:2108.09343",
+    "title": "Early-exit deep neural networks for distorted images: providing an  efficient edge offloading",
+    "abstract": "Edge offloading for deep neural networks (DNNs) can be adaptive to the input's complexity by using early-exit DNNs. These DNNs have side branches throughout their architecture, allowing the inference to end earlier in the edge. The branches estimate the accuracy for a given input. If this estimated accuracy reaches a threshold, the inference ends on the edge. Otherwise, the edge offloads the inference to the cloud to process the remaining DNN layers. However, DNNs for image classification deals with distorted images, which negatively impact the branches' estimated accuracy. Consequently, the edge offloads more inferences to the cloud. This work introduces expert side branches trained on a particular distortion type to improve robustness against image distortion. The edge detects the distortion type and selects appropriate expert branches to perform the inference. This approach increases the estimated accuracy on the edge, improving the offloading decisions. We validate our proposal in a realistic scenario, in which the edge offloads DNN inference to Amazon EC2 instances. ",
+    "url": "https://arxiv.org/abs/2108.09343",
+    "authors": [
+      "Roberto G. Pacheco",
+      "Fernanda D.V.R. Oliveira",
+      "Rodrigo S. Couto"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)",
+      "Machine Learning (cs.LG)",
+      "Networking and Internet Architecture (cs.NI)"
+    ]
+  },
+  {
+    "id": "arXiv:2108.09423",
+    "title": "Adaptive unsupervised learning with enhanced feature representation for  intra-tumor partitioning and survival prediction for glioblastoma",
+    "abstract": "Glioblastoma is profoundly heterogeneous in regional microstructure and vasculature. Characterizing the spatial heterogeneity of glioblastoma could lead to more precise treatment. With unsupervised learning techniques, glioblastoma MRI-derived radiomic features have been widely utilized for tumor sub-region segmentation and survival prediction. However, the reliability of algorithm outcomes is often challenged by both ambiguous intermediate process and instability introduced by the randomness of clustering algorithms, especially for data from heterogeneous patients. In this paper, we propose an adaptive unsupervised learning approach for efficient MRI intra-tumor partitioning and glioblastoma survival prediction. A novel and problem-specific Feature-enhanced Auto-Encoder (FAE) is developed to enhance the representation of pairwise clinical modalities and therefore improve clustering stability of unsupervised learning algorithms such as K-means. Moreover, the entire process is modelled by the Bayesian optimization (BO) technique with a custom loss function that the hyper-parameters can be adaptively optimized in a reasonably few steps. The results demonstrate that the proposed approach can produce robust and clinically relevant MRI sub-regions and statistically significant survival predictions. ",
+    "url": "https://arxiv.org/abs/2108.09423",
+    "authors": [
+      "Yifan Li",
+      "Chao Li",
+      "Yiran Wei",
+      "Stephen Price",
+      "Carola-Bibiane Sch\u00f6nlieb",
+      "Xi Chen"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Signal Processing (eess.SP)"
+    ]
+  },
+  {
+    "id": "arXiv:2108.09598",
+    "title": "SERF: Towards better training of deep neural networks using log-Softplus  ERror activation Function",
+    "abstract": "Activation functions play a pivotal role in determining the training dynamics and neural network performance. The widely adopted activation function ReLU despite being simple and effective has few disadvantages including the Dying ReLU problem. In order to tackle such problems, we propose a novel activation function called Serf which is self-regularized and nonmonotonic in nature. Like Mish, Serf also belongs to the Swish family of functions. Based on several experiments on computer vision (image classification and object detection) and natural language processing (machine translation, sentiment classification and multimodal entailment) tasks with different state-of-the-art architectures, it is observed that Serf vastly outperforms ReLU (baseline) and other activation functions including both Swish and Mish, with a markedly bigger margin on deeper architectures. Ablation studies further demonstrate that Serf based architectures perform better than those of Swish and Mish in varying scenarios, validating the effectiveness and compatibility of Serf with varying depth, complexity, optimizers, learning rates, batch sizes, initializers and dropout rates. Finally, we investigate the mathematical relation between Swish and Serf, thereby showing the impact of preconditioner function ingrained in the first derivative of Serf which provides a regularization effect making gradients smoother and optimization faster. ",
+    "url": "https://arxiv.org/abs/2108.09598",
+    "authors": [
+      "Sayan Nag",
+      "Mayukh Bhattacharyya"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Artificial Intelligence (cs.AI)",
+      "Computer Vision and Pattern Recognition (cs.CV)",
+      "Neural and Evolutionary Computing (cs.NE)"
+    ]
+  },
+  {
+    "id": "arXiv:2108.09684",
+    "title": "Rainfall-runoff prediction using a Gustafson-Kessel clustering based  Takagi-Sugeno Fuzzy model",
+    "abstract": "A rainfall-runoff model predicts surface runoff either using a physically-based approach or using a systems-based approach. Takagi-Sugeno (TS) Fuzzy models are systems-based approaches and a popular modeling choice for hydrologists in recent decades due to several advantages and improved accuracy in prediction over other existing models. In this paper, we propose a new rainfall-runoff model developed using Gustafson-Kessel (GK) clustering-based TS Fuzzy model. We present comparative performance measures of GK algorithms with two other clustering algorithms: (i) Fuzzy C-Means (FCM), and (ii)Subtractive Clustering (SC). Our proposed TS Fuzzy model predicts surface runoff using: (i) observed rainfall in a drainage basin and (ii) previously observed precipitation flow in the basin outlet. The proposed model is validated using the rainfall-runoff data collected from the sensors installed on the campus of the Indian Institute of Technology, Kharagpur. The optimal number of rules of the proposed model is obtained by different validation indices. A comparative study of four performance criteria: RootMean Square Error (RMSE), Coefficient of Efficiency (CE), Volumetric Error (VE), and Correlation Coefficient of Determination(R) have been quantitatively demonstrated for each clustering algorithm. ",
+    "url": "https://arxiv.org/abs/2108.09684",
+    "authors": [
+      "Subhrasankha Dey",
+      "Tanmoy Dam"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Artificial Intelligence (cs.AI)",
+      "Atmospheric and Oceanic Physics (physics.ao-ph)"
+    ]
+  },
+  {
+    "id": "arXiv:2108.10008",
+    "title": "BiaSwap: Removing dataset bias with bias-tailored swapping augmentation",
+    "abstract": "Deep neural networks often make decisions based on the spurious correlations inherent in the dataset, failing to generalize in an unbiased data distribution. Although previous approaches pre-define the type of dataset bias to prevent the network from learning it, recognizing the bias type in the real dataset is often prohibitive. This paper proposes a novel bias-tailored augmentation-based approach, BiaSwap, for learning debiased representation without requiring supervision on the bias type. Assuming that the bias corresponds to the easy-to-learn attributes, we sort the training images based on how much a biased classifier can exploits them as shortcut and divide them into bias-guiding and bias-contrary samples in an unsupervised manner. Afterwards, we integrate the style-transferring module of the image translation model with the class activation maps of such biased classifier, which enables to primarily transfer the bias attributes learned by the classifier. Therefore, given the pair of bias-guiding and bias-contrary, BiaSwap generates the bias-swapped image which contains the bias attributes from the bias-contrary images, while preserving bias-irrelevant ones in the bias-guiding images. Given such augmented images, BiaSwap demonstrates the superiority in debiasing against the existing baselines over both synthetic and real-world datasets. Even without careful supervision on the bias, BiaSwap achieves a remarkable performance on both unbiased and bias-guiding samples, implying the improved generalization capability of the model. ",
+    "url": "https://arxiv.org/abs/2108.10008",
+    "authors": [
+      "Eungyeup Kim",
+      "Jihyeon Lee",
+      "Jaegul Choo"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)",
+      "Artificial Intelligence (cs.AI)"
+    ]
+  },
+  {
+    "id": "arXiv:2108.10103",
+    "title": "Deep neural networks approach to microbial colony detection -- a  comparative analysis",
+    "abstract": "Counting microbial colonies is a fundamental task in microbiology and has many applications in numerous industry branches. Despite this, current studies towards automatic microbial counting using artificial intelligence are hardly comparable due to the lack of unified methodology and the availability of large datasets. The recently introduced AGAR dataset is the answer to the second need, but the research carried out is still not exhaustive. To tackle this problem, we compared the performance of three well-known deep learning approaches for object detection on the AGAR dataset, namely two-stage, one-stage and transformer based neural networks. The achieved results may serve as a benchmark for future experiments. ",
+    "url": "https://arxiv.org/abs/2108.10103",
+    "authors": [
+      "Sylwia Majchrowska",
+      "Jaros\u0142aw Paw\u0142owski",
+      "Natalia Czerep",
+      "Aleksander G\u00f3recki",
+      "Jakub Kuci\u0144ski",
+      "Tomasz Golan"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)",
+      "Image and Video Processing (eess.IV)",
+      "Quantitative Methods (q-bio.QM)"
+    ]
+  },
+  {
+    "id": "arXiv:2108.10267",
+    "title": "A statistical approach for enhancing security in VANETs with efficient  rogue node detection using fog computing",
+    "abstract": "Rogue nodes broadcasting false information in beacon messages may lead to catastrophic consequences in Vehicular Ad Hoc Networks (VANETs). Previous researchers used either cryptography, trust scores, or past vehicle data to detect rogue nodes; however, these methods suffer from high processing delay, overhead, and False-Positive Rate (FPR). We propose herein Greenshield's traffic model-based fog computing scheme called Fog-based Rogue Nodes Detection (F-RouND), which dynamically utilizes the On-Board Units (OBUs) of all vehicles in the region for rogue node detection. We aim to reduce the data processing delays and FPR in detecting rogue nodes at high vehicle densities. The performance of the F-RouND framework was evaluated via simulations. Results show that the F-RouND framework ensures 45% lower processing delays, 12% lower overhead, and 36% lower FPR at the urban scenario compared to the existing rogue node detection schemes even when the number of rogue nodes increases by up to 40% in the region. ",
+    "url": "https://arxiv.org/abs/2108.10267",
+    "authors": [
+      "Anirudh Paranjothi",
+      "Mohammed Atiquzzaman"
+    ],
+    "subjectives": [
+      "Networking and Internet Architecture (cs.NI)"
+    ]
+  },
+  {
+    "id": "arXiv:2108.09711",
+    "title": "FEDI: Few-shot learning based on Earth Mover's Distance algorithm  combined with deep residual network to identify diabetic retinopathy",
+    "abstract": "Diabetic retinopathy(DR) is the main cause of blindness in diabetic patients. However, DR can easily delay the occurrence of blindness through the diagnosis of the fundus. In view of the reality, it is difficult to collect a large amount of diabetic retina data in clinical practice. This paper proposes a few-shot learning model of a deep residual network based on Earth Mover's Distance algorithm to assist in diagnosing DR. We build training and validation classification tasks for few-shot learning based on 39 categories of 1000 sample data, train deep residual networks, and obtain experience maximization pre-training models. Based on the weights of the pre-trained model, the Earth Mover's Distance algorithm calculates the distance between the images, obtains the similarity between the images, and changes the model's parameters to improve the accuracy of the training model. Finally, the experimental construction of the small sample classification task of the test set to optimize the model further, and finally, an accuracy of 93.5667% on the 3way10shot task of the diabetic retina test set. For the experimental code and results, please refer to: https://github.com/panliangrui/few-shot-learning-funds. ",
+    "url": "https://arxiv.org/abs/2108.09711",
+    "authors": [
+      "Liangrui Pan",
+      "Boya Ji",
+      "Peng Xi",
+      "Xiaoqi Wang",
+      "Mitchai Chongcheawchamnan",
+      "Shaoliang Peng"
+    ],
+    "subjectives": [
+      "Image and Video Processing (eess.IV)",
+      "Computer Vision and Pattern Recognition (cs.CV)",
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2108.09795",
+    "title": "On a Tverberg graph",
+    "abstract": "For a graph whose vertex set is a finite set of points in $\\mathbb R^d$, consider the closed (open) balls with diameters induced by its edges. The graph is called a (an open) Tverberg graph if these closed (open) balls intersect. Using the idea of halving lines, we show that (i) for any finite set of points in the plane, there exists a Hamiltonian cycle that is a Tverberg graph; (ii) for any $n$ red and $n$ blue points in the plane, there exists a perfect red-blue matching that is a Tverberg graph. Using the idea of infinite descent, we prove that (iii) for any even set of points in $\\mathbb R^d$, there exists a perfect matching that is an open Tverberg graph; (iv) for any $n$ red and $n$ blue points in $ \\mathbb R^d $, there exists a perfect red-blue matching that is a Tverberg graph. ",
+    "url": "https://arxiv.org/abs/2108.09795",
+    "authors": [
+      "Olimjoni Pirahmad",
+      "Alexandr Polyanskii",
+      "Alexey Vasilevskii"
+    ],
+    "subjectives": [
+      "Combinatorics (math.CO)",
+      "Computational Geometry (cs.CG)",
+      "Metric Geometry (math.MG)"
+    ]
+  },
+  {
+    "id": "arXiv:2108.10029",
+    "title": "Modeling COVID-19 uncertainties evolving over time and density-dependent  social reinforcement and asymptomatic infections",
+    "abstract": "The novel coronavirus disease 2019 (COVID-19) presents unique and unknown problem complexities and modeling challenges, where an imperative task is to model both its process and data uncertainties, represented in implicit and high-proportional undocumented infections, asymptomatic contagion, social reinforcement of infections, and various quality issues in the reported data. These uncertainties become even more phenomenal in the overwhelming mutation-dominated resurgences with vaccinated but still susceptible populations. Here we introduce a novel hybrid approach to (1) characterizing and distinguishing Undocumented (U) and Documented (D) infections commonly seen during COVID-19 incubation periods and asymptomatic infections by expanding the foundational compartmental epidemic Susceptible-Infected-Recovered (SIR) model with two compartments, resulting in a new Susceptible-Undocumented infected-Documented infected-Recovered (SUDR) model; (2) characterizing the probabilistic density of infections by empowering SUDR to capture exogenous processes like clustering contagion interactions, superspreading and social reinforcement; and (3) approximating the density likelihood of COVID-19 prevalence over time by incorporating Bayesian inference into SUDR. Different from existing COVID-19 models, SUDR characterizes the undocumented infections during unknown transmission processes. To capture the uncertainties of temporal transmission and social reinforcement during the COVID-19 contagion, the transmission rate is modeled by a time-varying density function of undocumented infectious cases. We solve the modeling by sampling from the mean-field posterior distribution with reasonable priors, making SUDR suitable to handle the randomness, noise and sparsity of COVID-19 observations widely seen in the public COVID-19 case data. ",
+    "url": "https://arxiv.org/abs/2108.10029",
+    "authors": [
+      "Qing Liu",
+      "Longbing Cao"
+    ],
+    "subjectives": [
+      "Machine Learning (stat.ML)",
+      "Machine Learning (cs.LG)",
+      "Populations and Evolution (q-bio.PE)"
+    ]
+  },
+  {
+    "id": "arXiv:2108.10205",
+    "title": "Power transformer faults diagnosis using undestructive methods (Roger  and IEC) and artificial neural network for dissolved gas analysis applied on  the functional transformer in the Algerian north-eastern: a comparative study",
+    "abstract": "Nowadays, power transformer aging and failures are viewed with great attention in power transmission industry. Dissolved gas analysis (DGA) is classified among the biggest widely used methods used within the context of asset management policy to detect the incipient faults in their earlier stage in power transformers. Up to now, several procedures have been employed for the lecture of DGA results. Among these useful means, we find Key Gases, Rogers Ratios, IEC Ratios, the historical technique less used today Doernenburg Ratios, the two types of Duval Pentagons methods, several versions of the Duval Triangles method and Logarithmic Nomograph. Problem. DGA data extracted from different units in service served to verify the ability and reliability of these methods in assessing the state of health of the power transformer. Aim. An improving the quality of diagnostics of electrical power transformer by artificial neural network tools based on two conventional methods in the case of a functional power transformer at S\\'etif province in East North of Algeria. Methodology. Design an inelegant tool for power transformer diagnosis using neural networks based on traditional methods IEC and Rogers, which allows to early detection faults, to increase the reliability, of the entire electrical energy system from transport to consumers and improve a continuity and quality of service. Results. The solution of the problem was carried out by using feed-forward back-propagation neural networks implemented in MATLAB-Simulink environment. Four real power transformers working under different environment and climate conditions such as: desert, humid, cold were taken into account. The practical results of the diagnosis of these power transformers by the DGA are presented. Practical value..... ",
+    "url": "https://arxiv.org/abs/2108.10205",
+    "authors": [
+      "Bouchaoui Lahcene",
+      "Kamel Eddine Hemsas",
+      "Hacene Mellah",
+      "saad eddine benlahneche"
+    ],
+    "subjectives": [
+      "Signal Processing (eess.SP)",
+      "Machine Learning (cs.LG)",
+      "Systems and Control (eess.SY)"
+    ]
+  },
+  {
+    "id": "arXiv:1904.06551",
+    "title": "A partial knowledge of friends of friends speeds social search",
+    "abstract": " Title: A partial knowledge of friends of friends speeds social search ",
+    "url": "https://arxiv.org/abs/1904.06551",
+    "authors": [
+      "Amr Elsisy",
+      "Boleslaw K. Szymanski",
+      "Jasmine A. Plum",
+      "Miao Qi",
+      "Alex Pentland"
+    ],
+    "subjectives": [
+      "Social and Information Networks (cs.SI)",
+      "Physics and Society (physics.soc-ph)"
+    ]
+  },
+  {
+    "id": "arXiv:2003.14215",
+    "title": "Stream/block ciphers, difference equations and algebraic attacks",
+    "abstract": " Comments: 26 pages, to appear in Journal of Symbolic Computation ",
+    "url": "https://arxiv.org/abs/2003.14215",
+    "authors": [
+      "Roberto La Scala",
+      "Sharwan K. Tiwari"
+    ],
+    "subjectives": [
+      "Cryptography and Security (cs.CR)",
+      "Symbolic Computation (cs.SC)"
+    ]
+  },
+  {
+    "id": "arXiv:2004.02220",
+    "title": "Query-points visibility constraint minimum link paths in simple polygons",
+    "abstract": " Title: Query-points visibility constraint minimum link paths in simple polygons ",
+    "url": "https://arxiv.org/abs/2004.02220",
+    "authors": [
+      "Mohammad Reza Zarrabi",
+      "Nasrollah Moghaddam Charkari"
+    ],
+    "subjectives": [
+      "Computational Geometry (cs.CG)"
+    ]
+  },
+  {
+    "id": "arXiv:2006.03870",
+    "title": "Towards large-scale, automated, accurate detection of CCTV camera  objects using computer vision. Applications and implications for privacy,  safety, and cybersecurity. (Preprint)",
+    "abstract": " Title: Towards large-scale, automated, accurate detection of CCTV camera  objects using computer vision. Applications and implications for privacy,  safety, and cybersecurity. (Preprint) ",
+    "url": "https://arxiv.org/abs/2006.03870",
+    "authors": [
+      "Hannu Turtiainen",
+      "Andrei Costin",
+      "Tuomo Lahtinen",
+      "Lauri Sintonen",
+      "Timo Hamalainen"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)",
+      "Cryptography and Security (cs.CR)"
+    ]
+  },
+  {
+    "id": "arXiv:2104.08938",
+    "title": "On the approximation of functions by tanh neural networks",
+    "abstract": " Title: On the approximation of functions by tanh neural networks ",
+    "url": "https://arxiv.org/abs/2104.08938",
+    "authors": [
+      "Tim De Ryck",
+      "Samuel Lanthaler",
+      "Siddhartha Mishra"
+    ],
+    "subjectives": [
+      "Numerical Analysis (math.NA)",
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2107.08805",
+    "title": "How does a robot's social credibility relate to its perceived  trustworthiness?",
+    "abstract": " Comments: Position paper in proceedings of SCRITA 2021 (arXiv:2108.08092), a workshop at IEEE RO-MAN 2021: this https URL ",
+    "url": "https://arxiv.org/abs/2107.08805",
+    "authors": [
+      "Patrick Holthaus"
+    ],
+    "subjectives": [
+      "Robotics (cs.RO)"
+    ]
+  },
+  {
+    "id": "arXiv:2107.13282",
+    "title": "Dense Graph Partitioning on sparse and dense graphs",
+    "abstract": " Comments: 18 pages, 6 figures, submission to ISAAC 2021 ",
+    "url": "https://arxiv.org/abs/2107.13282",
+    "authors": [
+      "Cristina Bazgan",
+      "Katrin Casel",
+      "Pierre Cazals"
+    ],
+    "subjectives": [
+      "Computational Complexity (cs.CC)"
+    ]
+  },
+  {
+    "id": "arXiv:2108.00893",
+    "title": "Static analysis of ReLU neural networks with tropical polyhedra",
+    "abstract": " Title: Static analysis of ReLU neural networks with tropical polyhedra ",
+    "url": "https://arxiv.org/abs/2108.00893",
+    "authors": [
+      "Eric Goubault",
+      "S\u00e9bastien Palumby",
+      "Sylvie Putot",
+      "Louis Rustenholz",
+      "Sriram Sankaranarayanan"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Artificial Intelligence (cs.AI)"
+    ]
+  },
+  {
+    "id": "arXiv:2108.07135",
+    "title": "Vehicle-counting with Automatic Region-of-Interest and  Driving-Trajectory detection",
+    "abstract": " Comments: 5 pages with 3 figures and 1 table. Presented in ICML 2021 LatinXAI Workshop ",
+    "url": "https://arxiv.org/abs/2108.07135",
+    "authors": [
+      "Malolan Vasu",
+      "Nelson Abreu",
+      "Raysa V\u00e1squez",
+      "Christian L\u00f3pez"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)",
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2108.08631",
+    "title": "Determinant-free fermionic wave function using feed-forward neural  networks",
+    "abstract": " Title: Determinant-free fermionic wave function using feed-forward neural  networks ",
+    "url": "https://arxiv.org/abs/2108.08631",
+    "authors": [
+      "Koji Inui",
+      "Yasuyuki Kato",
+      "Yukitoshi Motome"
+    ],
+    "subjectives": [
+      "Strongly Correlated Electrons (cond-mat.str-el)",
+      "Disordered Systems and Neural Networks (cond-mat.dis-nn)",
+      "Machine Learning (cs.LG)",
+      "Computational Physics (physics.comp-ph)",
+      "Quantum Physics (quant-ph)"
+    ]
+  },
+  {
+    "id": "arXiv:2108.08875",
+    "title": "Comparing concepts of quantum and classical neural network models for  image classification task",
+    "abstract": " Comments: 11 pages, 6 figures. The final publication is available via this https URL ",
+    "url": "https://arxiv.org/abs/2108.08875",
+    "authors": [
+      "Rafal Potempa",
+      "Sebastian Porebski"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)"
+    ]
+  }
+]
