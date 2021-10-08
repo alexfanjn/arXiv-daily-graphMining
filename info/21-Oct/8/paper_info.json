@@ -1,0 +1,290 @@
+[
+  {
+    "id": "arXiv:2110.03049",
+    "title": "Physics-informed neural network simulation of multiphase poroelasticity  using stress-split sequential training",
+    "abstract": "Physics-informed neural networks (PINNs) have received significant attention as a unified framework for forward, inverse, and surrogate modeling of problems governed by partial differential equations (PDEs). Training PINNs for forward problems, however, pose significant challenges, mainly because of the complex non-convex and multi-objective loss function. In this work, we present a PINN approach to solving the equations of coupled flow and deformation in porous media for both single-phase and multiphase flow. To this end, we construct the solution space using multi-layer neural networks. Due to the dynamics of the problem, we find that incorporating multiple differential relations into the loss function results in an unstable optimization problem, meaning that sometimes it converges to the trivial null solution, other times it moves very far from the expected solution. We report a dimensionless form of the coupled governing equations that we find most favourable to the optimizer. Additionally, we propose a sequential training approach based on the stress-split algorithms of poromechanics. Notably, we find that sequential training based on stress-split performs well for different problems, while the classical strain-split algorithm shows an unstable behaviour similar to what is reported in the context of finite element solvers. We use the approach to solve benchmark problems of poroelasticity, including Mandel's consolidation problem, Barry-Mercer's injection-production problem, and a reference two-phase drainage problem. The Python-SciANN codes reproducing the results reported in this manuscript will be made publicly available at https://github.com/sciann/sciann-applications. ",
+    "url": "https://arxiv.org/abs/2110.03049",
+    "authors": [
+      "Ehsan Haghighat",
+      "Danial Amini",
+      "Ruben Juanes"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Computational Engineering, Finance, and Science (cs.CE)"
+    ]
+  },
+  {
+    "id": "arXiv:2110.03085",
+    "title": "A hybrid approach for dynamically training a torque prediction model for  devising a human-machine interface control strategy",
+    "abstract": "Human-machine interfaces (HMI) play a pivotal role in the rehabilitation and daily assistance of lower-limb amputees. The brain of such interfaces is a control model that detects the user's intention using sensor input and generates corresponding output (control commands). With recent advances in technology, AI-based policies have gained attention as control models for HMIs. However, supervised learning techniques require affluent amounts of labeled training data from the user, which is challenging in the context of lower-limb rehabilitation. Moreover, a static pre-trained model does not take the temporal variations in the motion of the amputee (e.g., due to speed, terrain) into account. In this study, we aimed to address both of these issues by creating an incremental training approach for a torque prediction model using incomplete user-specific training data and biologically inspired temporal patterns of human gait. To reach this goal, we created a hybrid of two distinct approaches, a generic inter-individual and an adapting individual-specific model that exploits the inter-limb synergistic coupling during human gait to learn a function that predicts the torque at the ankle joint continuously based on the kinematic sequences of the hip, knee, and shank. An inter-individual generic base model learns temporal patterns of gait from a set of able-bodied individuals and predicts the gait patterns for a new individual, while the individual-specific adaptation model learns and predicts the temporal patterns of gait specific to a particular individual. The iterative training using the hybrid model was validated on eight able-bodied and five transtibial amputee subjects. It was found that, with the addition of estimators fitted to individual-specific data, the accuracy significantly increased from the baseline inter-individual model and plateaued within two to three iterations. ",
+    "url": "https://arxiv.org/abs/2110.03085",
+    "authors": [
+      "Sharmita Dey",
+      "Takashi Yoshida",
+      "Robert H. Foerster",
+      "Michael Ernst",
+      "Thomas Schmalz",
+      "Rodrigo M.Carnier",
+      "Arndt F. Schilling"
+    ],
+    "subjectives": [
+      "Computational Engineering, Finance, and Science (cs.CE)"
+    ]
+  },
+  {
+    "id": "arXiv:2110.03290",
+    "title": "MC-LCR: Multi-modal contrastive classification by locally correlated  representations for effective face forgery detection",
+    "abstract": "As the remarkable development of facial manipulation technologies is accompanied by severe security concerns, face forgery detection has become a recent research hotspot. Most existing detection methods train a binary classifier under global supervision to judge real or fake. However, advanced manipulations only perform small-scale tampering, posing challenges to comprehensively capture subtle and local forgery artifacts, especially in high compression settings and cross-dataset scenarios. To address such limitations, we propose a novel framework named Multi-modal Contrastive Classification by Locally Correlated Representations(MC-LCR), for effective face forgery detection. Instead of specific appearance features, our MC-LCR aims to amplify implicit local discrepancies between authentic and forged faces from both spatial and frequency domains. Specifically, we design the shallow style representation block that measures the pairwise correlation of shallow feature maps, which encodes local style information to extract more discriminative features in the spatial domain. Moreover, we make a key observation that subtle forgery artifacts can be further exposed in the patch-wise phase and amplitude spectrum and exhibit different clues. According to the complementarity of amplitude and phase information, we develop a patch-wise amplitude and phase dual attention module to capture locally correlated inconsistencies with each other in the frequency domain. Besides the above two modules, we further introduce the collaboration of supervised contrastive loss with cross-entropy loss. It helps the network learn more discriminative and generalized representations. Through extensive experiments and comprehensive studies, we achieve state-of-the-art performance and demonstrate the robustness and generalization of our method. ",
+    "url": "https://arxiv.org/abs/2110.03290",
+    "authors": [
+      "Gaojian Wang",
+      "Qian Jiang",
+      "Xin Jin",
+      "Wei Li",
+      "Xiaohui Cui"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)"
+    ]
+  },
+  {
+    "id": "arXiv:2110.03403",
+    "title": "Disentangling deep neural networks with rectified linear units using  duality",
+    "abstract": "Despite their success deep neural networks (DNNs) are still largely considered as black boxes. The main issue is that the linear and non-linear operations are entangled in every layer, making it hard to interpret the hidden layer outputs. In this paper, we look at DNNs with rectified linear units (ReLUs), and focus on the gating property (`on/off' states) of the ReLUs. We extend the recently developed dual view in which the computation is broken path-wise to show that learning in the gates is more crucial, and learning the weights given the gates is characterised analytically via the so called neural path kernel (NPK) which depends on inputs and gates. In this paper, we present novel results to show that convolution with global pooling and skip connection provide respectively rotational invariance and ensemble structure to the NPK. To address `black box'-ness, we propose a novel interpretable counterpart of DNNs with ReLUs namely deep linearly gated networks (DLGN): the pre-activations to the gates are generated by a deep linear network, and the gates are then applied as external masks to learn the weights in a different network. The DLGN is not an alternative architecture per se, but a disentanglement and an interpretable re-arrangement of the computations in a DNN with ReLUs. The DLGN disentangles the computations into two `mathematically' interpretable linearities (i) the `primal' linearity between the input and the pre-activations in the gating network and (ii) the `dual' linearity in the path space in the weights network characterised by the NPK. We compare the performance of DNN, DGN and DLGN on CIFAR-10 and CIFAR-100 to show that, the DLGN recovers more than $83.5\\%$ of the performance of state-of-the-art DNNs. This brings us to an interesting question: `Is DLGN a universal spectral approximator?' ",
+    "url": "https://arxiv.org/abs/2110.03403",
+    "authors": [
+      "Chandrashekar Lakshminarayanan",
+      "Amit Vikram Singh"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2110.03478",
+    "title": "Complex-valued deep learning with differential privacy",
+    "abstract": "We present $\\zeta$-DP, an extension of differential privacy (DP) to complex-valued functions. After introducing the complex Gaussian mechanism, whose properties we characterise in terms of $(\\varepsilon, \\delta)$-DP and R\\'enyi-DP, we present $\\zeta$-DP stochastic gradient descent ($\\zeta$-DP-SGD), a variant of DP-SGD for training complex-valued neural networks. We experimentally evaluate $\\zeta$-DP-SGD on three complex-valued tasks, i.e. electrocardiogram classification, speech classification and magnetic resonance imaging (MRI) reconstruction. Moreover, we provide $\\zeta$-DP-SGD benchmarks for a large variety of complex-valued activation functions and on a complex-valued variant of the MNIST dataset. Our experiments demonstrate that DP training of complex-valued neural networks is possible with rigorous privacy guarantees and excellent utility. ",
+    "url": "https://arxiv.org/abs/2110.03478",
+    "authors": [
+      "Alexander Ziller",
+      "Dmitrii Usynin",
+      "Moritz Knolle",
+      "Kerstin Hammernik",
+      "Daniel Rueckert",
+      "Georgios Kaissis"
+    ],
+    "subjectives": [
+      "Cryptography and Security (cs.CR)",
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2110.03491",
+    "title": "Privacy-preserving methods for smart-meter-based network simulations",
+    "abstract": "Smart-meters are a key component of energy transition. The large amount of data collected in near real-time allows grid operators to observe and simulate network states. However, privacy-preserving rules forbid the use of such data for any applications other than network operation and billing. Smart-meter measurements must be anonymised to transmit these sensitive data to a third party to perform network simulation and analysis. This work proposes two methods for data anonymisation that enable the use of raw active power measurements for network simulation and analysis. The first is based on an allocation of an externally sourced load database. The second consists of grouping smart-meter data with similar electric characteristics, then performing a random permutation of the network load-bus assignment. A benchmark of these two methods highlights that both provide similar results in bus-voltage magnitude estimation concerning ground-truth voltage. ",
+    "url": "https://arxiv.org/abs/2110.03491",
+    "authors": [
+      "Jordan Holweger",
+      "Lionel Bloch",
+      "Christophe Ballif",
+      "Nicolas Wyrsch"
+    ],
+    "subjectives": [
+      "Cryptography and Security (cs.CR)"
+    ]
+  },
+  {
+    "id": "arXiv:2110.03593",
+    "title": "TranSalNet: Visual saliency prediction using transformers",
+    "abstract": "Convolutional neural networks (CNNs) have significantly advanced computational modeling for saliency prediction. However, the inherent inductive biases of convolutional architectures cause insufficient long-range contextual encoding capacity, which potentially makes a saliency model less humanlike. Transformers have shown great potential in encoding long-range information by leveraging the self-attention mechanism. In this paper, we propose a novel saliency model integrating transformer components to CNNs to capture the long-range contextual information. Experimental results show that the new components make improvements, and the proposed model achieves promising results in predicting saliency. ",
+    "url": "https://arxiv.org/abs/2110.03593",
+    "authors": [
+      "Jianxun Lou",
+      "Hanhe Lin",
+      "David Marshall",
+      "Dietmar Saupe",
+      "Hantao Liu"
+    ],
+    "subjectives": [
+      "Multimedia (cs.MM)",
+      "Computer Vision and Pattern Recognition (cs.CV)"
+    ]
+  },
+  {
+    "id": "arXiv:2110.03666",
+    "title": "Joint inference of multiple graphs with hidden variables from stationary  graph signals",
+    "abstract": "Learning graphs from sets of nodal observations represents a prominent problem formally known as graph topology inference. However, current approaches are limited by typically focusing on inferring single networks, and they assume that observations from all nodes are available. First, many contemporary setups involve multiple related networks, and second, it is often the case that only a subset of nodes is observed while the rest remain hidden. Motivated by these facts, we introduce a joint graph topology inference method that models the influence of the hidden variables. Under the assumptions that the observed signals are stationary on the sought graphs and the graphs are closely related, the joint estimation of multiple networks allows us to exploit such relationships to improve the quality of the learned graphs. Moreover, we confront the challenging problem of modeling the influence of the hidden nodes to minimize their detrimental effect. To obtain an amenable approach, we take advantage of the particular structure of the setup at hand and leverage the similarity between the different graphs, which affects both the observed and the hidden nodes. To test the proposed method, numerical simulations over synthetic and real-world graphs are provided. ",
+    "url": "https://arxiv.org/abs/2110.03666",
+    "authors": [
+      "Samuel Rey",
+      "Andrei Buciulea",
+      "Madeline Navarro",
+      "Santiago Segarra",
+      "Antonio G. Marques"
+    ],
+    "subjectives": [
+      "Social and Information Networks (cs.SI)",
+      "Machine Learning (cs.LG)",
+      "Signal Processing (eess.SP)"
+    ]
+  },
+  {
+    "id": "arXiv:2110.03012",
+    "title": "Emphasis control for parallel neural TTS",
+    "abstract": "The semantic information conveyed by a speech signal is strongly influenced by local variations in prosody. Recent parallel neural text-to-speech (TTS) synthesis methods are able to generate speech with high fidelity while maintaining high performance. However, these systems often lack simple control over the output prosody, thus restricting the semantic information conveyable for a given text. This paper proposes a hierarchical parallel neural TTS system for prosodic emphasis control by learning a latent space that directly corresponds to a change in emphasis. Three candidate features for the latent space are compared: 1) Variance of pitch and duration within words in a sentence, 2) a wavelet based feature computed from pitch, energy, and duration and 3) a learned combination of the above features. Objective measures reveal that the proposed methods are able to achieve a wide range of emphasis modification, and subjective evaluations on the degree of emphasis and the overall quality indicate that they show promise for real-world applications. ",
+    "url": "https://arxiv.org/abs/2110.03012",
+    "authors": [
+      "Shreyas Seshadri",
+      "Tuomo Raitio",
+      "Dan Castellani",
+      "Jiangchuan Li"
+    ],
+    "subjectives": [
+      "Audio and Speech Processing (eess.AS)",
+      "Computation and Language (cs.CL)"
+    ]
+  },
+  {
+    "id": "arXiv:2110.03130",
+    "title": "Generic tool for numerical simulation of transformation-diffusion  processes in complex volume geometric shapes: application to microbial  decomposition of organic matter",
+    "abstract": "This paper presents a generic framework for the numerical simulation of transformation-diffusion processes in complex volume geometric shapes. This work follows a previous one devoted to the simulation of microbial degradation of organic matter in porous system at microscopic scale. We generalized and improved the MOSAIC method significantly and thus yielding a much more generic and efficient numerical simulation scheme. In particular, regarding the simulation of diffusion processes from the graph, in this study we proposed a completely explicit and semi-implicit numerical scheme that can significantly reduce the computational complexity. We validated our method by comparing the results to the one provided by classical Lattice Boltzmann Method (LBM) within the context of microbial decomposition simulation. For the same datasets, we obtained similar results in a significantly shorter computing time (i.e., 10-15 minutes) than the prior work (several hours). Besides the classical LBM method takes around 3 weeks computing time. ",
+    "url": "https://arxiv.org/abs/2110.03130",
+    "authors": [
+      "Olivier Monga",
+      "Fr\u00e9d\u00e9ric Hecht",
+      "Serge Moto",
+      "Bruno Mbe",
+      "Patricia Garnier",
+      "Val\u00e9rie Pot"
+    ],
+    "subjectives": [
+      "Image and Video Processing (eess.IV)",
+      "Computer Vision and Pattern Recognition (cs.CV)",
+      "Computational Physics (physics.comp-ph)",
+      "Medical Physics (physics.med-ph)"
+    ]
+  },
+  {
+    "id": "arXiv:2110.03299",
+    "title": "End-to-end label uncertainty modeling for speech emotion recognition  using Bayesian neural networks",
+    "abstract": "Emotions are subjective constructs. Recent end-to-end speech emotion recognition systems are typically agnostic to the subjective nature of emotions, despite their state-of-the-art performances. In this work, we introduce an end-to-end Bayesian neural network architecture to capture the inherent subjectivity in emotions. To the best of our knowledge, this work is the first to use Bayesian neural networks for speech emotion recognition. At training, the network learns a distribution of weights to capture the inherent uncertainty related to subjective emotion annotations. For this, we introduce a loss term which enables the model to be explicitly trained on a distribution of emotion annotations, rather than training them exclusively on mean or gold-standard labels. We evaluate the proposed approach on the AVEC'16 emotion recognition dataset. Qualitative and quantitative analysis of the results reveal that the proposed model can aptly capture the distribution of subjective emotion annotations with a compromise between mean and standard deviation estimations. ",
+    "url": "https://arxiv.org/abs/2110.03299",
+    "authors": [
+      "Navin Raj Prabhu",
+      "Guillaume Carbajal",
+      "Nale Lehmann-Willenbrock",
+      "Timo Gerkmann"
+    ],
+    "subjectives": [
+      "Audio and Speech Processing (eess.AS)",
+      "Machine Learning (cs.LG)",
+      "Sound (cs.SD)"
+    ]
+  },
+  {
+    "id": "arXiv:2110.03310",
+    "title": "Solving the Dirichlet problem for the Monge-Amp\u00e8re equation using  neural networks",
+    "abstract": "The Monge-Amp\\`ere equation is a fully nonlinear partial differential equation (PDE) of fundamental importance in analysis, geometry and in the applied sciences. In this paper we solve the Dirichlet problem associated with the Monge-Amp\\`ere equation using neural networks and we show that an ansatz using deep input convex neural networks can be used to find the unique convex solution. As part of our analysis we study the effect of singularities and noise in the source function, we consider nontrivial domains, and we investigate how the method performs in higher dimensions. We also compare this method to an alternative approach in which standard feed-forward networks are used together with a loss function which penalizes lack of convexity. ",
+    "url": "https://arxiv.org/abs/2110.03310",
+    "authors": [
+      "Kaj Nystr\u00f6m",
+      "Matias Vestberg"
+    ],
+    "subjectives": [
+      "Machine Learning (stat.ML)",
+      "Machine Learning (cs.LG)",
+      "Numerical Analysis (math.NA)"
+    ]
+  },
+  {
+    "id": "arXiv:1812.11479",
+    "title": "Abelian varieties with prescribed embedding and embedding degrees",
+    "abstract": " Comments: Typos fixed ",
+    "url": "https://arxiv.org/abs/1812.11479",
+    "authors": [
+      "Steve Thakur"
+    ],
+    "subjectives": [
+      "Number Theory (math.NT)",
+      "Cryptography and Security (cs.CR)"
+    ]
+  },
+  {
+    "id": "arXiv:2012.00807",
+    "title": "On the robustness of minimum norm interpolators and regularized  empirical risk minimizers",
+    "abstract": " Comments: 35 pages ",
+    "url": "https://arxiv.org/abs/2012.00807",
+    "authors": [
+      "Geoffrey Chinot",
+      "Matthias L\u00f6ffler",
+      "Sara van de Geer"
+    ],
+    "subjectives": [
+      "Statistics Theory (math.ST)",
+      "Information Theory (cs.IT)",
+      "Numerical Analysis (math.NA)",
+      "Machine Learning (stat.ML)"
+    ]
+  },
+  {
+    "id": "arXiv:2103.13971",
+    "title": "Scaled relative graphs for system analysis",
+    "abstract": " Comments: Accepted to the 2021 IEEE Conference on Decision and Control ",
+    "url": "https://arxiv.org/abs/2103.13971",
+    "authors": [
+      "Thomas Chaffey",
+      "Fulvio Forni",
+      "Rodolphe Sepulchre"
+    ],
+    "subjectives": [
+      "Systems and Control (eess.SY)",
+      "Optimization and Control (math.OC)"
+    ]
+  },
+  {
+    "id": "arXiv:2104.02369",
+    "title": "Classification with Runge-Kutta networks and feature space augmentation",
+    "abstract": " Title: Classification with Runge-Kutta networks and feature space augmentation ",
+    "url": "https://arxiv.org/abs/2104.02369",
+    "authors": [
+      "Elisa Giesecke",
+      "Axel Kr\u00f6ner"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Dynamical Systems (math.DS)"
+    ]
+  },
+  {
+    "id": "arXiv:2109.00116",
+    "title": "Universality, criticality and complexity of information propagation in  social media",
+    "abstract": " Comments: 10 pages, 5 figures, 7 pages of bibliography, 28 pages of supplemental material ",
+    "url": "https://arxiv.org/abs/2109.00116",
+    "authors": [
+      "Daniele Notarmuzi",
+      "Claudio Castellano",
+      "Alessandro Flammini",
+      "Dario Mazzilli",
+      "Filippo Radicchi"
+    ],
+    "subjectives": [
+      "Physics and Society (physics.soc-ph)",
+      "Social and Information Networks (cs.SI)"
+    ]
+  },
+  {
+    "id": "arXiv:2109.09948",
+    "title": "Neural networks with trainable matrix activation functions",
+    "abstract": " Title: Neural networks with trainable matrix activation functions ",
+    "url": "https://arxiv.org/abs/2109.09948",
+    "authors": [
+      "Yuwen Li",
+      "Zhengqi Liu",
+      "Ludmil Zikatanov"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)"
+    ]
+  }
+]
