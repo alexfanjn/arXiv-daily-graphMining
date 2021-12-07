@@ -97,7 +97,7 @@ for dl in soup.find_all("dl"):
                     'convolutional', 'complex', 'link', 'prediction', 'heterogeneous',
                     'social', 'vulnerability', 'evolutionary', 'augmentation',
                     'self-supervised', 'self-supervise', 'causal', 'causality', 'privacy',
-                    'attacking', 'poisoning', 'evasion', 'community', 'backdoor', 'code', 'mining', 'gnn', 'heterophily', 'homophily', 'graph']
+                    'attacking', 'poisoning', 'evasion', 'community', 'backdoor', 'code', 'mining', 'gnn', 'heterophily', 'homophily', 'graph', 'rewiring']
         if len([i for i in title_words if i in keywords]) >= 1:
             print(title)
             tag = True
