@@ -31,7 +31,7 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git pull
+        git pull origin master
         git add .
         git commit -m "Github action automatic update on $(date  +"%m-%d-%Y %H:%M:%S %Z")." || echo "ignore commit failure, proceed"
         git push 
