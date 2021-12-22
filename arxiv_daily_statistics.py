@@ -88,6 +88,7 @@ for dl in soup.find_all("dl"):
         # print(type(title))
         title_words = title.split()
 
+        title_words = [s.lower() for s in title_words]
 
         tag = False
 
