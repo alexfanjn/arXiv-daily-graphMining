@@ -1,0 +1,2583 @@
+[
+  {
+    "id": "arXiv:2206.07729",
+    "title": "Taxonomy of Benchmarks in Graph Representation Learning",
+    "abstract": "Graph Neural Networks (GNNs) extend the success of neural networks to graph-structured data by accounting for their intrinsic geometry. While extensive research has been done on developing GNN models with superior performance according to a collection of graph representation learning benchmarks, it is currently not well understood what aspects of a given model are probed by them. For example, to what extent do they test the ability of a model to leverage graph structure vs. node features? Here, we develop a principled approach to taxonomize benchmarking datasets according to a $\\textit{sensitivity profile}$ that is based on how much GNN performance changes due to a collection of graph perturbations. Our data-driven analysis provides a deeper understanding of which benchmarking data characteristics are leveraged by GNNs. Consequently, our taxonomy can aid in selection and development of adequate graph benchmarks, and better informed evaluation of future GNN methods. Finally, our approach and implementation in $\\texttt{GTaxoGym}$ package are extendable to multiple graph prediction task types and future datasets. ",
+    "url": "https://arxiv.org/abs/2206.07729",
+    "authors": [
+      "Renming Liu",
+      "Semih Cant\u00fcrk",
+      "Frederik Wenkel",
+      "Dylan Sandfelder",
+      "Devin Kreuzer",
+      "Anna Little",
+      "Sarah McGuire",
+      "Leslie O'Bray",
+      "Michael Perlmutter",
+      "Bastian Rieck",
+      "Matthew Hirn",
+      "Guy Wolf",
+      "Ladislav Ramp\u00e1\u0161ek"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07737",
+    "title": "Disparate Impact in Differential Privacy from Gradient Misalignment",
+    "abstract": "As machine learning becomes more widespread throughout society, aspects including data privacy and fairness must be carefully considered, and are crucial for deployment in highly regulated industries. Unfortunately, the application of privacy enhancing technologies can worsen unfair tendencies in models. In particular, one of the most widely used techniques for private model training, differentially private stochastic gradient descent (DPSGD), frequently intensifies disparate impact on groups within data. In this work we study the fine-grained causes of unfairness in DPSGD and identify gradient misalignment due to inequitable gradient clipping as the most significant source. This observation leads us to a new method for reducing unfairness by preventing gradient misalignment in DPSGD. ",
+    "url": "https://arxiv.org/abs/2206.07737",
+    "authors": [
+      "Maria S. Esipova",
+      "Atiyeh Ashari Ghomi",
+      "Yaqiao Luo",
+      "Jesse C. Cresswell"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Artificial Intelligence (cs.AI)",
+      "Cryptography and Security (cs.CR)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07741",
+    "title": "Edge Inference with Fully Differentiable Quantized Mixed Precision  Neural Networks",
+    "abstract": "The large computing and memory cost of deep neural networks (DNNs) often precludes their use in resource-constrained devices. Quantizing the parameters and operations to lower bit-precision offers substantial memory and energy savings for neural network inference, facilitating the use of DNNs on edge computing platforms. Recent efforts at quantizing DNNs have employed a range of techniques encompassing progressive quantization, step-size adaptation, and gradient scaling. This paper proposes a new quantization approach for mixed precision convolutional neural networks (CNNs) targeting edge-computing. Our method establishes a new pareto frontier in model accuracy and memory footprint demonstrating a range of quantized models, delivering best-in-class accuracy below 4.3 MB of weights (wgts.) and activations (acts.). Our main contributions are: (i) hardware-aware heterogeneous differentiable quantization with tensor-sliced learned precision, (ii) targeted gradient modification for wgts. and acts. to mitigate quantization errors, and (iii) a multi-phase learning schedule to address instability in learning arising from updates to the learned quantizer and model parameters. We demonstrate the effectiveness of our techniques on the ImageNet dataset across a range of models including EfficientNet-Lite0 (e.g., 4.14MB of wgts. and acts. at 67.66% accuracy) and MobileNetV2 (e.g., 3.51MB wgts. and acts. at 65.39% accuracy). ",
+    "url": "https://arxiv.org/abs/2206.07741",
+    "authors": [
+      "Clemens JS Schaefer",
+      "Siddharth Joshi",
+      "Shan Li",
+      "Raul Blazquez"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Computer Vision and Pattern Recognition (cs.CV)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07743",
+    "title": "Feature Overcorrelation in Deep Graph Neural Networks: A New Perspective",
+    "abstract": "Recent years have witnessed remarkable success achieved by graph neural networks (GNNs) in many real-world applications such as recommendation and drug discovery. Despite the success, oversmoothing has been identified as one of the key issues which limit the performance of deep GNNs. It indicates that the learned node representations are highly indistinguishable due to the stacked aggregators. In this paper, we propose a new perspective to look at the performance degradation of deep GNNs, i.e., feature overcorrelation. Through empirical and theoretical study on this matter, we demonstrate the existence of feature overcorrelation in deeper GNNs and reveal potential reasons leading to this issue. To reduce the feature correlation, we propose a general framework DeCorr which can encourage GNNs to encode less redundant information. Extensive experiments have demonstrated that DeCorr can help enable deeper GNNs and is complementary to existing techniques tackling the oversmoothing issue. ",
+    "url": "https://arxiv.org/abs/2206.07743",
+    "authors": [
+      "Wei Jin",
+      "Xiaorui Liu",
+      "Yao Ma",
+      "Charu Aggarwal",
+      "Jiliang Tang"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Artificial Intelligence (cs.AI)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07746",
+    "title": "Condensing Graphs via One-Step Gradient Matching",
+    "abstract": "As training deep learning models on large dataset takes a lot of time and resources, it is desired to construct a small synthetic dataset with which we can train deep learning models sufficiently. There are recent works that have explored solutions on condensing image datasets through complex bi-level optimization. For instance, dataset condensation (DC) matches network gradients w.r.t. large-real data and small-synthetic data, where the network weights are optimized for multiple steps at each outer iteration. However, existing approaches have their inherent limitations: (1) they are not directly applicable to graphs where the data is discrete; and (2) the condensation process is computationally expensive due to the involved nested optimization. To bridge the gap, we investigate efficient dataset condensation tailored for graph datasets where we model the discrete graph structure as a probabilistic model. We further propose a one-step gradient matching scheme, which performs gradient matching for only one single step without training the network weights. Our theoretical analysis shows this strategy can generate synthetic graphs that lead to lower classification loss on real graphs. Extensive experiments on various graph datasets demonstrate the effectiveness and efficiency of the proposed method. In particular, we are able to reduce the dataset size by 90% while approximating up to 98% of the original performance and our method is significantly faster than multi-step gradient matching (e.g. 15x in CIFAR10 for synthesizing 500 graphs). ",
+    "url": "https://arxiv.org/abs/2206.07746",
+    "authors": [
+      "Wei Jin",
+      "Xianfeng Tang",
+      "Haoming Jiang",
+      "Zheng Li",
+      "Danqing Zhang",
+      "Jiliang Tang",
+      "Bin Ying"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Artificial Intelligence (cs.AI)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07756",
+    "title": "Hybrid full-field thermal characterization of additive manufacturing  processes using physics-informed neural networks with data",
+    "abstract": "Understanding the thermal behavior of additive manufacturing (AM) processes is crucial for enhancing the quality control and enabling customized process design. Most purely physics-based computational models suffer from intensive computational costs, thus not suitable for online control and iterative design application. Data-driven models taking advantage of the latest developed computational tools can serve as a more efficient surrogate, but they are usually trained over a large amount of simulation data and often fail to effectively use small but high-quality experimental data. In this work, we developed a hybrid physics-based data-driven thermal modeling approach of AM processes using physics-informed neural networks. Specifically, partially observed temperature data measured from an infrared camera is combined with the physics laws to predict full-field temperature history and to discover unknown material and process parameters. In the numerical and experimental examples, the effectiveness of adding auxiliary training data and using the technique of transfer learning on training efficiency and prediction accuracy, as well as the ability to identify unknown parameters with partially observed data, are demonstrated. The results show that the hybrid thermal model can effectively identify unknown parameters and capture the full-field temperature accurately, and thus it has the potential to be used in iterative process design and real-time process control of AM. ",
+    "url": "https://arxiv.org/abs/2206.07756",
+    "authors": [
+      "Shuheng Liao",
+      "Tianju Xue",
+      "Jihoon Jeong",
+      "Samantha Webster",
+      "Kornel Ehmann",
+      "Jian Cao"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07758",
+    "title": "Reconstructing Training Data from Trained Neural Networks",
+    "abstract": "Understanding to what extent neural networks memorize training data is an intriguing question with practical and theoretical implications. In this paper we show that in some cases a significant fraction of the training data can in fact be reconstructed from the parameters of a trained neural network classifier. We propose a novel reconstruction scheme that stems from recent theoretical results about the implicit bias in training neural networks with gradient-based methods. To the best of our knowledge, our results are the first to show that reconstructing a large portion of the actual training samples from a trained neural network classifier is generally possible. This has negative implications on privacy, as it can be used as an attack for revealing sensitive training data. We demonstrate our method for binary MLP classifiers on a few standard computer vision datasets. ",
+    "url": "https://arxiv.org/abs/2206.07758",
+    "authors": [
+      "Niv Haim",
+      "Gal Vardi",
+      "Gilad Yehudai",
+      "Ohad Shamir",
+      "Michal Irani"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Cryptography and Security (cs.CR)",
+      "Computer Vision and Pattern Recognition (cs.CV)",
+      "Neural and Evolutionary Computing (cs.NE)",
+      "Machine Learning (stat.ML)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07762",
+    "title": "Physics-Infused Fuzzy Generative Adversarial Network for Robust Failure  Prognosis",
+    "abstract": "Prognostics aid in the longevity of fielded systems or products. Quantifying the system's current health enable prognosis to enhance the operator's decision-making to preserve the system's health. Creating a prognosis for a system can be difficult due to (a) unknown physical relationships and/or (b) irregularities in data appearing well beyond the initiation of a problem. Traditionally, three different modeling paradigms have been used to develop a prognostics model: physics-based (PbM), data-driven (DDM), and hybrid modeling. Recently, the hybrid modeling approach that combines the strength of both PbM and DDM based approaches and alleviates their limitations is gaining traction in the prognostics domain. In this paper, a novel hybrid modeling approach for prognostics applications based on combining concepts from fuzzy logic and generative adversarial networks (GANs) is outlined. The FuzzyGAN based method embeds a physics-based model in the aggregation of the fuzzy implications. This technique constrains the output of the learning method to a realistic solution. Results on a bearing problem showcases the efficacy of adding a physics-based aggregation in a fuzzy logic model to improve GAN's ability to model health and give a more accurate system prognosis. ",
+    "url": "https://arxiv.org/abs/2206.07762",
+    "authors": [
+      "Ryan Nguyen",
+      "Shubhendu Kumar Singh",
+      "Rahul Rai"
+    ],
+    "subjectives": [
+      "Artificial Intelligence (cs.AI)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07765",
+    "title": "US News and Social Media Framing around Vaping",
+    "abstract": "In this paper, we investigate how vaping is framed differently (2008-2021) between US news and social media. We analyze 15,711 news articles and 1,231,379 Facebook posts about vaping to study the differences in framing between media varieties. We use word embeddings to provide two-dimensional visualizations of the semantic changes around vaping for news and for social media. We detail that news media framing of vaping shifted over time in line with emergent regulatory trends, such as; flavored vaping bans, with little discussion around vaping as a smoking cessation tool. We found that social media discussions were far more varied, with transitions toward vaping both as a public health harm and as a smoking cessation tool. Our cloze test, dynamic topic model, and question answering showed similar patterns, where social media, but not news media, characterizes vaping as combustible cigarette substitute. We use n-grams to detail that social media data first centered on vaping as a smoking cessation tool, and in 2019 moved toward narratives around vaping regulation, similar to news media frames. Overall, social media tracks the evolution of vaping as a social practice, while news media reflects more risk based concerns. A strength of our work is how the different techniques we have applied validate each other. Stakeholders may utilize our findings to intervene around the framing of vaping, and may design communications campaigns that improve the way society sees vaping, thus possibly aiding smoking cessation; and reducing youth vaping. ",
+    "url": "https://arxiv.org/abs/2206.07765",
+    "authors": [
+      "Keyu Chen",
+      "Marzieh Babaeianjelodar",
+      "Yiwen Shi",
+      "Rohan Aanegola",
+      "Lam Yin Cheung",
+      "Preslav Ivanov Nakov",
+      "Shweta Yadav",
+      "Angus Bancroft",
+      "Ashique Khudabukhsh",
+      "Munmun De Choudhury",
+      "Frederick L. Altice1",
+      "Navin Kumar"
+    ],
+    "subjectives": [
+      "Social and Information Networks (cs.SI)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07776",
+    "title": "Robust Attack Graph Generation",
+    "abstract": "We present a method to learn automaton models that are more robust to input modifications. It iteratively aligns sequences to a learned model, modifies the sequences to their aligned versions, and re-learns the model. Automaton learning algorithms are typically very good at modeling the frequent behavior of a software system. Our solution can be used to also learn the behavior present in infrequent sequences, as these will be aligned to the frequent ones represented by the model. We apply our method to the SAGE tool for modeling attacker behavior from intrusion alerts. In experiments, we demonstrate that our algorithm learns models that can handle noise such as added and removed symbols from sequences. Furthermore, it learns more concise models that fit better to the training data. ",
+    "url": "https://arxiv.org/abs/2206.07776",
+    "authors": [
+      "Dennis Mouwen",
+      "Sicco Verwer",
+      "Azqa Nadeem"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Cryptography and Security (cs.CR)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07801",
+    "title": "Beyond Adult and COMPAS: Fairness in Multi-Class Prediction",
+    "abstract": "We consider the problem of producing fair probabilistic classifiers for multi-class classification tasks. We formulate this problem in terms of \"projecting\" a pre-trained (and potentially unfair) classifier onto the set of models that satisfy target group-fairness requirements. The new, projected model is given by post-processing the outputs of the pre-trained classifier by a multiplicative factor. We provide a parallelizable iterative algorithm for computing the projected classifier and derive both sample complexity and convergence guarantees. Comprehensive numerical comparisons with state-of-the-art benchmarks demonstrate that our approach maintains competitive performance in terms of accuracy-fairness trade-off curves, while achieving favorable runtime on large datasets. We also evaluate our method at scale on an open dataset with multiple classes, multiple intersectional protected groups, and over 1M samples. ",
+    "url": "https://arxiv.org/abs/2206.07801",
+    "authors": [
+      "Wael Alghamdi",
+      "Hsiang Hsu",
+      "Haewon Jeong",
+      "Hao Wang",
+      "P. Winston Michalak",
+      "Shahab Asoodeh",
+      "Flavio P. Calmon"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Computers and Society (cs.CY)",
+      "Information Theory (cs.IT)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07810",
+    "title": "High-Resolution Bathymetric Reconstruction From Sidescan Sonar With Deep  Neural Networks",
+    "abstract": "We propose a novel data-driven approach for high-resolution bathymetric reconstruction from sidescan. Sidescan sonar (SSS) intensities as a function of range do contain some information about the slope of the seabed. However, that information must be inferred. Additionally, the navigation system provides the estimated trajectory, and normally the altitude along this trajectory is also available. From these we obtain a very coarse seabed bathymetry as an input. This is then combined with the indirect but high-resolution seabed slope information from the sidescan to estimate the full bathymetry. This sparse depth could be acquired by single-beam echo sounder, Doppler Velocity Log (DVL), other bottom tracking sensors or bottom tracking algorithm from sidescan itself. In our work, a fully convolutional network is used to estimate the depth contour and its aleatoric uncertainty from the sidescan images and sparse depth in an end-to-end fashion. The estimated depth is then used together with the range to calculate the point's 3D location on the seafloor. A high-quality bathymetric map can be reconstructed after fusing the depth predictions and the corresponding confidence measures from the neural networks. We show the improvement of the bathymetric map gained by using sparse depths with sidescan over estimates with sidescan alone. We also show the benefit of confidence weighting when fusing multiple bathymetric estimates into a single map. ",
+    "url": "https://arxiv.org/abs/2206.07810",
+    "authors": [
+      "Yiping Xie",
+      "Nils Bore",
+      "John Folkesson"
+    ],
+    "subjectives": [
+      "Robotics (cs.RO)",
+      "Artificial Intelligence (cs.AI)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07811",
+    "title": "Safety Guarantees for Neural Network Dynamic Systems via Stochastic  Barrier Functions",
+    "abstract": "Neural Networks (NNs) have been successfully employed to represent the state evolution of complex dynamical systems. Such models, referred to as NN dynamic models (NNDMs), use iterative noisy predictions of NN to estimate a distribution of system trajectories over time. Despite their accuracy, safety analysis of NNDMs is known to be a challenging problem and remains largely unexplored. To address this issue, in this paper, we introduce a method of providing safety guarantees for NNDMs. Our approach is based on stochastic barrier functions, whose relation with safety are analogous to that of Lyapunov functions with stability. We first show a method of synthesizing stochastic barrier functions for NNDMs via a convex optimization problem, which in turn provides a lower bound on the system's safety probability. A key step in our method is the employment of the recent convex approximation results for NNs to find piece-wise linear bounds, which allow the formulation of the barrier function synthesis problem as a sum-of-squares optimization program. If the obtained safety probability is above the desired threshold, the system is certified. Otherwise, we introduce a method of generating controls for the system that robustly maximizes the safety probability in a minimally-invasive manner. We exploit the convexity property of the barrier function to formulate the optimal control synthesis problem as a linear program. Experimental results illustrate the efficacy of the method. Namely, they show that the method can scale to multi-dimensional NNDMs with multiple layers and hundreds of neurons per layer, and that the controller can significantly improve the safety probability. ",
+    "url": "https://arxiv.org/abs/2206.07811",
+    "authors": [
+      "Rayan Mazouz",
+      "Karan Muvvala",
+      "Akash Ratheesh",
+      "Luca Laurenti",
+      "Morteza Lahijanian"
+    ],
+    "subjectives": [
+      "Systems and Control (eess.SY)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07819",
+    "title": "Neural Network Normal Estimation and Bathymetry Reconstruction from  Sidescan Sonar",
+    "abstract": "Sidescan sonar intensity encodes information about the changes of surface normal of the seabed. However, other factors such as seabed geometry as well as its material composition also affect the return intensity. One can model these intensity changes in a forward direction from the surface normals from bathymetric map and physical properties to the measured intensity or alternatively one can use an inverse model which starts from the intensities and models the surface normals. Here we use an inverse model which leverages deep learning's ability to learn from data; a convolutional neural network is used to estimate the surface normal from the sidescan. Thus the internal properties of the seabed are only implicitly learned. Once this information is estimated, a bathymetric map can be reconstructed through an optimization framework that also includes altimeter readings to provide a sparse depth profile as a constraint. Implicit neural representation learning was recently proposed to represent the bathymetric map in such an optimization framework. In this article, we use a neural network to represent the map and optimize it under constraints of altimeter points and estimated surface normal from sidescan. By fusing multiple observations from different angles from several sidescan lines, the estimated results are improved through optimization. We demonstrate the efficiency and scalability of the approach by reconstructing a high-quality bathymetry using sidescan data from a large sidescan survey. We compare the proposed data-driven inverse model approach of modeling a sidescan with a forward Lambertian model. We assess the quality of each reconstruction by comparing it with data constructed from a multibeam sensor. We are thus able to discuss the strengths and weaknesses of each approach. ",
+    "url": "https://arxiv.org/abs/2206.07819",
+    "authors": [
+      "Yiping Xie",
+      "Nils Bore",
+      "John Folkesson"
+    ],
+    "subjectives": [
+      "Robotics (cs.RO)",
+      "Artificial Intelligence (cs.AI)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07839",
+    "title": "Linearity Grafting: Relaxed Neuron Pruning Helps Certifiable Robustness",
+    "abstract": "Certifiable robustness is a highly desirable property for adopting deep neural networks (DNNs) in safety-critical scenarios, but often demands tedious computations to establish. The main hurdle lies in the massive amount of non-linearity in large DNNs. To trade off the DNN expressiveness (which calls for more non-linearity) and robustness certification scalability (which prefers more linearity), we propose a novel solution to strategically manipulate neurons, by \"grafting\" appropriate levels of linearity. The core of our proposal is to first linearize insignificant ReLU neurons, to eliminate the non-linear components that are both redundant for DNN performance and harmful to its certification. We then optimize the associated slopes and intercepts of the replaced linear activations for restoring model performance while maintaining certifiability. Hence, typical neuron pruning could be viewed as a special case of grafting a linear function of the fixed zero slopes and intercept, that might overly restrict the network flexibility and sacrifice its performance. Extensive experiments on multiple datasets and network backbones show that our linearity grafting can (1) effectively tighten certified bounds; (2) achieve competitive certifiable robustness without certified robust training (i.e., over 30% improvements on CIFAR-10 models); and (3) scale up complete verification to large adversarially trained models with 17M parameters. Codes are available at https://github.com/VITA-Group/Linearity-Grafting. ",
+    "url": "https://arxiv.org/abs/2206.07839",
+    "authors": [
+      "Tianlong Chen",
+      "Huan Zhang",
+      "Zhenyu Zhang",
+      "Shiyu Chang",
+      "Sijia Liu",
+      "Pin-Yu Chen",
+      "Zhangyang Wang"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Artificial Intelligence (cs.AI)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07840",
+    "title": "Architectural Backdoors in Neural Networks",
+    "abstract": "Machine learning is vulnerable to adversarial manipulation. Previous literature has demonstrated that at the training stage attackers can manipulate data and data sampling procedures to control model behaviour. A common attack goal is to plant backdoors i.e. force the victim model to learn to recognise a trigger known only by the adversary. In this paper, we introduce a new class of backdoor attacks that hide inside model architectures i.e. in the inductive bias of the functions used to train. These backdoors are simple to implement, for instance by publishing open-source code for a backdoored model architecture that others will reuse unknowingly. We demonstrate that model architectural backdoors represent a real threat and, unlike other approaches, can survive a complete re-training from scratch. We formalise the main construction principles behind architectural backdoors, such as a link between the input and the output, and describe some possible protections against them. We evaluate our attacks on computer vision benchmarks of different scales and demonstrate the underlying vulnerability is pervasive in a variety of training settings. ",
+    "url": "https://arxiv.org/abs/2206.07840",
+    "authors": [
+      "Mikel Bober-Irizar",
+      "Ilia Shumailov",
+      "Yiren Zhao",
+      "Robert Mullins",
+      "Nicolas Papernot"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Cryptography and Security (cs.CR)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07846",
+    "title": "Action Spotting using Dense Detection Anchors Revisited: Submission to  the SoccerNet Challenge 2022",
+    "abstract": "This technical report describes our submission to the Action Spotting SoccerNet Challenge 2022. The challenge is part of the CVPR 2022 ActivityNet Workshop. Our submission is based on a method that we proposed recently, which focuses on increasing temporal precision via a densely sampled set of detection anchors. Due to its emphasis on temporal precision, this approach is able to produce competitive results on the tight average-mAP metric, which uses small temporal evaluation tolerances. This recently proposed metric is the evaluation criterion used for the challenge. In order to further improve results, here we introduce small changes in the pre- and post-processing steps, and also combine different input feature types via late fusion. This report describes the resulting overall approach, focusing on the modifications introduced. We also describe the training procedures used, and present our results. ",
+    "url": "https://arxiv.org/abs/2206.07846",
+    "authors": [
+      "Jo\u00e3o V. B. Soares",
+      "Avijit Shah"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07869",
+    "title": "Let Invariant Rationale Discovery Inspire Graph Contrastive Learning",
+    "abstract": "Leading graph contrastive learning (GCL) methods perform graph augmentations in two fashions: (1) randomly corrupting the anchor graph, which could cause the loss of semantic information, or (2) using domain knowledge to maintain salient features, which undermines the generalization to other domains. Taking an invariance look at GCL, we argue that a high-performing augmentation should preserve the salient semantics of anchor graphs regarding instance-discrimination. To this end, we relate GCL with invariant rationale discovery, and propose a new framework, Rationale-aware Graph Contrastive Learning (RGCL). Specifically, without supervision signals, RGCL uses a rationale generator to reveal salient features about graph instance-discrimination as the rationale, and then creates rationale-aware views for contrastive learning. This rationale-aware pre-training scheme endows the backbone model with the powerful representation ability, further facilitating the fine-tuning on downstream tasks. On MNIST-Superpixel and MUTAG datasets, visual inspections on the discovered rationales showcase that the rationale generator successfully captures the salient features (i.e. distinguishing semantic nodes in graphs). On biochemical molecule and social network benchmark datasets, the state-of-the-art performance of RGCL demonstrates the effectiveness of rationale-aware views for contrastive learning. Our codes are available at https://github.com/lsh0520/RGCL. ",
+    "url": "https://arxiv.org/abs/2206.07869",
+    "authors": [
+      "Sihang Li",
+      "Xiang Wang",
+      "An zhang",
+      "Yingxin Wu",
+      "Xiangnan He",
+      "Tat-Seng Chua"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07882",
+    "title": "Accelerating Inference and Language Model Fusion of Recurrent Neural  Network Transducers via End-to-End 4-bit Quantization",
+    "abstract": "We report on aggressive quantization strategies that greatly accelerate inference of Recurrent Neural Network Transducers (RNN-T). We use a 4 bit integer representation for both weights and activations and apply Quantization Aware Training (QAT) to retrain the full model (acoustic encoder and language model) and achieve near-iso-accuracy. We show that customized quantization schemes that are tailored to the local properties of the network are essential to achieve good performance while limiting the computational overhead of QAT. Density ratio Language Model fusion has shown remarkable accuracy gains on RNN-T workloads but it severely increases the computational cost of inference. We show that our quantization strategies enable using large beam widths for hypothesis search while achieving streaming-compatible runtimes and a full model compression ratio of 7.6$\\times$ compared to the full precision model. Via hardware simulations, we estimate a 3.4$\\times$ acceleration from FP16 to INT4 for the end-to-end quantized RNN-T inclusive of LM fusion, resulting in a Real Time Factor (RTF) of 0.06. On the NIST Hub5 2000, Hub5 2001, and RT-03 test sets, we retain most of the gains associated with LM fusion, improving the average WER by $>$1.5%. ",
+    "url": "https://arxiv.org/abs/2206.07882",
+    "authors": [
+      "Andrea Fasoli",
+      "Chia-Yu Chen",
+      "Mauricio Serrano",
+      "Swagath Venkataramani",
+      "George Saon",
+      "Xiaodong Cui",
+      "Brian Kingsbury",
+      "Kailash Gopalakrishnan"
+    ],
+    "subjectives": [
+      "Computation and Language (cs.CL)",
+      "Machine Learning (cs.LG)",
+      "Sound (cs.SD)",
+      "Audio and Speech Processing (eess.AS)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07883",
+    "title": "Pure Exploration of Causal Bandits",
+    "abstract": "Causal bandit problem integrates causal inference with multi-armed bandits. The pure exploration of causal bandits is the following online learning task: given a causal graph with unknown causal inference distributions, in each round we can choose to either intervene one variable or do no intervention, and observe the random outcomes of all random variables, with the goal that using as few rounds as possible, we can output an intervention that gives the best (or almost best) expected outcome on the reward variable $Y$ with probability at least $1-\\delta$, where $\\delta$ is a given confidence level. We provide first gap-dependent fully adaptive pure exploration algorithms on three types of causal models including parallel graphs, general graphs with small number of backdoor parents, and binary generalized linear models. Our algorithms improve both prior causal bandit algorithms, which are not adaptive to reward gaps, and prior adaptive pure exploration algorithms, which do not utilize the special features of causal bandits. ",
+    "url": "https://arxiv.org/abs/2206.07883",
+    "authors": [
+      "Nuoya Xiong",
+      "Wei Chen"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Artificial Intelligence (cs.AI)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07893",
+    "title": "PeQuENet: Perceptual Quality Enhancement of Compressed Video with  Adaptation- and Attention-based Network",
+    "abstract": "In this paper we propose a generative adversarial network (GAN) framework to enhance the perceptual quality of compressed videos. Our framework includes attention and adaptation to different quantization parameters (QPs) in a single model. The attention module exploits global receptive fields that can capture and align long-range correlations between consecutive frames, which can be beneficial for enhancing perceptual quality of videos. The frame to be enhanced is fed into the deep network together with its neighboring frames, and in the first stage features at different depths are extracted. Then extracted features are fed into attention blocks to explore global temporal correlations, followed by a series of upsampling and convolution layers. Finally, the resulting features are processed by the QP-conditional adaptation module which leverages the corresponding QP information. In this way, a single model can be used to enhance adaptively to various QPs without requiring multiple models specific for every QP value, while having similar performance. Experimental results demonstrate the superior performance of the proposed PeQuENet compared with the state-of-the-art compressed video quality enhancement algorithms. ",
+    "url": "https://arxiv.org/abs/2206.07893",
+    "authors": [
+      "Saiping Zhang",
+      "Luis Herranz",
+      "Marta Mrak",
+      "Marc Gorriz Blanch",
+      "Shuai Wan",
+      "Fuzheng Yang"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)",
+      "Multimedia (cs.MM)",
+      "Image and Video Processing (eess.IV)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07897",
+    "title": "Dual Contrastive Attributed Graph Clustering Network",
+    "abstract": "Attributed graph clustering is one of the most important tasks in graph analysis field, the goal of which is to group nodes with similar representations into the same cluster without manual guidance. Recent studies based on graph contrastive learning have achieved impressive results in processing graph-structured data. However, existing graph contrastive learning based methods 1) do not directly address the clustering task, since the representation learning and clustering process are separated; 2) depend too much on graph data augmentation, which greatly limits the capability of contrastive learning; 3) ignore the contrastive message for subspace clustering. To accommodate the aforementioned issues, we propose a generic framework called Dual Contrastive Attributed Graph Clustering Network (DCAGC). In DCAGC, by leveraging Neighborhood Contrast Module, the similarity of the neighbor nodes will be maximized and the quality of the node representation will be improved. Meanwhile, the Contrastive Self-Expression Module is built by minimizing the node representation before and after the reconstruction of the self-expression layer to obtain a discriminative self-expression matrix for spectral clustering. All the modules of DCAGC are trained and optimized in a unified framework, so the learned node representation contains clustering-oriented messages. Extensive experimental results on four attributed graph datasets show the superiority of DCAGC compared with 16 state-of-the-art clustering methods. The code of this paper is available at https://github.com/wangtong627/Dual-Contrastive-Attributed-Graph-Clustering-Network. ",
+    "url": "https://arxiv.org/abs/2206.07897",
+    "authors": [
+      "Tong Wang",
+      "Guanyu Yang",
+      "Junhua Wu",
+      "Qijia He",
+      "Zhenquan Zhang"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07902",
+    "title": "On Privacy and Personalization in Cross-Silo Federated Learning",
+    "abstract": "While the application of differential privacy (DP) has been well-studied in cross-device federated learning (FL), there is a lack of work considering DP for cross-silo FL, a setting characterized by a limited number of clients each containing many data subjects. In cross-silo FL, usual notions of client-level privacy are less suitable as real-world privacy regulations typically concern in-silo data subjects rather than the silos themselves. In this work, we instead consider the more realistic notion of silo-specific item-level privacy, where silos set their own privacy targets for their local examples. Under this setting, we reconsider the roles of personalization in federated learning. In particular, we show that mean-regularized multi-task learning (MR-MTL), a simple personalization framework, is a strong baseline for cross-silo FL: under stronger privacy, silos are further incentivized to \"federate\" with each other to mitigate DP noise, resulting in consistent improvements relative to standard baseline methods. We provide a thorough empirical study of competing methods as well as a theoretical characterization of MR-MTL for a mean estimation problem, highlighting the interplay between privacy and cross-silo data heterogeneity. Our work serves to establish baselines for private cross-silo FL as well as identify key directions of future work in this area. ",
+    "url": "https://arxiv.org/abs/2206.07902",
+    "authors": [
+      "Ziyu Liu",
+      "Shengyuan Hu",
+      "Zhiwei Steven Wu",
+      "Virginia Smith"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Cryptography and Security (cs.CR)",
+      "Machine Learning (stat.ML)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07908",
+    "title": "Simultaneously Learning Stochastic and Adversarial Bandits with General  Graph Feedback",
+    "abstract": "The problem of online learning with graph feedback has been extensively studied in the literature due to its generality and potential to model various learning tasks. Existing works mainly study the adversarial and stochastic feedback separately. If the prior knowledge of the feedback mechanism is unavailable or wrong, such specially designed algorithms could suffer great loss. To avoid this problem, \\citet{erez2021towards} try to optimize for both environments. However, they assume the feedback graphs are undirected and each vertex has a self-loop, which compromises the generality of the framework and may not be satisfied in applications. With a general feedback graph, the observation of an arm may not be available when this arm is pulled, which makes the exploration more expensive and the algorithms more challenging to perform optimally in both environments. In this work, we overcome this difficulty by a new trade-off mechanism with a carefully-designed proportion for exploration and exploitation. We prove the proposed algorithm simultaneously achieves $\\mathrm{poly} \\log T$ regret in the stochastic setting and minimax-optimal regret of $\\tilde{O}(T^{2/3})$ in the adversarial setting where $T$ is the horizon and $\\tilde{O}$ hides parameters independent of $T$ as well as logarithmic terms. To our knowledge, this is the first best-of-both-worlds result for general feedback graphs. ",
+    "url": "https://arxiv.org/abs/2206.07908",
+    "authors": [
+      "Fang Kong",
+      "Yichi Zhou",
+      "Shuai Li"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07918",
+    "title": "\"Understanding Robustness Lottery\": A Comparative Visual Analysis of  Neural Network Pruning Approaches",
+    "abstract": "Deep learning approaches have provided state-of-the-art performance in many applications by relying on extremely large and heavily overparameterized neural networks. However, such networks have been shown to be very brittle, not generalize well to new uses cases, and are often difficult if not impossible to deploy on resources limited platforms. Model pruning, i.e., reducing the size of the network, is a widely adopted strategy that can lead to more robust and generalizable network -- usually orders of magnitude smaller with the same or even improved performance. While there exist many heuristics for model pruning, our understanding of the pruning process remains limited. Empirical studies show that some heuristics improve performance while others can make models more brittle or have other side effects. This work aims to shed light on how different pruning methods alter the network's internal feature representation, and the corresponding impact on model performance. To provide a meaningful comparison and characterization of model feature space, we use three geometric metrics that are decomposed from the common adopted classification loss. With these metrics, we design a visualization system to highlight the impact of pruning on model prediction as well as the latent feature embedding. The proposed tool provides an environment for exploring and studying differences among pruning methods and between pruned and original model. By leveraging our visualization, the ML researchers can not only identify samples that are fragile to model pruning and data corruption but also obtain insights and explanations on how some pruned models achieve superior robustness performance. ",
+    "url": "https://arxiv.org/abs/2206.07918",
+    "authors": [
+      "Zhimin Li",
+      "Shusen Liu",
+      "Xin Yu",
+      "Kailkhura Bhavya",
+      "Jie Cao",
+      "Diffenderfer James Daniel",
+      "Peer-Timo Bremer",
+      "Valerio Pascucci"
+    ],
+    "subjectives": [
+      "Human-Computer Interaction (cs.HC)",
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07919",
+    "title": "An Empirical Study on the Effectiveness of Data Resampling Approaches  for Cross-Project Software Defect Prediction",
+    "abstract": "Crossp-roject defect prediction (CPDP), where data from different software projects are used to predict defects, has been proposed as a way to provide data for software projects that lack historical data. Evaluations of CPDP models using the Nearest Neighbour (NN) Filter approach have shown promising results in recent studies. A key challenge with defect-prediction datasets is class imbalance, that is highly skewed datasets where non buggy modules dominate the buggy modules. In the past, data resampling approaches have been applied to within-projects defect prediction models to help alleviate the negative effects of class imbalance in the datasets. To address the class imbalance issue in CPDP, the authors assess the impact of data resampling approaches on CPDP models after the NN Filter is applied. The impact on prediction performance of five oversampling approaches (MAHAKIL, SMOTE, Borderline-SMOTE, Random Oversampling, and ADASYN) and three undersampling approaches (Random Undersampling, Tomek Links, and Onesided selection) is investigated and results are compared to approaches without data resampling. The authors' examined six defect prediction models on 34 datasets extracted from the PROMISE repository. The authors results show that there is a significant positive effect of data resampling on CPDP performance, suggesting that software quality teams and researchers should consider applying data resampling approaches for improved recall (pd) and g-measure prediction performance. However if the goal is to improve precision and reduce false alarm (pf) then data resampling approaches should be avoided. ",
+    "url": "https://arxiv.org/abs/2206.07919",
+    "authors": [
+      "Kwabena Ebo Bennin",
+      "Amjed Tahir",
+      "Stephen G. MacDonell",
+      "J\u00fcrgen B\u00f6rstler"
+    ],
+    "subjectives": [
+      "Software Engineering (cs.SE)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07922",
+    "title": "Challenges and Opportunities in Deep Reinforcement Learning with Graph  Neural Networks: A Comprehensive review of Algorithms and Applications",
+    "abstract": "Deep reinforcement learning (DRL) has empowered a variety of artificial intelligence fields, including pattern recognition, robotics, recommendation-systems, and gaming. Similarly, graph neural networks (GNN) have also demonstrated their superior performance in supervised learning for graph-structured data. In recent times, the fusion of GNN with DRL for graph-structured environments has attracted a lot of attention. This paper provides a comprehensive review of these hybrid works. These works can be classified into two categories: (1) algorithmic enhancement, where DRL and GNN complement each other for better utility; (2) application-specific enhancement, where DRL and GNN support each other. This fusion effectively addresses various complex problems in engineering and life sciences. Based on the review, we further analyze the applicability and benefits of fusing these two domains, especially in terms of increasing generalizability and reducing computational complexity. Finally, the key challenges in integrating DRL and GNN, and potential future research directions are highlighted, which will be of interest to the broader machine learning community. ",
+    "url": "https://arxiv.org/abs/2206.07922",
+    "authors": [
+      "Sai Munikoti",
+      "Deepesh Agarwal",
+      "Laya Das",
+      "Mahantesh Halappanavar",
+      "Balasubramaniam Natarajan"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07923",
+    "title": "Anonymous Expression in an Online Community for Women in China",
+    "abstract": "Gender issues faced by women can range from workplace harassment to domestic violence. While publicly disclosing these issues on social media can be hard, some may incline to express themselves anonymously. We approached such an anonymous female community on Chinese social media where discussion on gender issues takes place with a qualitative content analysis. By observing anonymous experiences contributed by female users and made publicly available by an influencer, we identified 20 issues commonly discussed, with cheating-partner, controlling parents and age anxiety taking the lead. The results are placed into context with Chinese culture and expectations about gender. By describing the results in context with the social challenges faced by women in China, and understanding how these issues are anonymously and openly discussed by them, we aim to motivate more policies and platform designs to accommodate the needs of the affected population. ",
+    "url": "https://arxiv.org/abs/2206.07923",
+    "authors": [
+      "Zhixuan Zhou",
+      "Zixin Wang",
+      "Franziska Zimmer"
+    ],
+    "subjectives": [
+      "Social and Information Networks (cs.SI)",
+      "Computers and Society (cs.CY)",
+      "Human-Computer Interaction (cs.HC)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07940",
+    "title": "PROFHIT: Probabilistic Robust Forecasting for Hierarchical Time-series",
+    "abstract": "Probabilistic hierarchical time-series forecasting is an important variant of time-series forecasting, where the goal is to model and forecast multivariate time-series that have underlying hierarchical relations. Most methods focus on point predictions and do not provide well-calibrated probabilistic forecasts distributions. Recent state-of-art probabilistic forecasting methods also impose hierarchical relations on point predictions and samples of distribution which does not account for coherency of forecast distributions. Previous works also silently assume that datasets are always consistent with given hierarchical relations and do not adapt to real-world datasets that show deviation from this assumption. We close both these gaps and propose PROFHIT, which is a fully probabilistic hierarchical forecasting model that jointly models forecast distribution of entire hierarchy. PROFHIT uses a flexible probabilistic Bayesian approach and introduces a novel Distributional Coherency regularization to learn from hierarchical relations for entire forecast distribution that enables robust and calibrated forecasts as well as adapt to datasets of varying hierarchical consistency. On evaluating PROFHIT over wide range of datasets, we observed 41-88% better performance in accuracy and calibration. Due to modeling the coherency over full distribution, we observed that PROFHIT can robustly provide reliable forecasts even if up to 10% of input time-series data is missing where other methods' performance severely degrade by over 70%. ",
+    "url": "https://arxiv.org/abs/2206.07940",
+    "authors": [
+      "Harshavardhan Kamarthi",
+      "Lingkai Kong",
+      "Alexander Rodr\u00edguez",
+      "Chao Zhang",
+      "B. Aditya Prakash"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Artificial Intelligence (cs.AI)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07953",
+    "title": "Analysis and Extensions of Adversarial Training for Video Classification",
+    "abstract": "Adversarial training (AT) is a simple yet effective defense against adversarial attacks to image classification systems, which is based on augmenting the training set with attacks that maximize the loss. However, the effectiveness of AT as a defense for video classification has not been thoroughly studied. Our first contribution is to show that generating optimal attacks for video requires carefully tuning the attack parameters, especially the step size. Notably, we show that the optimal step size varies linearly with the attack budget. Our second contribution is to show that using a smaller (sub-optimal) attack budget at training time leads to a more robust performance at test time. Based on these findings, we propose three defenses against attacks with variable attack budgets. The first one, Adaptive AT, is a technique where the attack budget is drawn from a distribution that is adapted as training iterations proceed. The second, Curriculum AT, is a technique where the attack budget is increased as training iterations proceed. The third, Generative AT, further couples AT with a denoising generative adversarial network to boost robust performance. Experiments on the UCF101 dataset demonstrate that the proposed methods improve adversarial robustness against multiple attack types. ",
+    "url": "https://arxiv.org/abs/2206.07953",
+    "authors": [
+      "Kaleab A. Kinfu",
+      "Ren\u00e9 Vidal"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)",
+      "Artificial Intelligence (cs.AI)",
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07960",
+    "title": "Towards Better Understanding with Uniformity and Explicit Regularization  of Embeddings in Embedding-based Neural Topic Models",
+    "abstract": "Embedding-based neural topic models could explicitly represent words and topics by embedding them to a homogeneous feature space, which shows higher interpretability. However, there are no explicit constraints for the training of embeddings, leading to a larger optimization space. Also, a clear description of the changes in embeddings and the impact on model performance is still lacking. In this paper, we propose an embedding regularized neural topic model, which applies the specially designed training constraints on word embedding and topic embedding to reduce the optimization space of parameters. To reveal the changes and roles of embeddings, we introduce \\textbf{uniformity} into the embedding-based neural topic model as the evaluation metric of embedding space. On this basis, we describe how embeddings tend to change during training via the changes in the uniformity of embeddings. Furthermore, we demonstrate the impact of changes in embeddings in embedding-based neural topic models through ablation studies. The results of experiments on two mainstream datasets indicate that our model significantly outperforms baseline models in terms of the harmony between topic quality and document modeling. This work is the first attempt to exploit uniformity to explore changes in embeddings of embedding-based neural topic models and their impact on model performance to the best of our knowledge. ",
+    "url": "https://arxiv.org/abs/2206.07960",
+    "authors": [
+      "Wei Shao",
+      "Lei Huang",
+      "Shuqi Liu",
+      "Shihua Ma",
+      "Linqi Song"
+    ],
+    "subjectives": [
+      "Computation and Language (cs.CL)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07967",
+    "title": "DreamNet: A Deep Riemannian Network based on SPD Manifold Learning for  Visual Classification",
+    "abstract": "Image set-based visual classification methods have achieved remarkable performance, via characterising the image set in terms of a non-singular covariance matrix on a symmetric positive definite (SPD) manifold. To adapt to complicated visual scenarios better, several Riemannian networks (RiemNets) for SPD matrix nonlinear processing have recently been studied. However, it is pertinent to ask, whether greater accuracy gains can be achieved by simply increasing the depth of RiemNets. The answer appears to be negative, as deeper RiemNets tend to lose generalization ability. To explore a possible solution to this issue, we propose a new architecture for SPD matrix learning. Specifically, to enrich the deep representations, we adopt SPDNet [1] as the backbone, with a stacked Riemannian autoencoder (SRAE) built on the tail. The associated reconstruction error term can make the embedding functions of both SRAE and of each RAE an approximate identity mapping, which helps to prevent the degradation of statistical information. We then insert several residual-like blocks with shortcut connections to augment the representational capacity of SRAE, and to simplify the training of a deeper network. The experimental evidence demonstrates that our DreamNet can achieve improved accuracy with increased depth of the network. ",
+    "url": "https://arxiv.org/abs/2206.07967",
+    "authors": [
+      "Rui Wang",
+      "Xiao-Jun Wu",
+      "Ziheng Chen",
+      "Tianyang Xu",
+      "Josef Kittler"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07970",
+    "title": "Well-posedness and variational numerical scheme for an adaptive model in  highly heterogeneous porous media",
+    "abstract": "Mathematical modeling of fluid flow in a porous medium is usually described by a continuity equation and a chosen constitutive law. The latter, depending on the problem at hand, may be a nonlinear relation between the fluid's pressure gradient and velocity. The actual shape of this relation is normally chosen at the outset of the problem, even though, in practice, the fluid may experience velocities outside of its range of applicability. We propose here an adaptive model, so that the most appropriate law is locally selected depending on the computed velocity. From the analytical point of view, we show well-posedness of the problem when the law is monotone in velocity and show existence in one space dimension otherwise. From the computational point of view, we present a new approach based on regularizing via mollification the underlying dissipation, i.e., the power lost by the fluid to the porous medium through drag. The resulting regularization is shown to converge to the original problem using $\\Gamma$-convergence on the dissipation in the monotone case. This approach gives rise to a variational numerical scheme which applies to very general problems and which we validate on three test cases. ",
+    "url": "https://arxiv.org/abs/2206.07970",
+    "authors": [
+      "Alessio Fumagalli",
+      "Francesco Saverio Patacchini"
+    ],
+    "subjectives": [
+      "Numerical Analysis (math.NA)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07980",
+    "title": "Research Topic Flows in Co-Authorship Networks",
+    "abstract": "In scientometrics, scientific collaboration is often analyzed by means of co-authorships. An aspect which is often overlooked and more difficult to quantify is the flow of expertise between authors from different research topics, which is an important part of scientific progress. With the Topic Flow Network (TFN) we propose a graph structure for the analysis of research topic flows between scientific authors and their respective research fields. Based on a multi-graph and a topic model, our proposed network structure accounts for intratopic as well as intertopic flows. Our method requires for the construction of a TFN solely a corpus of publications (i.e., author and abstract information). From this, research topics are discovered automatically through non-negative matrix factorization. The thereof derived TFN allows for the application of social network analysis techniques, such as common metrics and community detection. Most importantly, it allows for the analysis of intertopic flows on a large, macroscopic scale, i.e., between research topic, as well as on a microscopic scale, i.e., between certain sets of authors. We demonstrate the utility of TFNs by applying our method to two comprehensive corpora of altogether 20 Mio. publications spanning more than 60 years of research in the fields computer science and mathematics. Our results give evidence that TFNs are suitable, e.g., for the analysis of topical communities, the discovery of important authors in different fields, and, most notably, the analysis of intertopic flows, i.e., the transfer of topical expertise. Besides that, our method opens new directions for future research, such as the investigation of influence relationships between research fields. ",
+    "url": "https://arxiv.org/abs/2206.07980",
+    "authors": [
+      "Bastian Sch\u00e4fermeier",
+      "Johannes Hirth",
+      "Tom Hanika"
+    ],
+    "subjectives": [
+      "Social and Information Networks (cs.SI)",
+      "Digital Libraries (cs.DL)",
+      "Information Retrieval (cs.IR)",
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07987",
+    "title": "Reconfigurable Intelligent Surfaces Empowered Green Wireless Networks  with User Admission Control",
+    "abstract": "Reconfigurable intelligent surface (RIS) has emerged as a cost-effective and energy-efficient technique for 6G. By adjusting the phase shifts of passive reflecting elements, RIS is capable of suppressing the interference and combining the desired signals constructively at receivers, thereby significantly enhancing the performance of communication In this paper, we consider a green multi-user multi-antenna cellular network, where multiple RISs are deployed to provide energy-efficient communication service to end users. We jointly optimize the phase shifts of RISs, beamforming of the base stations, and the active RIS set with the aim of minimizing the power consumption of the base station (BS) and RISs subject to the quality of service (QoS) constraints of users and the transmit power constraint of the BS. However, the problem is mixed combinatorial and nonconvex, and there is a potential infeasibility issue when the QoS constraints cannot be guaranteed by all users. To deal with the infeasibility issue, we further investigate a user admission control problem to jointly optimize the transmit beamforming, RIS phase shifts, and the admitted user set. A unified alternating optimization (AO) framework is then proposed to solve both the power minimization and user admission control problems. Specifically, we first decompose the original nonconvex problem into several rank-one constrained optimization subproblems via matrix lifting. The proposed AO framework efficiently minimizes the power consumption of wireless networks as well as user admission control when the QoS constraints cannot be guaranteed by all users. Compared with the baseline algorithms, we illustrate that the proposed algorithm can achieve lower power consumption for given QoS constraints. Most importantly, the proposed algorithm successfully addresses the infeasibility issue with a QoS guarantee for active users. ",
+    "url": "https://arxiv.org/abs/2206.07987",
+    "authors": [
+      "Jinglian He",
+      "Yijie Mao",
+      "Yong Zhou",
+      "Ting Wang",
+      "Yuanming Shi"
+    ],
+    "subjectives": [
+      "Information Theory (cs.IT)",
+      "Signal Processing (eess.SP)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07990",
+    "title": "Patch-level Representation Learning for Self-supervised Vision  Transformers",
+    "abstract": "Recent self-supervised learning (SSL) methods have shown impressive results in learning visual representations from unlabeled images. This paper aims to improve their performance further by utilizing the architectural advantages of the underlying neural network, as the current state-of-the-art visual pretext tasks for SSL do not enjoy the benefit, i.e., they are architecture-agnostic. In particular, we focus on Vision Transformers (ViTs), which have gained much attention recently as a better architectural choice, often outperforming convolutional networks for various visual tasks. The unique characteristic of ViT is that it takes a sequence of disjoint patches from an image and processes patch-level representations internally. Inspired by this, we design a simple yet effective visual pretext task, coined SelfPatch, for learning better patch-level representations. To be specific, we enforce invariance against each patch and its neighbors, i.e., each patch treats similar neighboring patches as positive samples. Consequently, training ViTs with SelfPatch learns more semantically meaningful relations among patches (without using human-annotated labels), which can be beneficial, in particular, to downstream tasks of a dense prediction type. Despite its simplicity, we demonstrate that it can significantly improve the performance of existing SSL methods for various visual tasks, including object detection and semantic segmentation. Specifically, SelfPatch significantly improves the recent self-supervised ViT, DINO, by achieving +1.3 AP on COCO object detection, +1.2 AP on COCO instance segmentation, and +2.9 mIoU on ADE20K semantic segmentation. ",
+    "url": "https://arxiv.org/abs/2206.07990",
+    "authors": [
+      "Sukmin Yun",
+      "Hankook Lee",
+      "Jaehyung Kim",
+      "Jinwoo Shin"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)",
+      "Artificial Intelligence (cs.AI)",
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07994",
+    "title": "Joint Class-Affinity Loss Correction for Robust Medical Image  Segmentation with Noisy Labels",
+    "abstract": "Noisy labels collected with limited annotation cost prevent medical image segmentation algorithms from learning precise semantic correlations. Previous segmentation arts of learning with noisy labels merely perform a pixel-wise manner to preserve semantics, such as pixel-wise label correction, but neglect the pair-wise manner. In fact, we observe that the pair-wise manner capturing affinity relations between pixels can greatly reduce the label noise rate. Motivated by this observation, we present a novel perspective for noisy mitigation by incorporating both pixel-wise and pair-wise manners, where supervisions are derived from noisy class and affinity labels, respectively. Unifying the pixel-wise and pair-wise manners, we propose a robust Joint Class-Affinity Segmentation (JCAS) framework to combat label noise issues in medical image segmentation. Considering the affinity in pair-wise manner incorporates contextual dependencies, a differentiated affinity reasoning (DAR) module is devised to rectify the pixel-wise segmentation prediction by reasoning about intra-class and inter-class affinity relations. To further enhance the noise resistance, a class-affinity loss correction (CALC) strategy is designed to correct supervision signals via the modeled noise label distributions in class and affinity labels. Meanwhile, CALC strategy interacts the pixel-wise and pair-wise manners through the theoretically derived consistency regularization. Extensive experiments under both synthetic and real-world noisy labels corroborate the efficacy of the proposed JCAS framework with a minimum gap towards the upper bound performance. The source code is available at \\url{https://github.com/CityU-AIM-Group/JCAS}. ",
+    "url": "https://arxiv.org/abs/2206.07994",
+    "authors": [
+      "Xiaoqing Guo",
+      "Yixuan Yuan"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08005",
+    "title": "Evaluating Self-Supervised Learning for Molecular Graph Embeddings",
+    "abstract": "Graph Self-Supervised Learning (GSSL) paves the way for learning graph embeddings without expert annotation, which is particularly impactful for molecular graphs since the number of possible molecules is enormous and labels are expensive to obtain. However, by design, GSSL methods are not trained to perform well on one downstream task but aim for transferability to many, making evaluating them less straightforward. As a step toward obtaining profiles of molecular graph embeddings with diverse and interpretable attributes, we introduce Molecular Graph Representation Evaluation (MolGraphEval), a suite of probe tasks, categorised into (i) topological-, (ii) substructure-, and (iii) embedding space properties. By benchmarking existing GSSL methods on both existing downstream datasets and MolGraphEval, we discover surprising discrepancies between conclusions drawn from existing datasets alone versus more fine-grained probing, suggesting that current evaluation protocols do not provide the whole picture. Our modular, automated end-to-end GSSL pipeline code will be released upon acceptance, including standardised graph loading, experiment management, and embedding evaluation. ",
+    "url": "https://arxiv.org/abs/2206.08005",
+    "authors": [
+      "Hanchen Wang",
+      "Jean Kaddour",
+      "Shengchao Liu",
+      "Jian Tang",
+      "Matt Kusner",
+      "Joan Lasenby",
+      "Qi Liu"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Quantitative Methods (q-bio.QM)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08016",
+    "title": "Backbones-Review: Feature Extraction Networks for Deep Learning and Deep  Reinforcement Learning Approaches",
+    "abstract": "To understand the real world using various types of data, Artificial Intelligence (AI) is the most used technique nowadays. While finding the pattern within the analyzed data represents the main task. This is performed by extracting representative features step, which is proceeded using the statistical algorithms or using some specific filters. However, the selection of useful features from large-scale data represented a crucial challenge. Now, with the development of convolution neural networks (CNNs), the feature extraction operation has become more automatic and easier. CNNs allow to work on large-scale size of data, as well as cover different scenarios for a specific task. For computer vision tasks, convolutional networks are used to extract features also for the other parts of a deep learning model. The selection of a suitable network for feature extraction or the other parts of a DL model is not random work. So, the implementation of such a model can be related to the target task as well as the computational complexity of it. Many networks have been proposed and become the famous networks used for any DL models in any AI task. These networks are exploited for feature extraction or at the beginning of any DL model which is named backbones. A backbone is a known network trained in many other tasks before and demonstrates its effectiveness. In this paper, an overview of the existing backbones, e.g. VGGs, ResNets, DenseNet, etc, is given with a detailed description. Also, a couple of computer vision tasks are discussed by providing a review of each task regarding the backbones used. In addition, a comparison in terms of performance is also provided, based on the backbone used for each task. ",
+    "url": "https://arxiv.org/abs/2206.08016",
+    "authors": [
+      "Omar Elharroussad",
+      "Younes Akbari",
+      "Noor Almaadeed",
+      "Somaya Al-Maadeed"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08021",
+    "title": "Exploiting Global Semantic Similarities in Knowledge Graphs by  Relational Prototype Entities",
+    "abstract": "Knowledge graph (KG) embedding aims at learning the latent representations for entities and relations of a KG in continuous vector spaces. An empirical observation is that the head (tail) entities connected by the same relation often share similar semantic attributes -- specifically, they often belong to the same category -- no matter how far away they are from each other in the KG; that is, they share global semantic similarities. However, many existing methods derive KG embeddings based on the local information, which fail to effectively capture such global semantic similarities among entities. To address this challenge, we propose a novel approach, which introduces a set of virtual nodes called \\textit{\\textbf{relational prototype entities}} to represent the prototypes of the head and tail entities connected by the same relations. By enforcing the entities' embeddings close to their associated prototypes' embeddings, our approach can effectively encourage the global semantic similarities of entities -- that can be far away in the KG -- connected by the same relation. Experiments on the entity alignment and KG completion tasks demonstrate that our approach significantly outperforms recent state-of-the-arts. ",
+    "url": "https://arxiv.org/abs/2206.08021",
+    "authors": [
+      "Xueliang Wang",
+      "Jiajun Chen",
+      "Feng Wu",
+      "Jie Wang"
+    ],
+    "subjectives": [
+      "Computation and Language (cs.CL)",
+      "Artificial Intelligence (cs.AI)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08029",
+    "title": "DIALOG-22 RuATD Generated Text Detection",
+    "abstract": "Text Generation Models (TGMs) succeed in creating text that matches human language style reasonably well. Detectors that can distinguish between TGM-generated text and human-written ones play an important role in preventing abuse of TGM. In this paper, we describe our pipeline for the two DIALOG-22 RuATD tasks: detecting generated text (binary task) and classification of which model was used to generate text (multiclass task). We achieved 1st place on the binary classification task with an accuracy score of 0.82995 on the private test set and 4th place on the multiclass classification task with an accuracy score of 0.62856 on the private test set. We proposed an ensemble method of different pre-trained models based on the attention mechanism. ",
+    "url": "https://arxiv.org/abs/2206.08029",
+    "authors": [
+      "Narek Maloyan",
+      "Bulat Nutfullin",
+      "Eugene Ilyushin"
+    ],
+    "subjectives": [
+      "Computation and Language (cs.CL)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08050",
+    "title": "Time Interval-enhanced Graph Neural Network for Shared-account  Cross-domain Sequential Recommendation",
+    "abstract": "Shared-account Cross-domain Sequential Recommendation (SCSR) task aims to recommend the next item via leveraging the mixed user behaviors in multiple domains. It is gaining immense research attention as more and more users tend to sign up on different platforms and share accounts with others to access domain-specific services. Existing works on SCSR mainly rely on mining sequential patterns via Recurrent Neural Network (RNN)-based models, which suffer from the following limitations: 1) RNN-based methods overwhelmingly target discovering sequential dependencies in single-user behaviors. They are not expressive enough to capture the relationships among multiple entities in SCSR. 2) All existing methods bridge two domains via knowledge transfer in the latent space, and ignore the explicit cross-domain graph structure. 3) None existing studies consider the time interval information among items, which is essential in the sequential recommendation for characterizing different items and learning discriminative representations for them. In this work, we propose a new graph-based solution, namely TiDA-GCN, to address the above challenges. Specifically, we first link users and items in each domain as a graph. Then, we devise a domain-aware graph convolution network to learn userspecific node representations. To fully account for users' domainspecific preferences on items, two effective attention mechanisms are further developed to selectively guide the message passing process. Moreover, to further enhance item- and account-level representation learning, we incorporate the time interval into the message passing, and design an account-aware self-attention module for learning items' interactive characteristics. Experiments demonstrate the superiority of our proposed method from various aspects. ",
+    "url": "https://arxiv.org/abs/2206.08050",
+    "authors": [
+      "Lei Guo",
+      "Jinyu Zhang",
+      "Li Tang",
+      "Tong Chen",
+      "Lei Zhu",
+      "Hongzhi Yin"
+    ],
+    "subjectives": [
+      "Information Retrieval (cs.IR)",
+      "Artificial Intelligence (cs.AI)",
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08063",
+    "title": "Towards Robust Ranker for Text Retrieval",
+    "abstract": "A ranker plays an indispensable role in the de facto 'retrieval & rerank' pipeline, but its training still lags behind -- learning from moderate negatives or/and serving as an auxiliary module for a retriever. In this work, we first identify two major barriers to a robust ranker, i.e., inherent label noises caused by a well-trained retriever and non-ideal negatives sampled for a high-capable ranker. Thereby, we propose multiple retrievers as negative generators improve the ranker's robustness, where i) involving extensive out-of-distribution label noises renders the ranker against each noise distribution, and ii) diverse hard negatives from a joint distribution are relatively close to the ranker's negative distribution, leading to more challenging thus effective training. To evaluate our robust ranker (dubbed R$^2$anker), we conduct experiments in various settings on the popular passage retrieval benchmark, including BM25-reranking, full-ranking, retriever distillation, etc. The empirical results verify the new state-of-the-art effectiveness of our model. ",
+    "url": "https://arxiv.org/abs/2206.08063",
+    "authors": [
+      "Yucheng Zhou",
+      "Tao Shen",
+      "Xiubo Geng",
+      "Chongyang Tao",
+      "Can Xu",
+      "Guodong Long",
+      "Binxing Jiao",
+      "Daxin Jiang"
+    ],
+    "subjectives": [
+      "Information Retrieval (cs.IR)",
+      "Computation and Language (cs.CL)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08065",
+    "title": "Neural tangent kernel analysis of shallow $\u03b1$-Stable ReLU neural  networks",
+    "abstract": "There is a recent literature on large-width properties of Gaussian neural networks (NNs), i.e. NNs whose weights are distributed according to Gaussian distributions. Two popular problems are: i) the study of the large-width behaviour of NNs, which provided a characterization of the infinitely wide limit of a rescaled NN in terms of a Gaussian process; ii) the study of the large-width training dynamics of NNs, which set forth an equivalence between training the rescaled NN and performing a kernel regression with a deterministic kernel referred to as the neural tangent kernel (NTK). In this paper, we consider these problems for $\\alpha$-Stable NNs, which generalize Gaussian NNs by assuming that the NN's weights are distributed as $\\alpha$-Stable distributions with $\\alpha\\in(0,2]$, i.e. distributions with heavy tails. For shallow $\\alpha$-Stable NNs with a ReLU activation function, we show that if the NN's width goes to infinity then a rescaled NN converges weakly to an $\\alpha$-Stable process, i.e. a stochastic process with $\\alpha$-Stable finite-dimensional distributions. As a novelty with respect to the Gaussian setting, in the $\\alpha$-Stable setting the choice of the activation function affects the scaling of the NN, that is: to achieve the infinitely wide $\\alpha$-Stable process, the ReLU function requires an additional logarithmic scaling with respect to sub-linear functions. Then, our main contribution is the NTK analysis of shallow $\\alpha$-Stable ReLU-NNs, which leads to an equivalence between training a rescaled NN and performing a kernel regression with an $(\\alpha/2)$-Stable random kernel. The randomness of such a kernel is a further novelty with respect to the Gaussian setting, that is: in the $\\alpha$-Stable setting the randomness of the NN at initialization does not vanish in the NTK analysis, thus inducing a distribution for the kernel of the underlying kernel regression. ",
+    "url": "https://arxiv.org/abs/2206.08065",
+    "authors": [
+      "Stefano Favaro",
+      "Sandra Fortini",
+      "Stefano Peluchetti"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Statistics Theory (math.ST)",
+      "Machine Learning (stat.ML)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08077",
+    "title": "Neural Scene Representation for Locomotion on Structured Terrain",
+    "abstract": "We propose a learning-based method to reconstruct the local terrain for locomotion with a mobile robot traversing urban environments. Using a stream of depth measurements from the onboard cameras and the robot's trajectory, the algorithm estimates the topography in the robot's vicinity. The raw measurements from these cameras are noisy and only provide partial and occluded observations that in many cases do not show the terrain the robot stands on. Therefore, we propose a 3D reconstruction model that faithfully reconstructs the scene, despite the noisy measurements and large amounts of missing data coming from the blind spots of the camera arrangement. The model consists of a 4D fully convolutional network on point clouds that learns the geometric priors to complete the scene from the context and an auto-regressive feedback to leverage spatio-temporal consistency and use evidence from the past. The network can be solely trained with synthetic data, and due to extensive augmentation, it is robust in the real world, as shown in the validation on a quadrupedal robot, ANYmal, traversing challenging settings. We run the pipeline on the robot's onboard low-power computer using an efficient sparse tensor implementation and show that the proposed method outperforms classical map representations. ",
+    "url": "https://arxiv.org/abs/2206.08077",
+    "authors": [
+      "David Hoeller",
+      "Nikita Rudin",
+      "Christopher Choy",
+      "Animashree Anandkumar",
+      "Marco Hutter"
+    ],
+    "subjectives": [
+      "Robotics (cs.RO)",
+      "Artificial Intelligence (cs.AI)",
+      "Computer Vision and Pattern Recognition (cs.CV)",
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08083",
+    "title": "CARLANE: A Lane Detection Benchmark for Unsupervised Domain Adaptation  from Simulation to multiple Real-World Domains",
+    "abstract": "Unsupervised Domain Adaptation demonstrates great potential to mitigate domain shifts by transferring models from labeled source domains to unlabeled target domains. While Unsupervised Domain Adaptation has been applied to a wide variety of complex vision tasks, only few works focus on lane detection for autonomous driving. This can be attributed to the lack of publicly available datasets. To facilitate research in these directions, we propose CARLANE, a 3-way sim-to-real domain adaptation benchmark for 2D lane detection. CARLANE encompasses the single-target datasets MoLane and TuLane and the multi-target dataset MuLane. These datasets are built from three different domains, which cover diverse scenes and contain a total of 163K unique images, 118K of which are annotated. In addition we evaluate and report systematic baselines, including our own method, which builds upon Prototypical Cross-domain Self-supervised Learning. We find that false positive and false negative rates of the evaluated domain adaptation methods are high compared to those of fully supervised baselines. This affirms the need for benchmarks such as CARLANE to further strengthen research in Unsupervised Domain Adaptation for lane detection. CARLANE, all evaluated models and the corresponding implementations are publicly available at https://carlanebenchmark.github.io. ",
+    "url": "https://arxiv.org/abs/2206.08083",
+    "authors": [
+      "Julian Gebele",
+      "Bonifaz Stuhr",
+      "Johann Haselberger"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)",
+      "Artificial Intelligence (cs.AI)",
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08094",
+    "title": "Deep Neural Imputation: A Framework for Recovering Incomplete Brain  Recordings",
+    "abstract": "Neuroscientists and neuroengineers have long relied on multielectrode neural recordings to study the brain. However, in a typical experiment, many factors corrupt neural recordings from individual electrodes, including electrical noise, movement artifacts, and faulty manufacturing. Currently, common practice is to discard these corrupted recordings, reducing already limited data that is difficult to collect. To address this challenge, we propose Deep Neural Imputation (DNI), a framework to recover missing values from electrodes by learning from data collected across spatial locations, days, and participants. We explore our framework with a linear nearest-neighbor approach and two deep generative autoencoders, demonstrating DNI's flexibility. One deep autoencoder models participants individually, while the other extends this architecture to model many participants jointly. We evaluate our models across 12 human participants implanted with multielectrode intracranial electrocorticography arrays; participants had no explicit task and behaved naturally across hundreds of recording hours. We show that DNI recovers not only time series but also frequency content, and further establish DNI's practical value by recovering significant performance on a scientifically-relevant downstream neural decoding task. ",
+    "url": "https://arxiv.org/abs/2206.08094",
+    "authors": [
+      "Sabera Talukder",
+      "Jennifer J. Sun",
+      "Matthew Leonard",
+      "Bingni W. Brunton",
+      "Yisong Yue"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Neural and Evolutionary Computing (cs.NE)",
+      "Neurons and Cognition (q-bio.NC)",
+      "Machine Learning (stat.ML)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08105",
+    "title": "A Simple Baseline for Adversarial Domain Adaptation-based Unsupervised  Flood Forecasting",
+    "abstract": "Flood disasters cause enormous social and economic losses. However, both traditional physical models and learning-based flood forecasting models require massive historical flood data to train the model parameters. When come to some new site that does not have sufficient historical data, the model performance will drop dramatically due to overfitting. This technical report presents a Flood Domain Adaptation Network (FloodDAN), a baseline of applying Unsupervised Domain Adaptation (UDA) to the flood forecasting problem. Specifically, training of FloodDAN includes two stages: in the first stage, we train a rainfall encoder and a prediction head to learn general transferable hydrological knowledge on large-scale source domain data; in the second stage, we transfer the knowledge in the pretrained encoder into the rainfall encoder of target domain through adversarial domain alignment. During inference, we utilize the target domain rainfall encoder trained in the second stage and the prediction head trained in the first stage to get flood forecasting predictions. Experimental results on Tunxi and Changhua flood dataset show that FloodDAN can perform flood forecasting effectively with zero target domain supervision. The performance of the FloodDAN is on par with supervised models that uses 450-500 hours of supervision. ",
+    "url": "https://arxiv.org/abs/2206.08105",
+    "authors": [
+      "Delong Chen",
+      "Ruizhi Zhou",
+      "Yanling Pan",
+      "Fan Liu"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08119",
+    "title": "Learning to Infer Structures of Network Games",
+    "abstract": "Strategic interactions between a group of individuals or organisations can be modelled as games played on networks, where a player's payoff depends not only on their actions but also on those of their neighbours. Inferring the network structure from observed game outcomes (equilibrium actions) is an important problem with numerous potential applications in economics and social sciences. Existing methods mostly require the knowledge of the utility function associated with the game, which is often unrealistic to obtain in real-world scenarios. We adopt a transformer-like architecture which correctly accounts for the symmetries of the problem and learns a mapping from the equilibrium actions to the network structure of the game without explicit knowledge of the utility function. We test our method on three different types of network games using both synthetic and real-world data, and demonstrate its effectiveness in network structure inference and superior performance over existing methods. ",
+    "url": "https://arxiv.org/abs/2206.08119",
+    "authors": [
+      "Emanuele Rossi",
+      "Federico Monti",
+      "Yan Leng",
+      "Michael M. Bronstein",
+      "Xiaowen Dong"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Computer Science and Game Theory (cs.GT)",
+      "Social and Information Networks (cs.SI)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08124",
+    "title": "Using adversarial images to improve outcomes of federated learning for  non-IID data",
+    "abstract": "One of the important problems in federated learning is how to deal with unbalanced data. This contribution introduces a novel technique designed to deal with label skewed non-IID data, using adversarial inputs, created by the I-FGSM method. Adversarial inputs guide the training process and allow the Weighted Federated Averaging to give more importance to clients with 'selected' local label distributions. Experimental results, gathered from image classification tasks, for MNIST and CIFAR-10 datasets, are reported and analyzed. ",
+    "url": "https://arxiv.org/abs/2206.08124",
+    "authors": [
+      "Anastasiya Danilenka",
+      "Maria Ganzha",
+      "Marcin Paprzycki",
+      "Jacek Ma\u0144dziuk"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08129",
+    "title": "Trajectory-guided Control Prediction for End-to-end Autonomous Driving:  A Simple yet Strong Baseline",
+    "abstract": "Current end-to-end autonomous driving methods either run a controller based on a planned trajectory or perform control prediction directly, which have spanned two separately studied lines of research. Seeing their potential mutual benefits to each other, this paper takes the initiative to explore the combination of these two well-developed worlds. Specifically, our integrated approach has two branches for trajectory planning and direct control, respectively. The trajectory branch predicts the future trajectory, while the control branch involves a novel multi-step prediction scheme such that the relationship between current actions and future states can be reasoned. The two branches are connected so that the control branch receives corresponding guidance from the trajectory branch at each time step. The outputs from two branches are then fused to achieve complementary advantages. Our results are evaluated in the closed-loop urban driving setting with challenging scenarios using the CARLA simulator. Even with a monocular camera input, the proposed approach ranks $first$ on the official CARLA Leaderboard, outperforming other complex candidates with multiple sensors or fusion mechanisms by a large margin. The source code and data will be made publicly available at https://github.com/OpenPerceptionX/TCP. ",
+    "url": "https://arxiv.org/abs/2206.08129",
+    "authors": [
+      "Penghao Wu",
+      "Xiaosong Jia",
+      "Li Chen",
+      "Junchi Yan",
+      "Hongyang Li",
+      "Yu Qiao"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)",
+      "Artificial Intelligence (cs.AI)",
+      "Robotics (cs.RO)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08144",
+    "title": "A Contextual Combinatorial Semi-Bandit Approach to Network Bottleneck  Identification",
+    "abstract": "Bottleneck identification is a challenging task in network analysis, especially when the network is not fully specified. To address this task, we develop a unified online learning framework based on combinatorial semi-bandits that performs bottleneck identification alongside learning the specifications of the underlying network. Within this framework, we adapt and investigate several combinatorial semi-bandit methods such as epsilon-greedy, LinUCB, BayesUCB, and Thompson Sampling. Our framework is able to employ contextual information in the form of contextual bandits. We evaluate our framework on the real-world application of road networks and demonstrate its effectiveness in different settings. ",
+    "url": "https://arxiv.org/abs/2206.08144",
+    "authors": [
+      "Fazeleh Hoseini",
+      "Niklas \u00c5kerblom",
+      "Morteza Haghir Chehreghani"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08150",
+    "title": "Self-Adaptive Label Augmentation for Semi-supervised Few-shot  Classification",
+    "abstract": "Few-shot classification aims to learn a model that can generalize well to new tasks when only a few labeled samples are available. To make use of unlabeled data that are more abundantly available in real applications, Ren et al. \\shortcite{ren2018meta} propose a semi-supervised few-shot classification method that assigns an appropriate label to each unlabeled sample by a manually defined metric. However, the manually defined metric fails to capture the intrinsic property in data. In this paper, we propose a \\textbf{S}elf-\\textbf{A}daptive \\textbf{L}abel \\textbf{A}ugmentation approach, called \\textbf{SALA}, for semi-supervised few-shot classification. A major novelty of SALA is the task-adaptive metric, which can learn the metric adaptively for different tasks in an end-to-end fashion. Another appealing feature of SALA is a progressive neighbor selection strategy, which selects unlabeled data with high confidence progressively through the training phase. Experiments demonstrate that SALA outperforms several state-of-the-art methods for semi-supervised few-shot classification on benchmark datasets. ",
+    "url": "https://arxiv.org/abs/2206.08150",
+    "authors": [
+      "Xueliang Wang",
+      "Jianyu Cai",
+      "Shuiwang Ji",
+      "Houqiang Li",
+      "Feng Wu",
+      "Jie Wang"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08164",
+    "title": "Long Range Graph Benchmark",
+    "abstract": "Graph Neural Networks (GNNs) that are based on the message passing (MP) paradigm exchange information between 1-hop neighbors to build node representations at each layer. In principle, such networks are not able to capture long-range interactions (LRI) that may be desired or necessary for learning a given task on graphs. Recently, there has been an increasing interest in development of Transformer-based methods for graphs that can consider full node connectivity beyond the original sparse structure, thus enabling the modeling of LRI. However, MP-GNNs that simply rely on 1-hop message passing often fare better in several existing graph benchmarks when combined with positional feature representations, among other innovations, hence limiting the perceived utility and ranking of Transformer-like architectures. Here, we present the Long Range Graph Benchmark (LRGB) with 5 graph learning datasets: PascalVOC-SP, COCO-SP, PCQM-Contact, Peptides-func and Peptides-struct that arguably require LRI reasoning to achieve strong performance in a given task. We benchmark both baseline GNNs and Graph Transformer networks to verify that the models which capture long-range dependencies perform significantly better on these tasks. Therefore, these datasets are suitable for benchmarking and exploration of MP-GNNs and Graph Transformer architectures that are intended to capture LRI. ",
+    "url": "https://arxiv.org/abs/2206.08164",
+    "authors": [
+      "Vijay Prakash Dwivedi",
+      "Ladislav Ramp\u00e1\u0161ek",
+      "Mikhail Galkin",
+      "Ali Parviz",
+      "Guy Wolf",
+      "Anh Tuan Luu",
+      "Dominique Beaini"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08170",
+    "title": "Adversarial Privacy Protection on Speech Enhancement",
+    "abstract": "Speech is easily leaked imperceptibly, such as being recorded by mobile phones in different situations. Private content in speech may be maliciously extracted through speech enhancement technology. Speech enhancement technology has developed rapidly along with deep neural networks (DNNs), but adversarial examples can cause DNNs to fail. In this work, we propose an adversarial method to degrade speech enhancement systems. Experimental results show that generated adversarial examples can erase most content information in original examples or replace it with target speech content through speech enhancement. The word error rate (WER) between an enhanced original example and enhanced adversarial example recognition result can reach 89.0%. WER of target attack between enhanced adversarial example and target example is low to 33.75% . Adversarial perturbation can bring the rate of change to the original example to more than 1.4430. This work can prevent the malicious extraction of speech. ",
+    "url": "https://arxiv.org/abs/2206.08170",
+    "authors": [
+      "Mingyu Dong",
+      "Diqun Yan",
+      "Rangding Wang"
+    ],
+    "subjectives": [
+      "Sound (cs.SD)",
+      "Cryptography and Security (cs.CR)",
+      "Machine Learning (cs.LG)",
+      "Audio and Speech Processing (eess.AS)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08171",
+    "title": "K-Radar: 4D Radar Object Detection Dataset and Benchmark for Autonomous  Driving in Various Weather Conditions",
+    "abstract": "Unlike RGB cameras that use visible light bands (384$\\sim$769 THz) and Lidar that use infrared bands (361$\\sim$331 THz), Radars use relatively longer wavelength radio bands (77$\\sim$81 GHz), resulting in robust measurements in adverse weathers. Unfortunately, existing Radar datasets only contain a relatively small number of samples compared to the existing camera and Lidar datasets. This may hinder the development of sophisticated data-driven deep learning techniques for Radar-based perception. Moreover, most of the existing Radar datasets only provide 3D Radar tensor (3DRT) data that contain power measurements along the Doppler, range, and azimuth dimensions. As there is no elevation information, it is challenging to estimate the 3D bounding box of an object from 3DRT. In this work, we introduce KAIST-Radar (K-Radar), a novel large-scale object detection dataset and benchmark that contains 35K frames of 4D Radar tensor (4DRT) data with power measurements along the Doppler, range, azimuth, and elevation dimensions, together with carefully annotated 3D bounding box labels of objects on the roads. K-Radar includes challenging driving conditions such as adverse weathers (fog, rain, and snow) on various road structures (urban, suburban roads, alleyways, and highways). In addition to the 4DRT, we provide auxiliary measurements from carefully calibrated high-resolution Lidars, surround stereo cameras, and RTK-GPS. We also provide 4DRT-based object detection baseline neural networks (baseline NNs) and show that the height information is crucial for 3D object detection. And by comparing the baseline NN with a similarly-structured Lidar-based neural network, we demonstrate that 4D Radar is a more robust sensor for adverse weather conditions. All codes are available at https://github.com/kaist-avelab/k-radar. ",
+    "url": "https://arxiv.org/abs/2206.08171",
+    "authors": [
+      "Dong-Hee Paek",
+      "Seung-Hyun Kong",
+      "Kevin Tirta Wijaya"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)",
+      "Artificial Intelligence (cs.AI)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08181",
+    "title": "ResNorm: Tackling Long-tailed Degree Distribution Issue in Graph Neural  Networks via Normalization",
+    "abstract": "Graph Neural Networks (GNNs) have attracted much attention due to their ability in learning representations from graph-structured data. Despite the successful applications of GNNs in many domains, the optimization of GNNs is less well studied, and the performance on node classification heavily suffers from the long-tailed node degree distribution. This paper focuses on improving the performance of GNNs via normalization. In detail, by studying the long-tailed distribution of node degrees in the graph, we propose a novel normalization method for GNNs, which is termed ResNorm (\\textbf{Res}haping the long-tailed distribution into a normal-like distribution via \\textbf{norm}alization). The $scale$ operation of ResNorm reshapes the node-wise standard deviation (NStd) distribution so as to improve the accuracy of tail nodes (\\textit{i}.\\textit{e}., low-degree nodes). We provide a theoretical interpretation and empirical evidence for understanding the mechanism of the above $scale$. In addition to the long-tailed distribution issue, over-smoothing is also a fundamental issue plaguing the community. To this end, we analyze the behavior of the standard shift and prove that the standard shift serves as a preconditioner on the weight matrix, increasing the risk of over-smoothing. With the over-smoothing issue in mind, we design a $shift$ operation for ResNorm that simulates the degree-specific parameter strategy in a low-cost manner. Extensive experiments have validated the effectiveness of ResNorm on several node classification benchmark datasets. ",
+    "url": "https://arxiv.org/abs/2206.08181",
+    "authors": [
+      "Langzhang Liang",
+      "Zenglin Xu",
+      "Zixing Song",
+      "Irwin King",
+      "Jieping Ye"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08186",
+    "title": "Asymptotic Soft Cluster Pruning for Deep Neural Networks",
+    "abstract": "Filter pruning method introduces structural sparsity by removing selected filters and is thus particularly effective for reducing complexity. Previous works empirically prune networks from the point of view that filter with smaller norm contributes less to the final results. However, such criteria has been proven sensitive to the distribution of filters, and the accuracy may hard to recover since the capacity gap is fixed once pruned. In this paper, we propose a novel filter pruning method called Asymptotic Soft Cluster Pruning (ASCP), to identify the redundancy of network based on the similarity of filters. Each filter from over-parameterized network is first distinguished by clustering, and then reconstructed to manually introduce redundancy into it. Several guidelines of clustering are proposed to better preserve feature extraction ability. After reconstruction, filters are allowed to be updated to eliminate the effect caused by mistakenly selected. Besides, various decaying strategies of the pruning rate are adopted to stabilize the pruning process and improve the final performance as well. By gradually generating more identical filters within each cluster, ASCP can remove them through channel addition operation with almost no accuracy drop. Extensive experiments on CIFAR-10 and ImageNet datasets show that our method can achieve competitive results compared with many state-of-the-art algorithms. ",
+    "url": "https://arxiv.org/abs/2206.08186",
+    "authors": [
+      "Tao Niu",
+      "Yinglei Teng",
+      "Panpan Zou"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)",
+      "Artificial Intelligence (cs.AI)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08187",
+    "title": "Approximating optimization problems in graphs with locational  uncertainty",
+    "abstract": "Many combinatorial optimization problems can be formulated as the search for a subgraph that satisfies certain properties and minimizes the total weight. We assume here that the vertices correspond to points in a metric space and can take any position in given uncertainty sets. Then, the cost function to be minimized is the sum of the distances for the worst positions of the vertices in their uncertainty sets. We propose two types of polynomial-time approximation algorithms. The first one relies on solving a deterministic counterpart of the problem where the uncertain distances are replaced with maximum pairwise distances. We study in details the resulting approximation ratio, which depends on the structure of the feasible subgraphs and whether the metric space is Ptolemaic or not. The second algorithm is a fully-polynomial time approximation scheme for the special case of $s-t$ paths. ",
+    "url": "https://arxiv.org/abs/2206.08187",
+    "authors": [
+      "Marin Bougeret",
+      "J\u00e9r\u00e9my Omer",
+      "Michael Poss"
+    ],
+    "subjectives": [
+      "Data Structures and Algorithms (cs.DS)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08189",
+    "title": "Censer: Curriculum Semi-supervised Learning for Speech Recognition Based  on Self-supervised Pre-training",
+    "abstract": "Recent studies have shown that the benefits provided by self-supervised pre-training and self-training (pseudo-labeling) are complementary. Semi-supervised fine-tuning strategies under the pre-training framework, however, remain insufficiently studied. Besides, modern semi-supervised speech recognition algorithms either treat unlabeled data indiscriminately or filter out noisy samples with a confidence threshold. The dissimilarities among different unlabeled data are often ignored. In this paper, we propose Censer, a semi-supervised speech recognition algorithm based on self-supervised pre-training to maximize the utilization of unlabeled data. The pre-training stage of Censer adopts wav2vec2.0 and the fine-tuning stage employs an improved semi-supervised learning algorithm from slimIPL, which leverages unlabeled data progressively according to their pseudo labels' qualities. We also incorporate a temporal pseudo label pool and an exponential moving average to control the pseudo labels' update frequency and to avoid model divergence. Experimental results on Libri-Light and LibriSpeech datasets manifest our proposed method achieves better performance compared to existing approaches while being more unified. ",
+    "url": "https://arxiv.org/abs/2206.08189",
+    "authors": [
+      "Bowen Zhang",
+      "Songjun Cao",
+      "Xiaoming Zhang",
+      "Yike Zhang",
+      "Long Ma",
+      "Takahiro Shinozaki"
+    ],
+    "subjectives": [
+      "Sound (cs.SD)",
+      "Audio and Speech Processing (eess.AS)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08206",
+    "title": "Selective Multi-Scale Learning for Object Detection",
+    "abstract": "Pyramidal networks are standard methods for multi-scale object detection. Current researches on feature pyramid networks usually adopt layer connections to collect features from certain levels of the feature hierarchy, and do not consider the significant differences among them. We propose a better architecture of feature pyramid networks, named selective multi-scale learning (SMSL), to address this issue. SMSL is efficient and general, which can be integrated in both single-stage and two-stage detectors to boost detection performance, with nearly no extra inference cost. RetinaNet combined with SMSL obtains 1.8\\% improvement in AP (from 39.1\\% to 40.9\\%) on COCO dataset. When integrated with SMSL, two-stage detectors can get around 1.0\\% improvement in AP. ",
+    "url": "https://arxiv.org/abs/2206.08206",
+    "authors": [
+      "Junliang Chen",
+      "Weizeng Lu",
+      "Linlin Shen"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08213",
+    "title": "A Closer Look at Smoothness in Domain Adversarial Training",
+    "abstract": "Domain adversarial training has been ubiquitous for achieving invariant representations and is used widely for various domain adaptation tasks. In recent times, methods converging to smooth optima have shown improved generalization for supervised learning tasks like classification. In this work, we analyze the effect of smoothness enhancing formulations on domain adversarial training, the objective of which is a combination of task loss (eg. classification, regression, etc.) and adversarial terms. We find that converging to a smooth minima with respect to (w.r.t.) task loss stabilizes the adversarial training leading to better performance on target domain. In contrast to task loss, our analysis shows that converging to smooth minima w.r.t. adversarial loss leads to sub-optimal generalization on the target domain. Based on the analysis, we introduce the Smooth Domain Adversarial Training (SDAT) procedure, which effectively enhances the performance of existing domain adversarial methods for both classification and object detection tasks. Our analysis also provides insight into the extensive usage of SGD over Adam in the community for domain adversarial training. ",
+    "url": "https://arxiv.org/abs/2206.08213",
+    "authors": [
+      "Harsh Rangwani",
+      "Sumukh K Aithal",
+      "Mayank Mishra",
+      "Arihant Jain",
+      "R. Venkatesh Babu"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Computer Vision and Pattern Recognition (cs.CV)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08222",
+    "title": "Adapting Self-Supervised Vision Transformers by Probing  Attention-Conditioned Masking Consistency",
+    "abstract": "Visual domain adaptation (DA) seeks to transfer trained models to unseen, unlabeled domains across distribution shift, but approaches typically focus on adapting convolutional neural network architectures initialized with supervised ImageNet representations. In this work, we shift focus to adapting modern architectures for object recognition -- the increasingly popular Vision Transformer (ViT) -- and modern pretraining based on self-supervised learning (SSL). Inspired by the design of recent SSL approaches based on learning from partial image inputs generated via masking or cropping -- either by learning to predict the missing pixels, or learning representational invariances to such augmentations -- we propose PACMAC, a simple two-stage adaptation algorithm for self-supervised ViTs. PACMAC first performs in-domain SSL on pooled source and target data to learn task-discriminative features, and then probes the model's predictive consistency across a set of partial target inputs generated via a novel attention-conditioned masking strategy, to identify reliable candidates for self-training. Our simple approach leads to consistent performance gains over competing methods that use ViTs and self-supervised initializations on standard object recognition benchmarks. Code available at https://github.com/virajprabhu/PACMAC ",
+    "url": "https://arxiv.org/abs/2206.08222",
+    "authors": [
+      "Viraj Prabhu",
+      "Sriram Yenamandra",
+      "Aaditya Singh",
+      "Judy Hoffman"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)",
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08227",
+    "title": "Delving into the Scale Variance Problem in Object Detection",
+    "abstract": "Object detection has made substantial progress in the last decade, due to the capability of convolution in extracting local context of objects. However, the scales of objects are diverse and current convolution can only process single-scale input. The capability of traditional convolution with a fixed receptive field in dealing with such a scale variance problem, is thus limited. Multi-scale feature representation has been proven to be an effective way to mitigate the scale variance problem. Recent researches mainly adopt partial connection with certain scales, or aggregate features from all scales and focus on the global information across the scales. However, the information across spatial and depth dimensions is ignored. Inspired by this, we propose the multi-scale convolution (MSConv) to handle this problem. Taking into consideration scale, spatial and depth information at the same time, MSConv is able to process multi-scale input more comprehensively. MSConv is effective and computationally efficient, with only a small increase of computational cost. For most of the single-stage object detectors, replacing the traditional convolutions with MSConvs in the detection head can bring more than 2.5\\% improvement in AP (on COCO 2017 dataset), with only 3\\% increase of FLOPs. MSConv is also flexible and effective for two-stage object detectors. When extended to the mainstream two-stage object detectors, MSConv can bring up to 3.0\\% improvement in AP. Our best model under single-scale testing achieves 48.9\\% AP on COCO 2017 \\textit{test-dev} split, which surpasses many state-of-the-art methods. ",
+    "url": "https://arxiv.org/abs/2206.08227",
+    "authors": [
+      "Junliang Chen",
+      "Xiaodong Zhao",
+      "Linlin Shen"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08237",
+    "title": "Noisy Learning for Neural ODEs Acts as a Robustness Locus Widening",
+    "abstract": "We investigate the problems and challenges of evaluating the robustness of Differential Equation-based (DE) networks against synthetic distribution shifts. We propose a novel and simple accuracy metric which can be used to evaluate intrinsic robustness and to validate dataset corruption simulators. We also propose methodology recommendations, destined for evaluating the many faces of neural DEs' robustness and for comparing them with their discrete counterparts rigorously. We then use this criteria to evaluate a cheap data augmentation technique as a reliable way for demonstrating the natural robustness of neural ODEs against simulated image corruptions across multiple datasets. ",
+    "url": "https://arxiv.org/abs/2206.08237",
+    "authors": [
+      "Martin Gonzalez",
+      "Hatem Hajri",
+      "Loic Cantat",
+      "Mihaly Petreczky"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08255",
+    "title": "Gradient-Based Adversarial and Out-of-Distribution Detection",
+    "abstract": "We propose to utilize gradients for detecting adversarial and out-of-distribution samples. We introduce confounding labels -- labels that differ from normal labels seen during training -- in gradient generation to probe the effective expressivity of neural networks. Gradients depict the amount of change required for a model to properly represent given inputs, providing insight into the representational power of the model established by network architectural properties as well as training data. By introducing a label of different design, we remove the dependency on ground truth labels for gradient generation during inference. We show that our gradient-based approach allows for capturing the anomaly in inputs based on the effective expressivity of the models with no hyperparameter tuning or additional processing, and outperforms state-of-the-art methods for adversarial and out-of-distribution detection. ",
+    "url": "https://arxiv.org/abs/2206.08255",
+    "authors": [
+      "Jinsol Lee",
+      "Mohit Prabhushankar",
+      "Ghassan AlRegib"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Computer Vision and Pattern Recognition (cs.CV)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08258",
+    "title": "ProGNNosis: A Data-driven Model to Predict GNN Computation Time Using  Graph Metrics",
+    "abstract": "Graph Neural Networks (GNN) show great promise in problems dealing with graph-structured data. One of the unique points of GNNs is their flexibility to adapt to multiple problems, which not only leads to wide applicability, but also poses important challenges when finding the best model or acceleration technique for a particular problem. An example of such challenges resides in the fact that the accuracy or effectiveness of a GNN model or acceleration technique generally depends on the structure of the underlying graph. In this paper, in an attempt to address the problem of graph-dependent acceleration, we propose ProGNNosis, a data-driven model that can predict the GNN training time of a given GNN model running over a graph of arbitrary characteristics by inspecting the input graph metrics. Such prediction is made based on a regression that was previously trained offline using a diverse synthetic graph dataset. In practice, our method allows making informed decisions on which design to use for a specific problem. In the paper, the methodology to build ProGNNosis is defined and applied for a specific use case, where it helps to decide which graph representation is better. Our results show that ProGNNosis helps achieve an average speedup of 1.22X over randomly selecting a graph representation in multiple widely used GNN models such as GCN, GIN, GAT, or GraphSAGE. ",
+    "url": "https://arxiv.org/abs/2206.08258",
+    "authors": [
+      "Axel Wassington",
+      "Sergi Abadal"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08260",
+    "title": "Adversarial Robustness of Graph-based Anomaly Detection",
+    "abstract": "Graph-based anomaly detection is becoming prevalent due to the powerful representation abilities of graphs as well as recent advances in graph mining techniques. These GAD tools, however, expose a new attacking surface, ironically due to their unique advantage of being able to exploit the relations among data. That is, attackers now can manipulate those relations (i.e., the structure of the graph) to allow target nodes to evade detection or degenerate the classification performance of the detection. In this paper, we exploit this vulnerability by designing the structural poisoning attacks to a FeXtra-based GAD system termed OddBall as well as the black box attacks against GCN-based GAD systems by attacking the imbalanced lienarized GCN ( LGCN ). Specifically, we formulate the attack against OddBall and LGCN as a one-level optimization problem by incorporating different regression techniques, where the key technical challenge is to efficiently solve the problem in a discrete domain. We propose a novel attack method termed BinarizedAttack based on gradient descent. Comparing to prior arts, BinarizedAttack can better use the gradient information, making it particularly suitable for solving discrete optimization problems, thus opening the door to studying a new type of attack against security analytic tools that rely on graph data. ",
+    "url": "https://arxiv.org/abs/2206.08260",
+    "authors": [
+      "Yulin Zhu",
+      "Yuni Lai",
+      "Kaifa Zhao",
+      "Xiapu Luo",
+      "Mingquan Yuan",
+      "Jian Ren",
+      "Kai Zhou"
+    ],
+    "subjectives": [
+      "Cryptography and Security (cs.CR)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08261",
+    "title": "To Help or Disturb: Introduction of Crowdsourced WiFi to 5G Networks",
+    "abstract": "After upgrading to 5G, a network operator still faces congestion when providing the ubiquitous wireless service to the crowd. To meet users' ever-increasing demand, some other operators (e.g., Fon) have been developing another crowdsourced WiFi network to combine many users' home WiFi access points and provide enlarged WiFi coverage to them. While the 5G network experiences negative network externality, the crowdsourced WiFi network helps offload traffic from 5G and its service coverage exhibits positive externality with its subscription number. To our best knowledge, we are the first to investigate how these two heterogeneous networks of diverse network externalities co-exist from an economic perspective. We propose a dynamic game theoretic model to analyze the hybrid interaction among the 5G operator, the crowdsourced WiFi operator, and users. Our user choice model with WiFi's complementarity for 5G allows users to choose both services, departing from the traditional economics literature where a user chooses one over another alternative. Despite of non-convexity of the operators' pricing problems, we prove that the 5G operator facing severe congestion may purposely lower his price to encourage users to add-on WiFi to offload, and he benefits from the introduction of crowdsourced WiFi. However, 5G operator with mild congestion tends to charge users more and all the users' payoffs may decrease. ",
+    "url": "https://arxiv.org/abs/2206.08261",
+    "authors": [
+      "Shugang Hao",
+      "Lingjie Duan"
+    ],
+    "subjectives": [
+      "Networking and Internet Architecture (cs.NI)",
+      "Computer Science and Game Theory (cs.GT)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08263",
+    "title": "'John ate 5 apples' != 'John ate some apples': Self-Supervised  Paraphrase Quality Detection for Algebraic Word Problems",
+    "abstract": "This paper introduces the novel task of scoring paraphrases for Algebraic Word Problems (AWP) and presents a self-supervised method for doing so. In the current online pedagogical setting, paraphrasing these problems is helpful for academicians to generate multiple syntactically diverse questions for assessments. It also helps induce variation to ensure that the student has understood the problem instead of just memorizing it or using unfair means to solve it. The current state-of-the-art paraphrase generation models often cannot effectively paraphrase word problems, losing a critical piece of information (such as numbers or units) which renders the question unsolvable. There is a need for paraphrase scoring methods in the context of AWP to enable the training of good paraphrasers. Thus, we propose ParaQD, a self-supervised paraphrase quality detection method using novel data augmentations that can learn latent representations to separate a high-quality paraphrase of an algebraic question from a poor one by a wide margin. Through extensive experimentation, we demonstrate that our method outperforms existing state-of-the-art self-supervised methods by up to 32% while also demonstrating impressive zero-shot performance. ",
+    "url": "https://arxiv.org/abs/2206.08263",
+    "authors": [
+      "Rishabh Gupta",
+      "Venktesh V",
+      "Mukesh Mohania",
+      "Vikram Goyal"
+    ],
+    "subjectives": [
+      "Computation and Language (cs.CL)",
+      "Artificial Intelligence (cs.AI)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08289",
+    "title": "Switchable Representation Learning Framework with Self-compatibility",
+    "abstract": "Real-world visual search systems involve deployments on multiple platforms with different computing and storage resources. Deploying a unified model that suits the minimal-constrain platforms leads to limited accuracy. It is expected to deploy models with different capacities adapting to the resource constraints, which requires features extracted by these models to be aligned in the metric space. The method to achieve feature alignments is called \"compatible learning\". Existing research mainly focuses on the one-to-one compatible paradigm, which is limited in learning compatibility among multiple models. We propose a Switchable representation learning Framework with Self-Compatibility (SFSC). SFSC generates a series of compatible sub-models with different capacities through one training process. The optimization of sub-models faces gradients conflict, and we mitigate it from the perspective of the magnitude and direction. We adjust the priorities of sub-models dynamically through uncertainty estimation to co-optimize sub-models properly. Besides, the gradients with conflicting directions are projected to avoid mutual interference. SFSC achieves state-of-art performance on the evaluated dataset. ",
+    "url": "https://arxiv.org/abs/2206.08289",
+    "authors": [
+      "Shengsen Wu",
+      "Yan Bai",
+      "Yihang Lou",
+      "Xiongkun Linghu",
+      "Jianzhong He",
+      "Tao Bai",
+      "Ling-Yu Duan"
+    ],
+    "subjectives": [
+      "Artificial Intelligence (cs.AI)",
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08304",
+    "title": "Adversarial Patch Attacks and Defences in Vision-Based Tasks: A Survey",
+    "abstract": "Adversarial attacks in deep learning models, especially for safety-critical systems, are gaining more and more attention in recent years, due to the lack of trust in the security and robustness of AI models. Yet the more primitive adversarial attacks might be physically infeasible or require some resources that are hard to access like the training data, which motivated the emergence of patch attacks. In this survey, we provide a comprehensive overview to cover existing techniques of adversarial patch attacks, aiming to help interested researchers quickly catch up with the progress in this field. We also discuss existing techniques for developing detection and defences against adversarial patches, aiming to help the community better understand this field and its applications in the real world. ",
+    "url": "https://arxiv.org/abs/2206.08304",
+    "authors": [
+      "Abhijith Sharma",
+      "Yijun Bian",
+      "Phil Munz",
+      "Apurva Narayan"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)",
+      "Cryptography and Security (cs.CR)",
+      "Machine Learning (cs.LG)",
+      "Image and Video Processing (eess.IV)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08311",
+    "title": "Continuous-Time Modeling of Counterfactual Outcomes Using Neural  Controlled Differential Equations",
+    "abstract": "Estimating counterfactual outcomes over time has the potential to unlock personalized healthcare by assisting decision-makers to answer ''what-iF'' questions. Existing causal inference approaches typically consider regular, discrete-time intervals between observations and treatment decisions and hence are unable to naturally model irregularly sampled data, which is the common setting in practice. To handle arbitrary observation patterns, we interpret the data as samples from an underlying continuous-time process and propose to model its latent trajectory explicitly using the mathematics of controlled differential equations. This leads to a new approach, the Treatment Effect Neural Controlled Differential Equation (TE-CDE), that allows the potential outcomes to be evaluated at any time point. In addition, adversarial training is used to adjust for time-dependent confounding which is critical in longitudinal settings and is an added challenge not encountered in conventional time-series. To assess solutions to this problem, we propose a controllable simulation environment based on a model of tumor growth for a range of scenarios with irregular sampling reflective of a variety of clinical scenarios. TE-CDE consistently outperforms existing approaches in all simulated scenarios with irregular sampling. ",
+    "url": "https://arxiv.org/abs/2206.08311",
+    "authors": [
+      "Nabeel Seedat",
+      "Fergus Imrie",
+      "Alexis Bellot",
+      "Zhaozhi Qian",
+      "Mihaela van der Schaar"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Machine Learning (stat.ML)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08316",
+    "title": "Boosting the Adversarial Transferability of Surrogate Model with Dark  Knowledge",
+    "abstract": "Deep neural networks (DNNs) for image classification are known to be vulnerable to adversarial examples. And, the adversarial examples have transferability, which means an adversarial example for a DNN model can fool another black-box model with a non-trivial probability. This gave birth of the transfer-based adversarial attack where the adversarial examples generated by a pretrained or known model (called surrogate model) are used to conduct black-box attack. There are some work on how to generate the adversarial examples from a given surrogate model to achieve better transferability. However, training a special surrogate model to generate adversarial examples with better transferability is relatively under-explored. In this paper, we propose a method of training a surrogate model with abundant dark knowledge to boost the adversarial transferability of the adversarial examples generated by the surrogate model. This trained surrogate model is named dark surrogate model (DSM), and the proposed method to train DSM consists of two key components: a teacher model extracting dark knowledge and providing soft labels, and the mixing augmentation skill which enhances the dark knowledge of training data. Extensive experiments have been conducted to show that the proposed method can substantially improve the adversarial transferability of surrogate model across different architectures of surrogate model and optimizers for generating adversarial examples. We also show that the proposed method can be applied to other scenarios of transfer-based attack that contain dark knowledge, like face verification. ",
+    "url": "https://arxiv.org/abs/2206.08316",
+    "authors": [
+      "Dingcheng Yang",
+      "Zihao Xiao",
+      "Wenjian Yu"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Cryptography and Security (cs.CR)",
+      "Computer Vision and Pattern Recognition (cs.CV)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08324",
+    "title": "Modeling, robust control synthesis and worst-case analysis for an  on-orbit servicing mission with large flexible spacecraft",
+    "abstract": "This paper outlines a complete methodology for modeling an on-orbit servicing mission scenario and designing a feedback control system for the attitude dynamics that is guaranteed to robustly meet pointing requirements, despite model uncertainties as well as large inertia and flexibility changes throughout the mission scenario. A model of the uncertain plant was derived, which fully captures the dynamics and couplings between all subsystems as well as the decoupled/coupled configurations of the chaser/target system in a single linear fractional representation (LFR). In addition, a new approach is proposed to model and analyze a closed-loop kinematic chain formed by the chaser and the target spacecraft through the chaser's robotic arm, which uses two local spring-damper systems with uncertain damping and stiffness. This approach offers the possibility to model the dynamical behaviour of a docking mechanism with dynamic stiffness and damping. The controller was designed by taking into account all the interactions between subsystems and uncertainties as well as the time-varying and coupled flexible dynamics. Lastly, the robust stability and worst-case performances were assessed by means of a structured singular value analysis. ",
+    "url": "https://arxiv.org/abs/2206.08324",
+    "authors": [
+      "Ricardo Rodrigues",
+      "Valentin Preda",
+      "Francesco Sanfedino",
+      "Daniel Alazard"
+    ],
+    "subjectives": [
+      "Systems and Control (eess.SY)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08332",
+    "title": "BYOL-Explore: Exploration by Bootstrapped Prediction",
+    "abstract": "We present BYOL-Explore, a conceptually simple yet general approach for curiosity-driven exploration in visually-complex environments. BYOL-Explore learns a world representation, the world dynamics, and an exploration policy all-together by optimizing a single prediction loss in the latent space with no additional auxiliary objective. We show that BYOL-Explore is effective in DM-HARD-8, a challenging partially-observable continuous-action hard-exploration benchmark with visually-rich 3-D environments. On this benchmark, we solve the majority of the tasks purely through augmenting the extrinsic reward with BYOL-Explore s intrinsic reward, whereas prior work could only get off the ground with human demonstrations. As further evidence of the generality of BYOL-Explore, we show that it achieves superhuman performance on the ten hardest exploration games in Atari while having a much simpler design than other competitive agents. ",
+    "url": "https://arxiv.org/abs/2206.08332",
+    "authors": [
+      "Zhaohan Daniel Guo",
+      "Shantanu Thakoor",
+      "Miruna P\u00eeslar",
+      "Bernardo Avila Pires",
+      "Florent Altch\u00e9",
+      "Corentin Tallec",
+      "Alaa Saade",
+      "Daniele Calandriello",
+      "Jean-Bastien Grill",
+      "Yunhao Tang",
+      "Michal Valko",
+      "R\u00e9mi Munos",
+      "Mohammad Gheshlaghi Azar",
+      "Bilal Piot"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Artificial Intelligence (cs.AI)",
+      "Machine Learning (stat.ML)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08339",
+    "title": "iBoot: Image-bootstrapped Self-Supervised Video Representation Learning",
+    "abstract": "Learning visual representations through self-supervision is an extremely challenging task as the network needs to sieve relevant patterns from spurious distractors without the active guidance provided by supervision. This is achieved through heavy data augmentation, large-scale datasets and prohibitive amounts of compute. Video self-supervised learning (SSL) suffers from added challenges: video datasets are typically not as large as image datasets, compute is an order of magnitude larger, and the amount of spurious patterns the optimizer has to sieve through is multiplied several fold. Thus, directly learning self-supervised representations from video data might result in sub-optimal performance. To address this, we propose to utilize a strong image-based model, pre-trained with self- or language supervision, in a video representation learning framework, enabling the model to learn strong spatial and temporal information without relying on the video labeled data. To this end, we modify the typical video-based SSL design and objective to encourage the video encoder to \\textit{subsume} the semantic content of an image-based model trained on a general domain. The proposed algorithm is shown to learn much more efficiently (i.e. in less epochs and with a smaller batch) and results in a new state-of-the-art performance on standard downstream tasks among single-modality SSL methods. ",
+    "url": "https://arxiv.org/abs/2206.08339",
+    "authors": [
+      "Fatemeh Saleh",
+      "Fuwen Tan",
+      "Adrian Bulat",
+      "Georgios Tzimiropoulos",
+      "Brais Martinez"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)",
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08347",
+    "title": "Beyond Supervised vs. Unsupervised: Representative Benchmarking and  Analysis of Image Representation Learning",
+    "abstract": "By leveraging contrastive learning, clustering, and other pretext tasks, unsupervised methods for learning image representations have reached impressive results on standard benchmarks. The result has been a crowded field - many methods with substantially different implementations yield results that seem nearly identical on popular benchmarks, such as linear evaluation on ImageNet. However, a single result does not tell the whole story. In this paper, we compare methods using performance-based benchmarks such as linear evaluation, nearest neighbor classification, and clustering for several different datasets, demonstrating the lack of a clear front-runner within the current state-of-the-art. In contrast to prior work that performs only supervised vs. unsupervised comparison, we compare several different unsupervised methods against each other. To enrich this comparison, we analyze embeddings with measurements such as uniformity, tolerance, and centered kernel alignment (CKA), and propose two new metrics of our own: nearest neighbor graph similarity and linear prediction overlap. We reveal through our analysis that in isolation, single popular methods should not be treated as though they represent the field as a whole, and that future work ought to consider how to leverage the complimentary nature of these methods. We also leverage CKA to provide a framework to robustly quantify augmentation invariance, and provide a reminder that certain types of invariance will be undesirable for downstream tasks. ",
+    "url": "https://arxiv.org/abs/2206.08347",
+    "authors": [
+      "Matthew Gwilliam",
+      "Abhinav Shrivastava"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08353",
+    "title": "Towards Understanding How Machines Can Learn Causal Overhypotheses",
+    "abstract": "Recent work in machine learning and cognitive science has suggested that understanding causal information is essential to the development of intelligence. The extensive literature in cognitive science using the ``blicket detector'' environment shows that children are adept at many kinds of causal inference and learning. We propose to adapt that environment for machine learning agents. One of the key challenges for current machine learning algorithms is modeling and understanding causal overhypotheses: transferable abstract hypotheses about sets of causal relationships. In contrast, even young children spontaneously learn and use causal overhypotheses. In this work, we present a new benchmark -- a flexible environment which allows for the evaluation of existing techniques under variable causal overhypotheses -- and demonstrate that many existing state-of-the-art methods have trouble generalizing in this environment. The code and resources for this benchmark are available at https://github.com/CannyLab/casual_overhypotheses. ",
+    "url": "https://arxiv.org/abs/2206.08353",
+    "authors": [
+      "Eliza Kosoy",
+      "David M. Chan",
+      "Adrian Liu",
+      "Jasmine Collins",
+      "Bryanna Kaufmann",
+      "Sandy Han Huang",
+      "Jessica B. Hamrick",
+      "John Canny",
+      "Nan Rosemary Ke",
+      "Alison Gopnik"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Machine Learning (stat.ML)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08358",
+    "title": "MixGen: A New Multi-Modal Data Augmentation",
+    "abstract": "Data augmentation is a necessity to enhance data efficiency in deep learning. For vision-language pre-training, data is only augmented either for images or for text in previous works. In this paper, we present MixGen: a joint data augmentation for vision-language representation learning to further improve data efficiency. It generates new image-text pairs with semantic relationships preserved by interpolating images and concatenating text. It's simple, and can be plug-and-played into existing pipelines. We evaluate MixGen on four architectures, including CLIP, ViLT, ALBEF and TCL, across five downstream vision-language tasks to show its versatility and effectiveness. For example, adding MixGen in ALBEF pre-training leads to absolute performance improvements on downstream tasks: image-text retrieval (+6.2% on COCO fine-tuned and +5.3% on Flicker30K zero-shot), visual grounding (+0.9% on RefCOCO+), visual reasoning (+0.9% on NLVR$^{2}$), visual question answering (+0.3% on VQA2.0), and visual entailment (+0.4% on SNLI-VE). ",
+    "url": "https://arxiv.org/abs/2206.08358",
+    "authors": [
+      "Xiaoshuai Hao",
+      "Yi Zhu",
+      "Srikar Appalaraju",
+      "Aston Zhang",
+      "Wanqian Zhang",
+      "Bo Li",
+      "Mu Li"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)",
+      "Artificial Intelligence (cs.AI)",
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08362",
+    "title": "Unified Fourier-based Kernel and Nonlinearity Design for Equivariant  Networks on Homogeneous Spaces",
+    "abstract": "We introduce a unified framework for group equivariant networks on homogeneous spaces derived from a Fourier perspective. We address the case of feature fields being tensor valued before and after a convolutional layer. We present a unified derivation of kernels via the Fourier domain by taking advantage of the sparsity of Fourier coefficients of the lifted feature fields. The sparsity emerges when the stabilizer subgroup of the homogeneous space is a compact Lie group. We further introduce an activation method via an elementwise nonlinearity on the regular representation after lifting and projecting back to the field through an equivariant convolution. We show that other methods treating features as the Fourier coefficients in the stabilizer subgroup are special cases of our activation. Experiments on $SO(3)$ and $SE(3)$ show state-of-the-art performance in spherical vector field regression, point cloud classification, and molecular completion. ",
+    "url": "https://arxiv.org/abs/2206.08362",
+    "authors": [
+      "Yinshuang Xu",
+      "Jiahui Lei",
+      "Edgar Dobriban",
+      "Kostas Daniilidis"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08363",
+    "title": "Benchmarking Heterogeneous Treatment Effect Models through the Lens of  Interpretability",
+    "abstract": "Estimating personalized effects of treatments is a complex, yet pervasive problem. To tackle it, recent developments in the machine learning (ML) literature on heterogeneous treatment effect estimation gave rise to many sophisticated, but opaque, tools: due to their flexibility, modularity and ability to learn constrained representations, neural networks in particular have become central to this literature. Unfortunately, the assets of such black boxes come at a cost: models typically involve countless nontrivial operations, making it difficult to understand what they have learned. Yet, understanding these models can be crucial -- in a medical context, for example, discovered knowledge on treatment effect heterogeneity could inform treatment prescription in clinical practice. In this work, we therefore use post-hoc feature importance methods to identify features that influence the model's predictions. This allows us to evaluate treatment effect estimators along a new and important dimension that has been overlooked in previous work: We construct a benchmarking environment to empirically investigate the ability of personalized treatment effect models to identify predictive covariates -- covariates that determine differential responses to treatment. Our benchmarking environment then enables us to provide new insight into the strengths and weaknesses of different types of treatment effects models as we modulate different challenges specific to treatment effect estimation -- e.g. the ratio of prognostic to predictive information, the possible nonlinearity of potential outcomes and the presence and type of confounding. ",
+    "url": "https://arxiv.org/abs/2206.08363",
+    "authors": [
+      "Jonathan Crabb\u00e9",
+      "Alicia Curth",
+      "Ioana Bica",
+      "Mihaela van der Schaar"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Artificial Intelligence (cs.AI)",
+      "Methodology (stat.ME)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08368",
+    "title": "Unbiased 4D: Monocular 4D Reconstruction with a Neural Deformation Model",
+    "abstract": "Capturing general deforming scenes is crucial for many computer graphics and vision applications, and it is especially challenging when only a monocular RGB video of the scene is available. Competing methods assume dense point tracks, 3D templates, large-scale training datasets, or only capture small-scale deformations. In contrast to those, our method, Ub4D, makes none of these assumptions while outperforming the previous state of the art in challenging scenarios. Our technique includes two new, in the context of non-rigid 3D reconstruction, components, i.e., 1) A coordinate-based and implicit neural representation for non-rigid scenes, which enables an unbiased reconstruction of dynamic scenes, and 2) A novel dynamic scene flow loss, which enables the reconstruction of larger deformations. Results on our new dataset, which will be made publicly available, demonstrate the clear improvement over the state of the art in terms of surface reconstruction accuracy and robustness to large deformations. Visit the project page https://4dqv.mpi-inf.mpg.de/Ub4D/. ",
+    "url": "https://arxiv.org/abs/2206.08368",
+    "authors": [
+      "Erik C.M. Johnson",
+      "Marc Habermann",
+      "Soshi Shimada",
+      "Vladislav Golyanik",
+      "Christian Theobalt"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07824",
+    "title": "Large-Scale Differentiable Causal Discovery of Factor Graphs",
+    "abstract": "A common theme in causal inference is learning causal relationships between observed variables, also known as causal discovery. This is usually a daunting task, given the large number of candidate causal graphs and the combinatorial nature of the search space. Perhaps for this reason, most research has so far focused on relatively small causal graphs, with up to hundreds of nodes. However, recent advances in fields like biology enable generating experimental data sets with thousands of interventions followed by rich profiling of thousands of variables, raising the opportunity and urgent need for large causal graph models. Here, we introduce the notion of factor directed acyclic graphs (f-DAGs) as a way to restrict the search space to non-linear low-rank causal interaction models. Combining this novel structural assumption with recent advances that bridge the gap between causal discovery and continuous optimization, we achieve causal discovery on thousands of variables. Additionally, as a model for the impact of statistical noise on this estimation procedure, we study a model of edge perturbations of the f-DAG skeleton based on random graphs and quantify the effect of such perturbations on the f-DAG rank. This theoretical analysis suggests that the set of candidate f-DAGs is much smaller than the whole DAG space and thus more statistically robust in the high-dimensional regime where the underlying skeleton is hard to assess. We propose Differentiable Causal Discovery of Factor Graphs (DCD-FG), a scalable implementation of f-DAG constrained causal discovery for high-dimensional interventional data. DCD-FG uses a Gaussian non-linear low-rank structural equation model and shows significant improvements compared to state-of-the-art methods in both simulations as well as a recent large-scale single-cell RNA sequencing data set with hundreds of genetic interventions. ",
+    "url": "https://arxiv.org/abs/2206.07824",
+    "authors": [
+      "Romain Lopez",
+      "Jan-Christian H\u00fctter",
+      "Jonathan K. Pritchard",
+      "Aviv Regev"
+    ],
+    "subjectives": [
+      "Machine Learning (stat.ML)",
+      "Machine Learning (cs.LG)",
+      "Genomics (q-bio.GN)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07851",
+    "title": "Conformal prediction set for time-series",
+    "abstract": "When building either prediction intervals for regression (with real-valued response) or prediction sets for classification (with categorical responses), uncertainty quantification is essential to studying complex machine learning methods. In this paper, we develop Ensemble Regularized Adaptive Prediction Set (ERAPS) to construct prediction sets for time-series (with categorical responses), based on the prior work of [Xu and Xie, 2021]. In particular, we allow unknown dependencies to exist within features and responses that arrive in sequence. Method-wise, ERAPS is a distribution-free and ensemble-based framework that is applicable for arbitrary classifiers. Theoretically, we bound the coverage gap without assuming data exchangeability and show asymptotic set convergence. Empirically, we demonstrate valid marginal and conditional coverage by ERAPS, which also tends to yield smaller prediction sets than competing methods. ",
+    "url": "https://arxiv.org/abs/2206.07851",
+    "authors": [
+      "Chen Xu",
+      "Yao Xie"
+    ],
+    "subjectives": [
+      "Machine Learning (stat.ML)",
+      "Machine Learning (cs.LG)",
+      "Methodology (stat.ME)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07857",
+    "title": "The Scattering Transform Network with Generalized Morse Wavelets and Its  Application to Music Genre Classification",
+    "abstract": "We propose to use the Generalized Morse Wavelets (GMWs) instead of commonly-used Morlet (or Gabor) wavelets in the Scattering Transform Network (STN), which we call the GMW-STN, for signal classification problems. The GMWs form a parameterized family of truly analytic wavelets while the Morlet wavelets are only approximately analytic. The analyticity of underlying wavelet filters in the STN is particularly important for nonstationary oscillatory signals such as music signals because it improves interpretability of the STN representations by providing multiscale amplitude and phase (and consequently frequency) information of input signals. We demonstrate the superiority of the GMW-STN over the conventional STN in music genre classification using the so-called GTZAN database. Moreover, we show the performance improvement of the GMW-STN by increasing its number of layers to three over the typical two-layer STN.} ",
+    "url": "https://arxiv.org/abs/2206.07857",
+    "authors": [
+      "Wai Ho Chak",
+      "Naoki Saito",
+      "David Weber"
+    ],
+    "subjectives": [
+      "Audio and Speech Processing (eess.AS)",
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07931",
+    "title": "DRAFT: A Novel Framework to Reduce Domain Shifting in Self-supervised  Learning and Its Application to Children's ASR",
+    "abstract": "Self-supervised learning (SSL) in the pretraining stage using un-annotated speech data has been successful in low-resource automatic speech recognition (ASR) tasks. However, models trained through SSL are biased to the pretraining data which is usually different from the data used in finetuning tasks, causing a domain shifting problem, and thus resulting in limited knowledge transfer. We propose a novel framework, domain responsible adaptation and finetuning (DRAFT), to reduce domain shifting in pretrained speech models through an additional adaptation stage. In DRAFT, residual adapters (RAs) are inserted in the pretrained model to learn domain-related information with the same SSL loss as the pretraining stage. Only RA parameters are updated during the adaptation stage. DRAFT is agnostic to the type of SSL method used and is evaluated with three widely used approaches: APC, Wav2vec2.0, and HuBERT. On two child ASR tasks (OGI and MyST databases), using SSL models trained with un-annotated adult speech data (Librispeech), relative WER improvements of up to 19.7% are observed when compared to the pretrained models without adaptation. Additional experiments examined the potential of cross knowledge transfer between the two datasets and the results are promising, showing a broader usage of the proposed DRAFT framework. ",
+    "url": "https://arxiv.org/abs/2206.07931",
+    "authors": [
+      "Ruchao Fan",
+      "Abeer Alwan"
+    ],
+    "subjectives": [
+      "Audio and Speech Processing (eess.AS)",
+      "Sound (cs.SD)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07944",
+    "title": "Distributed Online Learning Algorithm With Differential Privacy Strategy  for Convex Nondecomposable Global Objectives",
+    "abstract": "In this paper, we deal with a general distributed constrained online learning problem with privacy over time-varying networks, where a class of nondecomposable objective functions are considered. Under this setting, each node only controls a part of the global decision variable, and the goal of all nodes is to collaboratively minimize the global objective over a time horizon $T$ while guarantees the security of the transmitted information. For such problems, we first design a novel generic algorithm framework, named as DPSDA, of differentially private distributed online learning using the Laplace mechanism and the stochastic variants of dual averaging method. Then, we propose two algorithms, named as DPSDA-C and DPSDA-PS, under this framework. Theoretical results show that both algorithms attain an expected regret upper bound in $\\mathcal{O}( \\sqrt{T} )$ when the objective function is convex, which matches the best utility achievable by cutting-edge algorithms. Finally, numerical experiment results on both real-world and randomly generated datasets verify the effectiveness of our algorithms. ",
+    "url": "https://arxiv.org/abs/2206.07944",
+    "authors": [
+      "Huqiang Cheng",
+      "Xiaofeng Liao",
+      "Huaqing Li"
+    ],
+    "subjectives": [
+      "Optimization and Control (math.OC)",
+      "Cryptography and Security (cs.CR)",
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08011",
+    "title": "Hardness prediction of age-hardening aluminum alloy based on ensemble  learning",
+    "abstract": "With the rapid development of artificial intelligence, the combination of material database and machine learning has driven the progress of material informatics. Because aluminum alloy is widely used in many fields, so it is significant to predict the properties of aluminum alloy. In this thesis, the data of Al-Cu-Mg-X (X: Zn, Zr, etc.) alloy are used to input the composition, aging conditions (time and temperature) and predict its hardness. An ensemble learning solution based on automatic machine learning and an attention mechanism introduced into the secondary learner of deep neural network are proposed respectively. The experimental results show that selecting the correct secondary learner can further improve the prediction accuracy of the model. This manuscript introduces the attention mechanism to improve the secondary learner based on deep neural network, and obtains a fusion model with better performance. The R-Square of the best model is 0.9697 and the MAE is 3.4518HV. ",
+    "url": "https://arxiv.org/abs/2206.08011",
+    "authors": [
+      "Zuo Houchen",
+      "Jiang Yongquan",
+      "Yang Yan",
+      "Liu Baoying",
+      "Hu Jie"
+    ],
+    "subjectives": [
+      "Materials Science (cond-mat.mtrl-sci)",
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08019",
+    "title": "Multi-View Imputation and Cross-Attention Network Based on Incomplete  Longitudinal and Multi-Modal Data for Alzheimer's Disease Prediction",
+    "abstract": "Longitudinal variations and complementary information inherent in longitudinal and multi-modal data play an important role in Alzheimer's disease (AD) prediction, particularly in identifying subjects with mild cognitive impairment who are about to have AD. However, longitudinal and multi-modal data may have missing data, which hinders the effective application of these data. Additionally, previous longitudinal studies require existing longitudinal data to achieve prediction, but AD prediction is expected to be conducted at patients' baseline visit (BL) in clinical practice. Thus, we proposed a multi-view imputation and cross-attention network (MCNet) to integrate data imputation and AD prediction in a unified framework and achieve accurate AD prediction. First, a multi-view imputation method combined with adversarial learning, which can handle a wide range of missing data situations and reduce imputation errors, was presented. Second, two cross-attention blocks were introduced to exploit the potential associations in longitudinal and multi-modal data. Finally, a multi-task learning model was built for data imputation, longitudinal classification, and AD prediction tasks. When the model was properly trained, the disease progression information learned from longitudinal data can be leveraged by BL data to improve AD prediction. The proposed method was tested on two independent testing sets and single-model data at BL to verify its effectiveness and flexibility on AD prediction. Results showed that MCNet outperformed several state-of-the-art methods. Moreover, the interpretability of MCNet was presented. Thus, our MCNet is a tool with a great application potential in longitudinal and multi-modal data analysis for AD prediction. Codes are available at https://github.com/Meiyan88/MCNET. ",
+    "url": "https://arxiv.org/abs/2206.08019",
+    "authors": [
+      "Meiyan Huang",
+      "Tao Wang",
+      "Xiumei Chen",
+      "Xiaoling Zhang",
+      "Shuoling Zhou",
+      "Qianjin Feng"
+    ],
+    "subjectives": [
+      "Image and Video Processing (eess.IV)",
+      "Computer Vision and Pattern Recognition (cs.CV)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08078",
+    "title": "U-PET: MRI-based Dementia Detection with Joint Generation of Synthetic  FDG-PET Images",
+    "abstract": "Alzheimer's disease (AD) is the most common cause of dementia. An early detection is crucial for slowing down the disease and mitigating risks related to the progression. While the combination of MRI and FDG-PET is the best image-based tool for diagnosis, FDG-PET is not always available. The reliable detection of Alzheimer's disease with only MRI could be beneficial, especially in regions where FDG-PET might not be affordable for all patients. To this end, we propose a multi-task method based on U-Net that takes T1-weighted MR images as an input to generate synthetic FDG-PET images and classifies the dementia progression of the patient into cognitive normal (CN), cognitive impairment (MCI), and AD. The attention gates used in both task heads can visualize the most relevant parts of the brain, guiding the examiner and adding interpretability. Results show the successful generation of synthetic FDG-PET images and a performance increase in disease classification over the naive single-task baseline. ",
+    "url": "https://arxiv.org/abs/2206.08078",
+    "authors": [
+      "Marcel Kollovieh",
+      "Matthias Keicher",
+      "Stephan Wunderlich",
+      "Hendrik Burwinkel",
+      "Thomas Wendler",
+      "Nassir Navab"
+    ],
+    "subjectives": [
+      "Image and Video Processing (eess.IV)",
+      "Computer Vision and Pattern Recognition (cs.CV)",
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08174",
+    "title": "Strategies to Improve Robustness of Target Speech Extraction to  Enrollment Variations",
+    "abstract": "Target speech extraction is a technique to extract the target speaker's voice from mixture signals using a pre-recorded enrollment utterance that characterize the voice characteristics of the target speaker. One major difficulty of target speech extraction lies in handling variability in ``intra-speaker'' characteristics, i.e., characteristics mismatch between target speech and an enrollment utterance. While most conventional approaches focus on improving {\\it average performance} given a set of enrollment utterances, here we propose to guarantee the {\\it worst performance}, which we believe is of great practical importance. In this work, we propose an evaluation metric called worst-enrollment source-to-distortion ratio (SDR) to quantitatively measure the robustness towards enrollment variations. We also introduce a novel training scheme that aims at directly optimizing the worst-case performance by focusing on training with difficult enrollment cases where extraction does not perform well. In addition, we investigate the effectiveness of auxiliary speaker identification loss (SI-loss) as another way to improve robustness over enrollments. Experimental validation reveals the effectiveness of both worst-enrollment target training and SI-loss training to improve robustness against enrollment variations, by increasing speaker discriminability. ",
+    "url": "https://arxiv.org/abs/2206.08174",
+    "authors": [
+      "Hiroshi Sato",
+      "Tsubasa Ochiai",
+      "Marc Delcroix",
+      "Keisuke Kinoshita",
+      "Takafumi Moriya",
+      "Naoki Makishima",
+      "Mana Ihori",
+      "Tomohiro Tanaka",
+      "Ryo Masumura"
+    ],
+    "subjectives": [
+      "Audio and Speech Processing (eess.AS)",
+      "Sound (cs.SD)",
+      "Signal Processing (eess.SP)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08262",
+    "title": "Attention-wise masked graph contrastive learning for predicting  molecular property",
+    "abstract": "Accurate and efficient prediction of the molecular properties of drugs is one of the fundamental problems in drug research and development. Recent advancements in representation learning have been shown to greatly improve the performance of molecular property prediction. However, due to limited labeled data, supervised learning-based molecular representation algorithms can only search limited chemical space, which results in poor generalizability. In this work, we proposed a self-supervised representation learning framework for large-scale unlabeled molecules. We developed a novel molecular graph augmentation strategy, referred to as attention-wise graph mask, to generate challenging positive sample for contrastive learning. We adopted the graph attention network (GAT) as the molecular graph encoder, and leveraged the learned attention scores as masking guidance to generate molecular augmentation graphs. By minimization of the contrastive loss between original graph and masked graph, our model can capture important molecular structure and higher-order semantic information. Extensive experiments showed that our attention-wise graph mask contrastive learning exhibit state-of-the-art performance in a couple of downstream molecular property prediction tasks. ",
+    "url": "https://arxiv.org/abs/2206.08262",
+    "authors": [
+      "Hui Liu",
+      "Yibiao Huang",
+      "Xuejun Liu",
+      "Lei Deng"
+    ],
+    "subjectives": [
+      "Biomolecules (q-bio.BM)",
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08272",
+    "title": "Longitudinal detection of new MS lesions using Deep Learning",
+    "abstract": "The detection of new multiple sclerosis (MS) lesions is an important marker of the evolution of the disease. The applicability of learning-based methods could automate this task efficiently. However, the lack of annotated longitudinal data with new-appearing lesions is a limiting factor for the training of robust and generalizing models. In this work, we describe a deep-learning-based pipeline addressing the challenging task of detecting and segmenting new MS lesions. First, we propose to use transfer-learning from a model trained on a segmentation task using single time-points. Therefore, we exploit knowledge from an easier task and for which more annotated datasets are available. Second, we propose a data synthesis strategy to generate realistic longitudinal time-points with new lesions using single time-point scans. In this way, we pretrain our detection model on large synthetic annotated datasets. Finally, we use a data-augmentation technique designed to simulate data diversity in MRI. By doing that, we increase the size of the available small annotated longitudinal datasets. Our ablation study showed that each contribution lead to an enhancement of the segmentation accuracy. Using the proposed pipeline, we obtained the best score for the segmentation and the detection of new MS lesions in the MSSEG2 MICCAI challenge. ",
+    "url": "https://arxiv.org/abs/2206.08272",
+    "authors": [
+      "Reda Abdellah Kamraoui",
+      "Boris Mansencal",
+      "Jos\u00e9 V Manjon",
+      "Pierrick Coup\u00e9"
+    ],
+    "subjectives": [
+      "Image and Video Processing (eess.IV)",
+      "Computer Vision and Pattern Recognition (cs.CV)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.08298",
+    "title": "Video Capsule Endoscopy Classification using Focal Modulation Guided  Convolutional Neural Network",
+    "abstract": "Video capsule endoscopy is a hot topic in computer vision and medicine. Deep learning can have a positive impact on the future of video capsule endoscopy technology. It can improve the anomaly detection rate, reduce physicians' time for screening, and aid in real-world clinical analysis. CADx classification system for video capsule endoscopy has shown a great promise for further improvement. For example, detection of cancerous polyp and bleeding can lead to swift medical response and improve the survival rate of the patients. To this end, an automated CADx system must have high throughput and decent accuracy. In this paper, we propose FocalConvNet, a focal modulation network integrated with lightweight convolutional layers for the classification of small bowel anatomical landmarks and luminal findings. FocalConvNet leverages focal modulation to attain global context and allows global-local spatial interactions throughout the forward pass. Moreover, the convolutional block with its intrinsic inductive/learning bias and capacity to extract hierarchical features allows our FocalConvNet to achieve favourable results with high throughput. We compare our FocalConvNet with other SOTA on Kvasir-Capsule, a large-scale VCE dataset with 44,228 frames with 13 classes of different anomalies. Our proposed method achieves the weighted F1-score, recall and MCC} of 0.6734, 0.6373 and 0.2974, respectively outperforming other SOTA methodologies. Furthermore, we report the highest throughput of 148.02 images/second rate to establish the potential of FocalConvNet in a real-time clinical environment. The code of the proposed FocalConvNet is available at https://github.com/NoviceMAn-prog/FocalConvNet. ",
+    "url": "https://arxiv.org/abs/2206.08298",
+    "authors": [
+      "Abhishek Srivastava",
+      "Nikhil Kumar Tomar",
+      "Ulas Bagci",
+      "Debesh Jha"
+    ],
+    "subjectives": [
+      "Image and Video Processing (eess.IV)",
+      "Computer Vision and Pattern Recognition (cs.CV)"
+    ]
+  },
+  {
+    "id": "arXiv:2002.09564",
+    "title": "Towards Robust and Reproducible Active Learning Using Neural Networks",
+    "abstract": " Comments: Accepted at CVPR 2022; Improved figures and plots for better readability ",
+    "url": "https://arxiv.org/abs/2002.09564",
+    "authors": [
+      "Prateek Munjal",
+      "Nasir Hayat",
+      "Munawar Hayat",
+      "Jamshid Sourati",
+      "Shadab Khan"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Computer Vision and Pattern Recognition (cs.CV)",
+      "Machine Learning (stat.ML)"
+    ]
+  },
+  {
+    "id": "arXiv:2004.04331",
+    "title": "Robust Linear Precoder Design for 3D Massive MIMO Downlink with A  Posteriori Channel Model",
+    "abstract": " Comments: 29 pages, 6 figures ",
+    "url": "https://arxiv.org/abs/2004.04331",
+    "authors": [
+      "An-An Lu",
+      "Xiqi Gao",
+      "Chengshan Xiao"
+    ],
+    "subjectives": [
+      "Information Theory (cs.IT)"
+    ]
+  },
+  {
+    "id": "arXiv:2005.05048",
+    "title": "A Light Signalling Approach to Node Grouping for Massive MIMO IoT  Networks",
+    "abstract": " Title: A Light Signalling Approach to Node Grouping for Massive MIMO IoT  Networks ",
+    "url": "https://arxiv.org/abs/2005.05048",
+    "authors": [
+      "Emma Fitzgerald",
+      "Micha\u0142 Pi\u00f3ro",
+      "Harsh Tataria",
+      "Gilles Callebaut",
+      "Sara Gunnarsson",
+      "Liesbet Van der Perre"
+    ],
+    "subjectives": [
+      "Networking and Internet Architecture (cs.NI)",
+      "Signal Processing (eess.SP)"
+    ]
+  },
+  {
+    "id": "arXiv:2012.03476",
+    "title": "NCGNN: Node-Level Capsule Graph Neural Network for Semisupervised  Classification",
+    "abstract": " Comments: accepted by TNNLS ",
+    "url": "https://arxiv.org/abs/2012.03476",
+    "authors": [
+      "Rui Yang",
+      "Wenrui Dai",
+      "Chenglin Li",
+      "Junni Zou",
+      "Hongkai Xiong"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2103.06261",
+    "title": "A Tree-based Model Averaging Approach for Personalized Treatment Effect  Estimation from Heterogeneous Data Sources",
+    "abstract": " Comments: Accepted at ICML 2022. Previously titled \"A Tree-based Federated Learning Approach for Personalized Treatment Effect Estimation from Heterogeneous Data Sources\" ",
+    "url": "https://arxiv.org/abs/2103.06261",
+    "authors": [
+      "Xiaoqing Tan",
+      "Chung-Chou H. Chang",
+      "Ling Zhou",
+      "Lu Tang"
+    ],
+    "subjectives": [
+      "Machine Learning (stat.ML)",
+      "Machine Learning (cs.LG)",
+      "Methodology (stat.ME)"
+    ]
+  },
+  {
+    "id": "arXiv:2105.05987",
+    "title": "Two Influence Maximization Games on Graphs Made Temporal",
+    "abstract": " Comments: Accepted to IJCAI 2021 ",
+    "url": "https://arxiv.org/abs/2105.05987",
+    "authors": [
+      "Niclas Boehmer",
+      "Vincent Froese",
+      "Julia Henkel",
+      "Yvonne Lasars",
+      "Rolf Niedermeier",
+      "Malte Renken"
+    ],
+    "subjectives": [
+      "Computer Science and Game Theory (cs.GT)"
+    ]
+  },
+  {
+    "id": "arXiv:2106.13973",
+    "title": "Benchmarking Differential Privacy and Federated Learning for BERT Models",
+    "abstract": " Comments: 4 pages, 3 tables, 1 figure ",
+    "url": "https://arxiv.org/abs/2106.13973",
+    "authors": [
+      "Priyam Basu",
+      "Tiasa Singha Roy",
+      "Rakshit Naidu",
+      "Zumrut Muftuoglu",
+      "Sahib Singh",
+      "Fatemehsadat Mireshghallah"
+    ],
+    "subjectives": [
+      "Computation and Language (cs.CL)",
+      "Cryptography and Security (cs.CR)",
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2106.14587",
+    "title": "Topos and Stacks of Deep Neural Networks",
+    "abstract": " Comments: 151 pages, 12 figures ",
+    "url": "https://arxiv.org/abs/2106.14587",
+    "authors": [
+      "Jean-Claude Belfiore",
+      "Daniel Bennequin"
+    ],
+    "subjectives": [
+      "Algebraic Topology (math.AT)",
+      "Artificial Intelligence (cs.AI)"
+    ]
+  },
+  {
+    "id": "arXiv:2106.14832",
+    "title": "The role of reciprocity in human-robot social influence",
+    "abstract": " Comments: Article published on iScience. See this https URL Cite as: Zonca, J., Folso, A., & Sciutti, A. (2021). The role of reciprocity in human-robot social influence. iScience, 24(12), 103424. 10.1016/j.isci.2021.103424 ",
+    "url": "https://arxiv.org/abs/2106.14832",
+    "authors": [
+      "Joshua Zonca",
+      "Anna Folso",
+      "Alessandra Sciutti"
+    ],
+    "subjectives": [
+      "Robotics (cs.RO)"
+    ]
+  },
+  {
+    "id": "arXiv:2107.11630",
+    "title": "Detecting Adversarial Examples Is (Nearly) As Hard As Classifying Them",
+    "abstract": " Comments: ICML 2022 (Long Talk) ",
+    "url": "https://arxiv.org/abs/2107.11630",
+    "authors": [
+      "Florian Tram\u00e8r"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Cryptography and Security (cs.CR)",
+      "Machine Learning (stat.ML)"
+    ]
+  },
+  {
+    "id": "arXiv:2108.02390",
+    "title": "Fuzzy Logic Based Logical Query Answering on Knowledge Graphs",
+    "abstract": " Comments: AAAI'2022 ",
+    "url": "https://arxiv.org/abs/2108.02390",
+    "authors": [
+      "Xuelu Chen",
+      "Ziniu Hu",
+      "Yizhou Sun"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2109.01904",
+    "title": "Estimating Categorical Counterfactuals via Deep Twin Networks",
+    "abstract": " Comments: 8 pages + appendix ",
+    "url": "https://arxiv.org/abs/2109.01904",
+    "authors": [
+      "Athanasios Vlontzos",
+      "Bernhard Kainz",
+      "Ciaran M. Gilligan-Lee"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Artificial Intelligence (cs.AI)"
+    ]
+  },
+  {
+    "id": "arXiv:2109.15117",
+    "title": "Monotone-Value Neural Networks: Exploiting Preference Monotonicity in  Combinatorial Assignment",
+    "abstract": " Title: Monotone-Value Neural Networks: Exploiting Preference Monotonicity in  Combinatorial Assignment ",
+    "url": "https://arxiv.org/abs/2109.15117",
+    "authors": [
+      "Jakob Weissteiner",
+      "Jakob Heiss",
+      "Julien Siems",
+      "Sven Seuken"
+    ],
+    "subjectives": [
+      "Computer Science and Game Theory (cs.GT)"
+    ]
+  },
+  {
+    "id": "arXiv:2110.01359",
+    "title": "CENN: Conservative energy method based on neural networks with  subdomains for solving variational problems involving heterogeneous and  complex geometries",
+    "abstract": " Comments: 38 pages, 22 figures, 1 graphical abstract ",
+    "url": "https://arxiv.org/abs/2110.01359",
+    "authors": [
+      "Yizheng Wang",
+      "Jia Sun",
+      "Wei Li",
+      "Zaiyuan Lu",
+      "Yinghua Liu"
+    ],
+    "subjectives": [
+      "Numerical Analysis (math.NA)",
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2110.06892",
+    "title": "TAG: Toward Accurate Social Media Content Tagging with a Concept Graph",
+    "abstract": " Comments: Accepted by ACM SIGKDD 2022 ",
+    "url": "https://arxiv.org/abs/2110.06892",
+    "authors": [
+      "Jiuding Yang",
+      "Weidong Guo",
+      "Bang Liu",
+      "Yakun Yu",
+      "Chaoyue Wang",
+      "Jinwen Luo",
+      "Linglong Kong",
+      "Di Niu",
+      "Zhen Wen"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Artificial Intelligence (cs.AI)"
+    ]
+  },
+  {
+    "id": "arXiv:2110.06904",
+    "title": "Poison Forensics: Traceback of Data Poisoning Attacks in Neural Networks",
+    "abstract": " Comments: 18 pages ",
+    "url": "https://arxiv.org/abs/2110.06904",
+    "authors": [
+      "Shawn Shan",
+      "Arjun Nitin Bhagoji",
+      "Haitao Zheng",
+      "Ben Y. Zhao"
+    ],
+    "subjectives": [
+      "Cryptography and Security (cs.CR)",
+      "Artificial Intelligence (cs.AI)"
+    ]
+  },
+  {
+    "id": "arXiv:2110.08449",
+    "title": "Adversarial Attacks on Gaussian Process Bandits",
+    "abstract": " Comments: Accepted to ICML 2022 ",
+    "url": "https://arxiv.org/abs/2110.08449",
+    "authors": [
+      "Eric Han",
+      "Jonathan Scarlett"
+    ],
+    "subjectives": [
+      "Machine Learning (stat.ML)",
+      "Cryptography and Security (cs.CR)",
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2110.10498",
+    "title": "Differential Privacy in Multi-Party Resource Sharing",
+    "abstract": " Title: Differential Privacy in Multi-Party Resource Sharing ",
+    "url": "https://arxiv.org/abs/2110.10498",
+    "authors": [
+      "Utku Karaca",
+      "S. Ilker Birbil",
+      "Sinan Yildirim",
+      "Nursen Aydin",
+      "Gizem Mullaoglu"
+    ],
+    "subjectives": [
+      "Optimization and Control (math.OC)",
+      "Cryptography and Security (cs.CR)"
+    ]
+  },
+  {
+    "id": "arXiv:2110.13939",
+    "title": "CausalAF: Causal Autoregressive Flow for Safety-Critical Driving  Scenario Generation",
+    "abstract": " Comments: 11 pages, under review ",
+    "url": "https://arxiv.org/abs/2110.13939",
+    "authors": [
+      "Wenhao Ding",
+      "Haohong Lin",
+      "Bo Li",
+      "Ding Zhao"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)",
+      "Artificial Intelligence (cs.AI)",
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2111.02212",
+    "title": "A swarm intelligence-based robust solution for Virtual Reference  Feedback Tuning",
+    "abstract": " Comments: 33 pages, 9 figures, journal ",
+    "url": "https://arxiv.org/abs/2111.02212",
+    "authors": [
+      "L. V. Fiorio",
+      "C. L. Remes",
+      "Y. R. de Novaes"
+    ],
+    "subjectives": [
+      "Systems and Control (eess.SY)",
+      "Signal Processing (eess.SP)"
+    ]
+  },
+  {
+    "id": "arXiv:2111.09298",
+    "title": "SeCGAN: Parallel Conditional Generative Adversarial Networks for Face  Editing via Semantic Consistency",
+    "abstract": " Comments: Accepted by AI for Content Creation (AI4CC) workshop at CVPR 2022 ",
+    "url": "https://arxiv.org/abs/2111.09298",
+    "authors": [
+      "Jiaze Sun",
+      "Binod Bhattarai",
+      "Zhixiang Chen",
+      "Tae-Kyun Kim"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)"
+    ]
+  },
+  {
+    "id": "arXiv:2111.09561",
+    "title": "Adversarial attacks on voter model dynamics in complex networks",
+    "abstract": " Comments: 7 pages, 5 figures ",
+    "url": "https://arxiv.org/abs/2111.09561",
+    "authors": [
+      "Katsumi Chiyomaru",
+      "Kazuhiro Takemoto"
+    ],
+    "subjectives": [
+      "Physics and Society (physics.soc-ph)",
+      "Social and Information Networks (cs.SI)"
+    ]
+  },
+  {
+    "id": "arXiv:2112.07794",
+    "title": "Review of Factor Graphs for Robust GNSS Applications",
+    "abstract": " Title: Review of Factor Graphs for Robust GNSS Applications ",
+    "url": "https://arxiv.org/abs/2112.07794",
+    "authors": [
+      "Shounak Das",
+      "Ryan Watson",
+      "Jason Gross"
+    ],
+    "subjectives": [
+      "Robotics (cs.RO)"
+    ]
+  },
+  {
+    "id": "arXiv:2112.11790",
+    "title": "BEVDet: High-performance Multi-camera 3D Object Detection in  Bird-Eye-View",
+    "abstract": " Comments: Multi-camera 3D Object Detection ",
+    "url": "https://arxiv.org/abs/2112.11790",
+    "authors": [
+      "Junjie Huang",
+      "Guan Huang",
+      "Zheng Zhu",
+      "Yun Ye",
+      "Dalong Du"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)"
+    ]
+  },
+  {
+    "id": "arXiv:2201.00378",
+    "title": "Graph Signal Reconstruction Techniques for IoT Air Pollution Monitoring  Platforms",
+    "abstract": " Comments: This work has been submitted to the IEEE for possible publication. Copyright may be transferred without notice, after which this version may no longer be accessible ",
+    "url": "https://arxiv.org/abs/2201.00378",
+    "authors": [
+      "Pau Ferrer-Cid",
+      "Jose M. Barcelo-Ordinas",
+      "Jorge Garcia-Vidal"
+    ],
+    "subjectives": [
+      "Signal Processing (eess.SP)",
+      "Machine Learning (cs.LG)",
+      "Networking and Internet Architecture (cs.NI)"
+    ]
+  },
+  {
+    "id": "arXiv:2201.02115",
+    "title": "The dynamics of representation learning in shallow, non-linear  autoencoders",
+    "abstract": " Title: The dynamics of representation learning in shallow, non-linear  autoencoders ",
+    "url": "https://arxiv.org/abs/2201.02115",
+    "authors": [
+      "Maria Refinetti",
+      "Sebastian Goldt"
+    ],
+    "subjectives": [
+      "Machine Learning (stat.ML)",
+      "Disordered Systems and Neural Networks (cond-mat.dis-nn)",
+      "Statistical Mechanics (cond-mat.stat-mech)",
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2201.03016",
+    "title": "Learning from Synthetic InSAR with Vision Transformers: The case of  volcanic unrest detection",
+    "abstract": " Comments: This work has been submitted to the IEEE for possible publication ",
+    "url": "https://arxiv.org/abs/2201.03016",
+    "authors": [
+      "Nikolaos Ioannis Bountos",
+      "Dimitrios Michail",
+      "Ioannis Papoutsis"
+    ],
+    "subjectives": [
+      "Image and Video Processing (eess.IV)",
+      "Computer Vision and Pattern Recognition (cs.CV)"
+    ]
+  },
+  {
+    "id": "arXiv:2201.07296",
+    "title": "Convergence of Policy Gradient for Entropy Regularized MDPs with Neural  Network Approximation in the Mean-Field Regime",
+    "abstract": " Title: Convergence of Policy Gradient for Entropy Regularized MDPs with Neural  Network Approximation in the Mean-Field Regime ",
+    "url": "https://arxiv.org/abs/2201.07296",
+    "authors": [
+      "Bekzhan Kerimkulov",
+      "James-Michael Leahy",
+      "David \u0160i\u0161ka",
+      "Lukasz Szpruch"
+    ],
+    "subjectives": [
+      "Optimization and Control (math.OC)",
+      "Artificial Intelligence (cs.AI)",
+      "Machine Learning (cs.LG)",
+      "Probability (math.PR)",
+      "Machine Learning (stat.ML)"
+    ]
+  },
+  {
+    "id": "arXiv:2201.11969",
+    "title": "Approximately Equivariant Networks for Imperfectly Symmetric Dynamics",
+    "abstract": " Title: Approximately Equivariant Networks for Imperfectly Symmetric Dynamics ",
+    "url": "https://arxiv.org/abs/2201.11969",
+    "authors": [
+      "Rui Wang",
+      "Robin Walters",
+      "Rose Yu"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2201.12987",
+    "title": "Interpretable and Generalizable Graph Learning via Stochastic Attention  Mechanism",
+    "abstract": " Comments: Accepted to ICML 2022 ",
+    "url": "https://arxiv.org/abs/2201.12987",
+    "authors": [
+      "Siqi Miao",
+      "Miaoyuan Liu",
+      "Pan Li"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2202.08835",
+    "title": "General Cyclical Training of Neural Networks",
+    "abstract": " Comments: Position paper ",
+    "url": "https://arxiv.org/abs/2202.08835",
+    "authors": [
+      "Leslie N. Smith"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Artificial Intelligence (cs.AI)",
+      "Computer Vision and Pattern Recognition (cs.CV)",
+      "Machine Learning (stat.ML)"
+    ]
+  },
+  {
+    "id": "arXiv:2202.09792",
+    "title": "Hierarchical Interpretation of Neural Text Classification",
+    "abstract": " Comments: Under review of Computational Linguistics ",
+    "url": "https://arxiv.org/abs/2202.09792",
+    "authors": [
+      "Hanqi Yan",
+      "Lin Gui",
+      "Yulan He"
+    ],
+    "subjectives": [
+      "Computation and Language (cs.CL)",
+      "Artificial Intelligence (cs.AI)",
+      "Information Retrieval (cs.IR)"
+    ]
+  },
+  {
+    "id": "arXiv:2202.10103",
+    "title": "Robustness and Accuracy Could Be Reconcilable by (Proper) Definition",
+    "abstract": " Comments: ICML 2022 ",
+    "url": "https://arxiv.org/abs/2202.10103",
+    "authors": [
+      "Tianyu Pang",
+      "Min Lin",
+      "Xiao Yang",
+      "Jun Zhu",
+      "Shuicheng Yan"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Cryptography and Security (cs.CR)",
+      "Machine Learning (stat.ML)"
+    ]
+  },
+  {
+    "id": "arXiv:2202.12230",
+    "title": "Sample Efficiency of Data Augmentation Consistency Regularization",
+    "abstract": " Title: Sample Efficiency of Data Augmentation Consistency Regularization ",
+    "url": "https://arxiv.org/abs/2202.12230",
+    "authors": [
+      "Shuo Yang",
+      "Yijun Dong",
+      "Rachel Ward",
+      "Inderjit S. Dhillon",
+      "Sujay Sanghavi",
+      "Qi Lei"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2202.12636",
+    "title": "Learning Multi-Task Gaussian Process Over Heterogeneous Input Domains",
+    "abstract": " Comments: 12 pages, 9 figures, 4 tables, preprint under review ",
+    "url": "https://arxiv.org/abs/2202.12636",
+    "authors": [
+      "Haitao Liu",
+      "Kai Wu",
+      "Yew-Soon Ong",
+      "Chao Bian",
+      "Xiaomo Jiang",
+      "Xiaofang Wang"
+    ],
+    "subjectives": [
+      "Machine Learning (stat.ML)",
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2203.02654",
+    "title": "A Large-scale Comprehensive Dataset and Copy-overlap Aware Evaluation  Protocol for Segment-level Video Copy Detection",
+    "abstract": " Comments: Accepted by CVPR 2022. Codes are all publicly available at this https URL ",
+    "url": "https://arxiv.org/abs/2203.02654",
+    "authors": [
+      "Sifeng He",
+      "Xudong Yang",
+      "Chen Jiang",
+      "Gang Liang",
+      "Wei Zhang",
+      "Tan Pan",
+      "Qing Wang",
+      "Furong Xu",
+      "Chunguang Li",
+      "Jingxiong Liu",
+      "Hui Xu",
+      "Kaiming Huang",
+      "Yuan Cheng",
+      "Feng Qian",
+      "Xiaobo Zhang",
+      "Lei Yang"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)"
+    ]
+  },
+  {
+    "id": "arXiv:2203.09103",
+    "title": "Knowledge Graph-Enabled Text-Based Automatic Personality Prediction",
+    "abstract": " Comments: This is a preprint of an article published in \"Computational Intelligence and Neuroscience\" ",
+    "url": "https://arxiv.org/abs/2203.09103",
+    "authors": [
+      "Majid Ramezani",
+      "Mohammad-Reza Feizi-Derakhshi",
+      "Mohammad-Ali Balafar"
+    ],
+    "subjectives": [
+      "Computation and Language (cs.CL)",
+      "Artificial Intelligence (cs.AI)"
+    ]
+  },
+  {
+    "id": "arXiv:2203.09948",
+    "title": "Neural Enhanced Belief Propagation for Data Association in Multiobject  Tracking",
+    "abstract": " Title: Neural Enhanced Belief Propagation for Data Association in Multiobject  Tracking ",
+    "url": "https://arxiv.org/abs/2203.09948",
+    "authors": [
+      "Mingchao Liang",
+      "Florian Meyer"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)",
+      "Machine Learning (cs.LG)",
+      "Signal Processing (eess.SP)"
+    ]
+  },
+  {
+    "id": "arXiv:2203.10384",
+    "title": "Data Smells: Categories, Causes and Consequences, and Detection of  Suspicious Data in AI-based Systems",
+    "abstract": " Title: Data Smells: Categories, Causes and Consequences, and Detection of  Suspicious Data in AI-based Systems ",
+    "url": "https://arxiv.org/abs/2203.10384",
+    "authors": [
+      "Harald Foidl",
+      "Michael Felderer",
+      "Rudolf Ramler"
+    ],
+    "subjectives": [
+      "Software Engineering (cs.SE)",
+      "Artificial Intelligence (cs.AI)"
+    ]
+  },
+  {
+    "id": "arXiv:2203.12587",
+    "title": "Bubble Prediction of Non-Fungible Tokens (NFTs): An Empirical  Investigation",
+    "abstract": " Title: Bubble Prediction of Non-Fungible Tokens (NFTs): An Empirical  Investigation ",
+    "url": "https://arxiv.org/abs/2203.12587",
+    "authors": [
+      "Kensuke Ito",
+      "Kyohei Shibano",
+      "Gento Mogi"
+    ],
+    "subjectives": [
+      "Statistical Finance (q-fin.ST)",
+      "Computers and Society (cs.CY)"
+    ]
+  },
+  {
+    "id": "arXiv:2203.13574",
+    "title": "Embedding Recurrent Layers with Dual-Path Strategy in a Variant of  Convolutional Network for Speaker-Independent Speech Separation",
+    "abstract": " Comments: Accepted by Interspeech 2022 ",
+    "url": "https://arxiv.org/abs/2203.13574",
+    "authors": [
+      "Xue Yang",
+      "Changchun Bao"
+    ],
+    "subjectives": [
+      "Audio and Speech Processing (eess.AS)",
+      "Sound (cs.SD)"
+    ]
+  },
+  {
+    "id": "arXiv:2203.17054",
+    "title": "BEVDet4D: Exploit Temporal Cues in Multi-camera 3D Object Detection",
+    "abstract": " Comments: arXiv admin note: text overlap with arXiv:2112.11790 ",
+    "url": "https://arxiv.org/abs/2203.17054",
+    "authors": [
+      "Junjie Huang",
+      "Guan Huang"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)"
+    ]
+  },
+  {
+    "id": "arXiv:2204.03196",
+    "title": "A Framework for Following Temporal Logic Instructions with Unknown  Causal Dependencies",
+    "abstract": " Comments: Accepted at IJCNN 2022 (Oral) ",
+    "url": "https://arxiv.org/abs/2204.03196",
+    "authors": [
+      "Duo Xu",
+      "Faramarz Fekri"
+    ],
+    "subjectives": [
+      "Robotics (cs.RO)"
+    ]
+  },
+  {
+    "id": "arXiv:2204.11307",
+    "title": "A Comprehensive Test Pattern Generation Approach Exploiting SAT Attack  for Logic Locking",
+    "abstract": " Comments: 10 pages, 8 figures ",
+    "url": "https://arxiv.org/abs/2204.11307",
+    "authors": [
+      "Yadi Zhong",
+      "Ujjwal Guin"
+    ],
+    "subjectives": [
+      "Cryptography and Security (cs.CR)"
+    ]
+  },
+  {
+    "id": "arXiv:2205.03569",
+    "title": "Representation Learning for Compressed Video Action Recognition via  Attentive Cross-modal Interaction with Motion Enhancement",
+    "abstract": " Comments: Accepted to IJCAI 2022 ",
+    "url": "https://arxiv.org/abs/2205.03569",
+    "authors": [
+      "Bing Li",
+      "Jiaxin Chen",
+      "Dongming Zhang",
+      "Xiuguo Bao",
+      "Di Huang"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)"
+    ]
+  },
+  {
+    "id": "arXiv:2205.03811",
+    "title": "Data-Free Adversarial Knowledge Distillation for Graph Neural Networks",
+    "abstract": " Comments: Accepted by IJCAI 2022. arXiv admin note: text overlap with arXiv:2011.14779, arXiv:1912.11006 by other authors ",
+    "url": "https://arxiv.org/abs/2205.03811",
+    "authors": [
+      "Yuanxin Zhuang",
+      "Lingjuan Lyu",
+      "Chuan Shi",
+      "Carl Yang",
+      "Lichao Sun"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2205.05715",
+    "title": "Causal discovery under a confounder blanket",
+    "abstract": " Comments: To be presented at the 38th Conference on Uncertainty in Artificial Intelligence ",
+    "url": "https://arxiv.org/abs/2205.05715",
+    "authors": [
+      "David S. Watson",
+      "Ricardo Silva"
+    ],
+    "subjectives": [
+      "Methodology (stat.ME)",
+      "Artificial Intelligence (cs.AI)",
+      "Machine Learning (stat.ML)"
+    ]
+  },
+  {
+    "id": "arXiv:2205.06296",
+    "title": "Integrating User and Item Reviews in Deep Cooperative Neural Networks  for Movie Ranking Prediction",
+    "abstract": " Comments: 14 pages, typos corrected, references added ",
+    "url": "https://arxiv.org/abs/2205.06296",
+    "authors": [
+      "Aristeidis Karras",
+      "Christos Karras"
+    ],
+    "subjectives": [
+      "Information Retrieval (cs.IR)",
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2205.07471",
+    "title": "Adaptive Convolutional Dictionary Network for CT Metal Artifact  Reduction",
+    "abstract": " Comments: this https URL ",
+    "url": "https://arxiv.org/abs/2205.07471",
+    "authors": [
+      "Hong Wang",
+      "Yuexiang Li",
+      "Deyu Meng",
+      "Yefeng Zheng"
+    ],
+    "subjectives": [
+      "Image and Video Processing (eess.IV)",
+      "Computer Vision and Pattern Recognition (cs.CV)"
+    ]
+  },
+  {
+    "id": "arXiv:2205.13205",
+    "title": "$O(N^2)$ Universal Antisymmetry in Fermionic Neural Networks",
+    "abstract": " Comments: ICML 2022 AI for Science Workshop ",
+    "url": "https://arxiv.org/abs/2205.13205",
+    "authors": [
+      "Tianyu Pang",
+      "Shuicheng Yan",
+      "Min Lin"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Chemical Physics (physics.chem-ph)",
+      "Computational Physics (physics.comp-ph)",
+      "Quantum Physics (quant-ph)"
+    ]
+  },
+  {
+    "id": "arXiv:2205.13542",
+    "title": "BEVFusion: Multi-Task Multi-Sensor Fusion with Unified Bird's-Eye View  Representation",
+    "abstract": " Comments: The first two authors contributed equally to this work. Project page: this https URL ",
+    "url": "https://arxiv.org/abs/2205.13542",
+    "authors": [
+      "Zhijian Liu",
+      "Haotian Tang",
+      "Alexander Amini",
+      "Xinyu Yang",
+      "Huizi Mao",
+      "Daniela Rus",
+      "Song Han"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.02796",
+    "title": "Mixed Graph Contrastive Network for Semi-Supervised Node Classification",
+    "abstract": " Title: Mixed Graph Contrastive Network for Semi-Supervised Node Classification ",
+    "url": "https://arxiv.org/abs/2206.02796",
+    "authors": [
+      "Xihong Yang",
+      "Yue Liu",
+      "Sihang Zhou",
+      "Xinwang Liu",
+      "En Zhu"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.03563",
+    "title": "Two Ways of Understanding Social Dynamics: Analyzing the Predictability  of Emergence of Objects in Reddit r/place Dependent on Locality in Space and  Time",
+    "abstract": " Title: Two Ways of Understanding Social Dynamics: Analyzing the Predictability  of Emergence of Objects in Reddit r/place Dependent on Locality in Space and  Time ",
+    "url": "https://arxiv.org/abs/2206.03563",
+    "authors": [
+      "Alyssa M Adams",
+      "Javier Fernandez",
+      "Olaf Witkowski"
+    ],
+    "subjectives": [
+      "Physics and Society (physics.soc-ph)",
+      "Human-Computer Interaction (cs.HC)",
+      "Machine Learning (cs.LG)",
+      "Multiagent Systems (cs.MA)",
+      "Social and Information Networks (cs.SI)",
+      "Cellular Automata and Lattice Gases (nlin.CG)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.03734",
+    "title": "On gradient descent training under data augmentation with on-line noisy  copies",
+    "abstract": " Title: On gradient descent training under data augmentation with on-line noisy  copies ",
+    "url": "https://arxiv.org/abs/2206.03734",
+    "authors": [
+      "Katsuyuki Hagiwara"
+    ],
+    "subjectives": [
+      "Machine Learning (stat.ML)",
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.03838",
+    "title": "Efficient reversible data hiding via two layers of double-peak embedding",
+    "abstract": " Title: Efficient reversible data hiding via two layers of double-peak embedding ",
+    "url": "https://arxiv.org/abs/2206.03838",
+    "authors": [
+      "Fuhu Wu",
+      "Jian Sun",
+      "Shun Zhang",
+      "Zhili Chen",
+      "Hong Zhong"
+    ],
+    "subjectives": [
+      "Cryptography and Security (cs.CR)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.05490",
+    "title": "Discovery and density estimation of latent confounders in Bayesian  networks with evidence lower bound",
+    "abstract": " Title: Discovery and density estimation of latent confounders in Bayesian  networks with evidence lower bound ",
+    "url": "https://arxiv.org/abs/2206.05490",
+    "authors": [
+      "Kiattikun Chobtham",
+      "Anthony C. Constantinou"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.06023",
+    "title": "Virtual embeddings and self-consistency for self-supervised learning",
+    "abstract": " Title: Virtual embeddings and self-consistency for self-supervised learning ",
+    "url": "https://arxiv.org/abs/2206.06023",
+    "authors": [
+      "Tariq Bdair",
+      "Hossam Abdelhamid",
+      "Nassir Navab",
+      "Shadi Albarqouni"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)",
+      "Artificial Intelligence (cs.AI)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.06829",
+    "title": "Efficient Decoder-free Object Detection with Transformers",
+    "abstract": " Comments: Update metadata, 10 pages ",
+    "url": "https://arxiv.org/abs/2206.06829",
+    "authors": [
+      "Peixian Chen",
+      "Mengdan Zhang",
+      "Yunhang Shen",
+      "Kekai Sheng",
+      "Yuting Gao",
+      "Xing Sun",
+      "Ke Li",
+      "Chunhua Shen"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.06872",
+    "title": "On Provably Robust Meta-Bayesian Optimization",
+    "abstract": " Comments: Accepted to 38th Conference on Uncertainty in Artificial Intelligence (UAI 2022), Extended version with proofs and additional experimental details and results, 31 pages ",
+    "url": "https://arxiv.org/abs/2206.06872",
+    "authors": [
+      "Zhongxiang Dai",
+      "Yizhou Chen",
+      "Haibin Yu",
+      "Bryan Kian Hsiang Low",
+      "Patrick Jaillet"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Artificial Intelligence (cs.AI)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07286",
+    "title": "Faster Decomposition of Weighted Graphs into Cliques using Fisher's  Inequality",
+    "abstract": " Comments: 11 pages, 7 figures ",
+    "url": "https://arxiv.org/abs/2206.07286",
+    "authors": [
+      "Shweta Jain",
+      "Yosuke Mizutani",
+      "Blair Sullivan"
+    ],
+    "subjectives": [
+      "Data Structures and Algorithms (cs.DS)",
+      "Discrete Mathematics (cs.DM)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07298",
+    "title": "S$^2$-FPN: Scale-ware Strip Attention Guided Feature Pyramid Network for  Real-time Semantic Segmentation",
+    "abstract": " Title: S$^2$-FPN: Scale-ware Strip Attention Guided Feature Pyramid Network for  Real-time Semantic Segmentation ",
+    "url": "https://arxiv.org/abs/2206.07298",
+    "authors": [
+      "Mohammed A. M. Elhassan",
+      "Chenhui Yang",
+      "Chenxi Huang",
+      "Tewodros Legesse Munea",
+      "Xin Hong"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)",
+      "Artificial Intelligence (cs.AI)"
+    ]
+  },
+  {
+    "id": "arXiv:2206.07481",
+    "title": "A Survey of Detection Methods for Die Attachment and Wire Bonding  Defects in Integrated Circuit Manufacturing",
+    "abstract": " Comments: 13 pages, 9 figures, 8 tables ",
+    "url": "https://arxiv.org/abs/2206.07481",
+    "authors": [
+      "Lamia Alam",
+      "Nasser Kehtarnavaz"
+    ],
+    "subjectives": [
+      "Signal Processing (eess.SP)",
+      "Computer Vision and Pattern Recognition (cs.CV)",
+      "Machine Learning (cs.LG)"
+    ]
+  }
+]
