@@ -25,12 +25,9 @@ else:
 from bs4 import BeautifulSoup
 soup = BeautifulSoup(html, 'html.parser')
 
-s = soup.find("h3")
-print(s.get_text())
-os._exit()
+s = soup.find("h3").text.split(",")[-1].strip().split(' ')
+day, month, year = s[0], s[1], s[2]
 
-s = soup.find(class_="list-dateline").text.split("announced")[-1].strip()
-day, month, year = [_.strip() for _ in s.split(",")[-1].split()]
 info_folder = "info/%s-%s/%s" % (year, month, day)
 os.makedirs(info_folder, exist_ok=True)
 
@@ -50,9 +47,12 @@ for dl in soup.find_all("dl"):
 
     for (dd, dt) in dds_dts:
         # arXiv id
-        list_identifier = dt.find(class_="list-identifier")
-        id = list_identifier.a.text
+        #list_identifier = dt.find(class_="list-identifier")
+        #id = list_identifier.a.text
+        
+        id = dt.find(title='Abstract').text.strip()
 
+        
         # abstract
         abstract = dd.find_all(class_="mathjax")[-1].text.replace('\n', ' ').replace('\r', ' ')
 
