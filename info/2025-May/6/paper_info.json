@@ -844,7 +844,7 @@
   {
     "id": "arXiv:2505.01930",
     "title": "A Matrix Product State Representation of Boolean Functions",
-    "abstract": "           We introduce a novel normal form representation of Boolean functions in terms of products of binary matrices, hereafter referred to as the Binary Matrix Product (BMP) representation. BMPs are analogous to the Tensor-Trains (TT) and Matrix Product States (MPS) used, respectively, in applied mathematics and in quantum many-body physics to accelerate computations that are usually inaccessible by more traditional approaches. BMPs turn out to be closely related to Binary Decision Diagrams (BDDs), a powerful compressed representation of Boolean functions invented in the late 80s by Bryant that has found a broad range of applications in many areas of computer science and engineering. We present a direct and natural translation of BMPs into Binary Decision Diagrams (BDDs), and derive an elementary set of operations used to manipulate and combine BMPs that are analogous to those introduced by Bryant for BDDs. Both BDDs and BMPs are practical tools when the complexity of these representations, as measured by the maximum bond dimension of a BMP (or the accumulated bond dimension across the BMP matrix train) and the number of nodes of a BDD, remains polynomial in the number of bits.. In both cases, controlling the complexity hinges on optimizing the order of the Boolean variables. BMPs offer the advantage that their construction and manipulation rely on simple linear algebra -- a compelling feature that can facilitate the development of open-source libraries that are both more flexible and easier to use than those currently available for BDDs. An initial implementation of a BMP library is available on GitHub, with the expectation that the close conceptual connection to TT and MPS techniques will motivate further development of BMP methods by researchers in these fields, potentially enabling novel applications to classical and quantum computing.         ",
+    "abstract": "           We introduce a novel normal form representation of Boolean functions in terms of products of binary matrices, hereafter referred to as the Binary Matrix Product (BMP) representation. BMPs are analogous to the Tensor-Trains (TT) and Matrix Product States (MPS) used, respectively, in applied mathematics and in quantum many-body physics to accelerate computations that are usually inaccessible by more traditional approaches. BMPs turn out to be closely related to Binary Decision Diagrams (BDDs), a powerful compressed representation of Boolean functions invented in the late 80s by Bryant that has found a broad range of applications in many areas of computer science and engineering. We present a direct and natural translation of BMPs into Binary Decision Diagrams (BDDs), and derive an elementary set of operations used to manipulate and combine BMPs that are analogous to those introduced by Bryant for BDDs. Both BDDs and BMPs are practical tools when the complexity of these representations, as measured by the maximum bond dimension of a BMP (or the accumulated bond dimension across the BMP matrix train) and the number of nodes of a BDD, remains polynomial in the number of bits, $n$. In both cases, controlling the complexity hinges on optimizing the order of the Boolean variables. BMPs offer the advantage that their construction and manipulation rely on simple linear algebra -- a compelling feature that can facilitate the development of open-source libraries that are both more flexible and easier to use than those currently available for BDDs. An initial implementation of a BMP library is available on GitHub, with the expectation that the close conceptual connection to TT and MPS techniques will motivate further development of BMP methods by researchers in these fields, potentially enabling novel applications to classical and quantum computing.         ",
     "url": "https://arxiv.org/abs/2505.01930",
     "authors": [
       "Umut Eren Usturali",
@@ -853,7 +853,9 @@
       "Eduardo R. Mucciolo"
     ],
     "subjectives": [
-      "Data Structures and Algorithms (cs.DS)"
+      "Data Structures and Algorithms (cs.DS)",
+      "Computational Physics (physics.comp-ph)",
+      "Quantum Physics (quant-ph)"
     ]
   },
   {
@@ -868,7 +870,8 @@
       "Zhu Li"
     ],
     "subjectives": [
-      "Computer Vision and Pattern Recognition (cs.CV)"
+      "Computer Vision and Pattern Recognition (cs.CV)",
+      "Image and Video Processing (eess.IV)"
     ]
   },
   {
@@ -2020,21 +2023,6 @@
     ]
   },
   {
-    "id": "arXiv:2505.02529",
-    "title": "RobSurv: Vector Quantization-Based Multi-Modal Learning for Robust Cancer Survival Prediction",
-    "abstract": "           Cancer survival prediction using multi-modal medical imaging presents a critical challenge in oncology, mainly due to the vulnerability of deep learning models to noise and protocol variations across imaging centers. Current approaches struggle to extract consistent features from heterogeneous CT and PET images, limiting their clinical applicability. We address these challenges by introducing RobSurv, a robust deep-learning framework that leverages vector quantization for resilient multi-modal feature learning. The key innovation of our approach lies in its dual-path architecture: one path maps continuous imaging features to learned discrete codebooks for noise-resistant representation, while the parallel path preserves fine-grained details through continuous feature processing. This dual representation is integrated through a novel patch-wise fusion mechanism that maintains local spatial relationships while capturing global context via Transformer-based processing. In extensive evaluations across three diverse datasets (HECKTOR, H\\&N1, and NSCLC Radiogenomics), RobSurv demonstrates superior performance, achieving concordance index of 0.771, 0.742, and 0.734 respectively - significantly outperforming existing methods. Most notably, our model maintains robust performance even under severe noise conditions, with performance degradation of only 3.8-4.5\\% compared to 8-12\\% in baseline methods. These results, combined with strong generalization across different cancer types and imaging protocols, establish RobSurv as a promising solution for reliable clinical prognosis that can enhance treatment planning and patient care.         ",
-    "url": "https://arxiv.org/abs/2505.02529",
-    "authors": [
-      "Aiman Farooq",
-      "Azad Singh",
-      "Deepak Mishra",
-      "Santanu Chaudhury"
-    ],
-    "subjectives": [
-      "Computer Vision and Pattern Recognition (cs.CV)"
-    ]
-  },
-  {
     "id": "arXiv:2505.02537",
     "title": "Advancing Constrained Monotonic Neural Networks: Achieving Universal Approximation Beyond Bounded Activations",
     "abstract": "           Conventional techniques for imposing monotonicity in MLPs by construction involve the use of non-negative weight constraints and bounded activation functions, which pose well-known optimization challenges. In this work, we generalize previous theoretical results, showing that MLPs with non-negative weight constraint and activations that saturate on alternating sides are universal approximators for monotonic functions. Additionally, we show an equivalence between the saturation side in the activations and the sign of the weight constraint. This connection allows us to prove that MLPs with convex monotone activations and non-positive constrained weights also qualify as universal approximators, in contrast to their non-negative constrained counterparts. Our results provide theoretical grounding to the empirical effectiveness observed in previous works while leading to possible architectural simplification. Moreover, to further alleviate the optimization difficulties, we propose an alternative formulation that allows the network to adjust its activations according to the sign of the weights. This eliminates the requirement for weight reparameterization, easing initialization and improving training stability. Experimental evaluation reinforces the validity of the theoretical results, showing that our novel approach compares favourably to traditional monotonic architectures.         ",
@@ -2264,23 +2252,6 @@
       "Robotics (cs.RO)",
       "Computer Vision and Pattern Recognition (cs.CV)",
       "Machine Learning (cs.LG)"
-    ]
-  },
-  {
-    "id": "arXiv:2505.02677",
-    "title": "Multimodal Deep Learning for Stroke Prediction and Detection using Retinal Imaging and Clinical Data",
-    "abstract": "           Stroke is a major public health problem, affecting millions worldwide. Deep learning has recently demonstrated promise for enhancing the diagnosis and risk prediction of stroke. However, existing methods rely on costly medical imaging modalities, such as computed tomography. Recent studies suggest that retinal imaging could offer a cost-effective alternative for cerebrovascular health assessment due to the shared clinical pathways between the retina and the brain. Hence, this study explores the impact of leveraging retinal images and clinical data for stroke detection and risk prediction. We propose a multimodal deep neural network that processes Optical Coherence Tomography (OCT) and infrared reflectance retinal scans, combined with clinical data, such as demographics, vital signs, and diagnosis codes. We pretrained our model using a self-supervised learning framework using a real-world dataset consisting of $37$ k scans, and then fine-tuned and evaluated the model using a smaller labeled subset. Our empirical findings establish the predictive ability of the considered modalities in detecting lasting effects in the retina associated with acute stroke and forecasting future risk within a specific time horizon. The experimental results demonstrate the effectiveness of our proposed framework by achieving $5$\\% AUROC improvement as compared to the unimodal image-only baseline, and $8$\\% improvement compared to an existing state-of-the-art foundation model. In conclusion, our study highlights the potential of retinal imaging in identifying high-risk patients and improving long-term outcomes.         ",
-    "url": "https://arxiv.org/abs/2505.02677",
-    "authors": [
-      "Saeed Shurrab",
-      "Aadim Nepal",
-      "Terrence J. Lee-St. John",
-      "Nicola G. Ghazi",
-      "Bartlomiej Piechowski-Jozwiak",
-      "Farah E. Shamout"
-    ],
-    "subjectives": [
-      "Computer Vision and Pattern Recognition (cs.CV)"
     ]
   },
   {
@@ -2927,6 +2898,22 @@
     ]
   },
   {
+    "id": "arXiv:2505.02529",
+    "title": "RobSurv: Vector Quantization-Based Multi-Modal Learning for Robust Cancer Survival Prediction",
+    "abstract": "           Cancer survival prediction using multi-modal medical imaging presents a critical challenge in oncology, mainly due to the vulnerability of deep learning models to noise and protocol variations across imaging centers. Current approaches struggle to extract consistent features from heterogeneous CT and PET images, limiting their clinical applicability. We address these challenges by introducing RobSurv, a robust deep-learning framework that leverages vector quantization for resilient multi-modal feature learning. The key innovation of our approach lies in its dual-path architecture: one path maps continuous imaging features to learned discrete codebooks for noise-resistant representation, while the parallel path preserves fine-grained details through continuous feature processing. This dual representation is integrated through a novel patch-wise fusion mechanism that maintains local spatial relationships while capturing global context via Transformer-based processing. In extensive evaluations across three diverse datasets (HECKTOR, H\\&N1, and NSCLC Radiogenomics), RobSurv demonstrates superior performance, achieving concordance index of 0.771, 0.742, and 0.734 respectively - significantly outperforming existing methods. Most notably, our model maintains robust performance even under severe noise conditions, with performance degradation of only 3.8-4.5\\% compared to 8-12\\% in baseline methods. These results, combined with strong generalization across different cancer types and imaging protocols, establish RobSurv as a promising solution for reliable clinical prognosis that can enhance treatment planning and patient care.         ",
+    "url": "https://arxiv.org/abs/2505.02529",
+    "authors": [
+      "Aiman Farooq",
+      "Azad Singh",
+      "Deepak Mishra",
+      "Santanu Chaudhury"
+    ],
+    "subjectives": [
+      "Image and Video Processing (eess.IV)",
+      "Computer Vision and Pattern Recognition (cs.CV)"
+    ]
+  },
+  {
     "id": "arXiv:2505.02530",
     "title": "Energy Efficiency Maximization for CR-NOMA based Smart Grid Communication Network",
     "abstract": "           Managing massive data flows effectively and resolving spectrum shortages are two challenges that Smart Grid Communication Networks (SGCN) must overcome. To address these problems, we provide a combined optimization approach that makes use of Cognitive Radio (CR) and Non-Orthogonal Multiple Access (NOMA) technologies. Our work focuses on using user pairing (UP) and power allocation (PA) techniques to maximize energy efficiency (EE) in SGCN, particularly within Neighbourhood Area Networks (NANs). We develop a joint optimization problem that takes into account the real-world limitations of a CR-NOMA setting. This problem is NP-hard, nonlinear, and nonconvex by nature. To address the computational complexity of the problem, we use the Block Coordinate Descent (BCD) method, which breaks the problem into UP and PA subproblems. Initially, we proposed the Zebra-Optimization User Pairing (ZOUP) algorithm to tackle the UP problem, which outperforms both Orthogonal Multiple Access (OMA) and non-optimized NOMA (UPWO) by 78.8\\% and 13.6\\%, respectively, at a SNR of 15 dB. Based on the ZOUP pairs, we subsequently proposed the PA approach, i.e., ZOUPPA, which significantly outperforms UPWO and ZOUP by 53.2\\% and 25.4\\%, respectively, at an SNR of 15 dB. A detailed analysis of key parameters, including varying SNRs, power allocation constants, path loss exponents, user density, channel availability, and coverage radius, underscores the superiority of our approach. By facilitating the effective use of communication resources in SGCN, our research opens the door to more intelligent and energy-efficient grid systems. Our work tackles important issues in SGCN and lays the groundwork for future developments in smart grid communication technologies by combining modern optimization approaches with CR-NOMA.         ",
@@ -2958,6 +2945,24 @@
     "subjectives": [
       "Image and Video Processing (eess.IV)",
       "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2505.02677",
+    "title": "Multimodal Deep Learning for Stroke Prediction and Detection using Retinal Imaging and Clinical Data",
+    "abstract": "           Stroke is a major public health problem, affecting millions worldwide. Deep learning has recently demonstrated promise for enhancing the diagnosis and risk prediction of stroke. However, existing methods rely on costly medical imaging modalities, such as computed tomography. Recent studies suggest that retinal imaging could offer a cost-effective alternative for cerebrovascular health assessment due to the shared clinical pathways between the retina and the brain. Hence, this study explores the impact of leveraging retinal images and clinical data for stroke detection and risk prediction. We propose a multimodal deep neural network that processes Optical Coherence Tomography (OCT) and infrared reflectance retinal scans, combined with clinical data, such as demographics, vital signs, and diagnosis codes. We pretrained our model using a self-supervised learning framework using a real-world dataset consisting of $37$ k scans, and then fine-tuned and evaluated the model using a smaller labeled subset. Our empirical findings establish the predictive ability of the considered modalities in detecting lasting effects in the retina associated with acute stroke and forecasting future risk within a specific time horizon. The experimental results demonstrate the effectiveness of our proposed framework by achieving $5$\\% AUROC improvement as compared to the unimodal image-only baseline, and $8$\\% improvement compared to an existing state-of-the-art foundation model. In conclusion, our study highlights the potential of retinal imaging in identifying high-risk patients and improving long-term outcomes.         ",
+    "url": "https://arxiv.org/abs/2505.02677",
+    "authors": [
+      "Saeed Shurrab",
+      "Aadim Nepal",
+      "Terrence J. Lee-St. John",
+      "Nicola G. Ghazi",
+      "Bartlomiej Piechowski-Jozwiak",
+      "Farah E. Shamout"
+    ],
+    "subjectives": [
+      "Image and Video Processing (eess.IV)",
+      "Computer Vision and Pattern Recognition (cs.CV)"
     ]
   },
   {
