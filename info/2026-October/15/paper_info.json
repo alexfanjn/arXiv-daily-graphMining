@@ -1,0 +1,771 @@
+[
+  {
+    "id": "arXiv:2112.09646",
+    "title": "Generation of data on discontinuous manifolds via continuous stochastic non-invertible networks",
+    "abstract": "           The generation of discontinuous distributions is a difficult task for most known frameworks such as generative autoencoders and generative adversarial networks. Generative non-invertible models are unable to accurately generate such distributions, require long training and often are subject to mode collapse. Variational autoencoders (VAEs), which are based on the idea of keeping the latent space to be Gaussian for the sake of a simple sampling, allow an accurate reconstruction, while they experience significant limitations at generation task. In this work, instead of trying to keep the latent space to be Gaussian, we use a pre-trained contrastive encoder to obtain a clustered latent space. Then, for each cluster, representing a unimodal submanifold, we train a dedicated low complexity network to generate this submanifold from the Gaussian distribution. The proposed framework is based on the information-theoretic formulation of mutual information maximization between the input data and latent space representation. We derive a link between the cost functions and the information-theoretic formulation. We apply our approach to synthetic 2D distributions to demonstrate both reconstruction and generation of discontinuous distributions using continuous stochastic networks.         ",
+    "url": "https://arxiv.org/abs/2112.09646",
+    "authors": [
+      "Mariia Drozdova",
+      "Vitaliy Kinakh",
+      "Guillaume Qu\u00e9tant",
+      "Tobias Golling",
+      "Slava Voloshynovskiy"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2402.05203",
+    "title": "Bellman Conformal Inference: Calibrating Prediction Intervals For Time Series",
+    "abstract": "           We introduce Bellman Conformal Inference (BCI), a framework that wraps around any time series forecasting models and provides calibrated prediction intervals. Unlike the existing methods, BCI is able to leverage multi-step ahead forecasts and explicitly optimize the average interval lengths by solving a one-dimensional stochastic control problem (SCP) at each time step. In particular, we use the dynamic programming algorithm to find the optimal policy for the SCP. We prove that BCI achieves long-term coverage under arbitrary distribution shifts and temporal dependence, even with poor multi-step ahead forecasts. When the raw forecast intervals are approximately calibrated, we prove that BCI is near optimal for its surrogate model predictive control problem. We find empirically that BCI avoids uninformative intervals with infinite lengths under our main experimental configuration and generates substantially shorter prediction intervals when the raw forecast intervals are poorly calibrated.         ",
+    "url": "https://arxiv.org/abs/2402.05203",
+    "authors": [
+      "Zitong Yang",
+      "Yu Ming Huang",
+      "Emmanuel Cand\u00e8s",
+      "Lihua Lei"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Machine Learning (stat.ML)"
+    ]
+  },
+  {
+    "id": "arXiv:2412.08016",
+    "title": "GLL: A Differentiable Graph Learning Layer for Neural Networks",
+    "abstract": "           Standard deep learning architectures used for classification generate label predictions with a projection head and softmax activation function. Although successful, these methods fail to leverage the relational information between samples for generating label predictions. In recent works, graph-based learning techniques, namely Laplace learning, have been heuristically combined with neural networks for both supervised and semi-supervised learning (SSL) tasks. However, prior works approximate the gradient of the loss function with respect to the graph learning algorithm or decouple the processes; end-to-end integration with neural networks is not achieved. In this work, we derive backpropagation equations, via the adjoint method, for inclusion of a general family of graph learning layers into a neural network. The resulting method, distinct from graph neural networks, allows us to precisely integrate similarity graph construction and graph Laplacian-based label propagation into a neural network layer, replacing a projection head and softmax activation function for general classification task. Our experimental results demonstrate smooth label transitions across data, improved generalization and robustness to adversarial attacks, and improved training dynamics compared to a standard softmax-based approach.         ",
+    "url": "https://arxiv.org/abs/2412.08016",
+    "authors": [
+      "Jason Brown",
+      "Bohan Chen",
+      "Harris Hardiman-Mostow",
+      "Jeff Calder",
+      "Andrea L. Bertozzi"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Machine Learning (stat.ML)"
+    ]
+  },
+  {
+    "id": "arXiv:2506.04713",
+    "title": "Enabling Validation for Robust Few-Shot Recognition",
+    "abstract": "           A key challenge in Few-Shot Recognition (FSR) is the scarcity of labeled task-specific data for training. Contemporary methods mitigate this challenge by exploiting pretrained Vision-Language Models (VLMs) for their learned transferable features. Some recent ones augment the scarce data by retrieving relevant yet out-of-distribution (OOD) examples from external data sources. However, they largely overlook an equally fundamental challenge: the absence of validation data for model selection and hyperparameter tuning. As a result, the adapted VLMs overfit the few-shot training data and generalize poorly to OOD test data. We show that retrieved data provide a natural source of validation, but their direct use creates a fundamental paradox. Since the retrieved samples are inherently OOD w.r.t the few-shot ID training data, adapting a VLM to the ID data constantly degrades its performance on the retrieved data. Consequently, conventional validation relying on the accuracy of retrieved data favors no adaptation and prevents improved generalization. To resolve this dilemma, we formulate validation as a multi-objective optimization (MOO) problem between performance gains on the few-shot ID data and the performance preservation on the retrieved data. We introduce a simple yet effective validation strategy by choosing an operating point on the Pareto front of the MOO problem. This strategy enables hyperparameter tuning, which had been unrealistically done by using test data, thereby mitigating overfitting and improving generalization. We integrate it into a stage-wise finetuning pipeline, termed Validation-Enabled Stage-wise Tuning (VEST). Extensive experiments on five established benchmarks show that VEST consistently outperforms existing approaches on both ID and OOD test data.         ",
+    "url": "https://arxiv.org/abs/2506.04713",
+    "authors": [
+      "Hanxin Wang",
+      "Tian Liu",
+      "Shu Kong"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)"
+    ]
+  },
+  {
+    "id": "arXiv:2506.09309",
+    "title": "An unconditionally convergent discontinuous Galerkin neural network method activated by plane waves for Helmholtz equation and Maxwell's equations",
+    "abstract": "           In this paper we propose a discontinuous Galerkin plane wave neural network (DGPWNN) method for approximately solving Helmholtz equation and Maxwell's equations. In this method, we define an elliptic-type variational problem as in the plane wave least square method with $h-$refinement and introduce the adaptive construction of recursively augmented discontinuous Galerkin subspaces whose basis functions are realizations of element-wise neural network functions with hp-refinement, where the activation function is chosen as a complex-valued exponential function like the plane wave function. A sequence of basis functions approaching the unit residuals are recursively generated by iteratively solving quasi-maximization problems associated with the underlying residual functionals and the intersection of the closed unit ball and discontinuous plane wave neural network spaces. The convergence results of the DGPWNN method are unconditional only if nonlinear initial parameters for the quasi-maximizers are selected by suitably distributed propagation directions, and established without the assumption on the boundedness of the neural network parameters. Numerical experiments confirm the effectiveness of the proposed method.         ",
+    "url": "https://arxiv.org/abs/2506.09309",
+    "authors": [
+      "Long Yuan",
+      "Menghui Wu",
+      "Xiaoqiang Yue"
+    ],
+    "subjectives": [
+      "Numerical Analysis (math.NA)"
+    ]
+  },
+  {
+    "id": "arXiv:2507.10928",
+    "title": "Arcturus: A Cloud Overlay Network for Global Accelerator with Enhanced Performance and Stability",
+    "abstract": "           Global Accelerator (GA) services play a vital role in ensuring low-latency, high-reliability communication for real-time interactive applications. However, existing GA offerings are tightly bound to specific cloud providers, resulting in high costs, rigid deployment, and limited flexibility, especially for large-scale or budget-sensitive deployments. Arcturus is a cloud-native GA framework that revisits the design of GA systems by leveraging low-cost, heterogeneous cloud resources across multiple providers. Rather than relying on fixed, high-end infrastructure, Arcturus dynamically constructs its acceleration network and balances performance, stability, and resource efficiency. To achieve this, Arcturus introduces a two-plane design: a forwarding plane that builds a proxy network with adaptive control, and a scheduling plane that coordinates load and routing through lightweight, quantitative optimization. Evaluations under millions of RPS show that Arcturus outperforms commercial GA services by up to 1.7X in acceleration performance, reduces cost by 71%, and maintains over 80% resource efficiency--demonstrating efficient use of cloud resources at scale.         ",
+    "url": "https://arxiv.org/abs/2507.10928",
+    "authors": [
+      "Matthew Yang Liu",
+      "Chuang Chen",
+      "Pengcheng Lv",
+      "Hui Guo",
+      "Yanan Zhang",
+      "Cong Wang",
+      "Yusen Li",
+      "Zhenyu Li",
+      "Yu-Chu Tian"
+    ],
+    "subjectives": [
+      "Networking and Internet Architecture (cs.NI)",
+      "Distributed, Parallel, and Cluster Computing (cs.DC)"
+    ]
+  },
+  {
+    "id": "arXiv:2508.09426",
+    "title": "Security Analysis of ChatGPT: Threats and Privacy Risks",
+    "abstract": "           As artificial intelligence technology continues to advance, chatbots are becoming increasingly powerful. Among them, ChatGPT, launched by OpenAI, has garnered widespread attention globally due to its powerful natural language processing capabilities based on the GPT model, which enables it to engage in natural conversations with users, understand various forms of linguistic expressions, and generate useful information and suggestions. However, as its application scope expands, user demand grows, and malicious attacks related to it become increasingly frequent, the security threats and privacy risks faced by ChatGPT are gradually coming to the forefront. In this paper, the security of ChatGPT is mainly studied from two aspects, security threats and privacy risks. The article systematically analyzes various types of vulnerabilities involved in the above two types of problems and their causes. Briefly, we discuss the controversies that ChatGPT may cause at the ethical and moral levels. In addition, this paper reproduces several network attack and defense test scenarios by simulating the attacker's perspective and methodology. Simultaneously, it explores the feasibility of using ChatGPT for security vulnerability detection and security tool generation from the defender's perspective.         ",
+    "url": "https://arxiv.org/abs/2508.09426",
+    "authors": [
+      "Yushan Xiang",
+      "Zhongwen Li",
+      "Xiaoqi Li"
+    ],
+    "subjectives": [
+      "Cryptography and Security (cs.CR)"
+    ]
+  },
+  {
+    "id": "arXiv:2509.21712",
+    "title": "It's My Agent, Not Me: Personal Privacy Boundaries in AI-Delegated Information Sharing",
+    "abstract": "           Aligning AI systems with human privacy preferences requires understanding individuals' nuanced disclosure behaviors beyond general privacy norms. Yet eliciting these boundaries remains challenging because they involve context-dependent trade-offs. We present an elicitation approach that probes individuals' privacy boundaries through a discriminative task. Through a between-subjects study with varying communication roles and delegation conditions, we collected 1,650 privacy boundaries from 169 participants across 60 scenarios. We examined how communication roles, AI delegation, and individual differences influence boundaries. Results show that communication roles significantly influence sensitivity to disclosure granularity or identifiability, depending on whose private information is shared; AI delegation and individuals' need for privacy heighten sensitivity to disclosed identifiers. Our analysis further reveals how AI delegation shifts privacy preferences across contexts, highlighting new complexities in AI-mediated communication. We advocate eliciting nuanced privacy boundaries within real-world data flows by considering roles and AI delegation, and enabling user involvement in guiding privacy-aware AI behavior.         ",
+    "url": "https://arxiv.org/abs/2509.21712",
+    "authors": [
+      "Bingcan Guo",
+      "Eryue Xu",
+      "Zhiping Zhang",
+      "Tianshi Li"
+    ],
+    "subjectives": [
+      "Cryptography and Security (cs.CR)",
+      "Artificial Intelligence (cs.AI)"
+    ]
+  },
+  {
+    "id": "arXiv:2511.03740",
+    "title": "Kalman-Bucy Filtering with Randomized Sensing: Fundamental Limits and Sensor Network Design for Field Estimation",
+    "abstract": "           Stability analysis of the Kalman filter under randomly lost measurements has been widely studied. We revisit this problem in a general continuous-time framework, where both the measurement matrix and noise covariance evolve as random processes, capturing variability in sensing locations. Within this setting, we derive a closed-form upper bound on the expected estimation covariance for continuous-time Kalman filtering. We then apply this framework to spatiotemporal field estimation, where the field is modeled as a Gaussian process observed by randomly located, noisy sensors. Using clarity, introduced in our earlier work as a rescaled form of the differential entropy of a random variable, we establish a lower bound on the expected spatially averaged clarity and show that its steady-state value converges to a grid-independent limit as the grid is refined. This result exposes fundamental performance limits through a composite sensing parameter that jointly captures the effects of the number of sensors, noise level, and measurement frequency. Simulations show close agreement between the continuous-time analytical solution and the discrete-time covariance, with the agreement improving as the sampling interval decreases. The analytical solution also avoids the recursive computations required in the discrete-time formulation. Most importantly, the derived limits provide principled and efficient guidelines for sensor network design prior to deployment.         ",
+    "url": "https://arxiv.org/abs/2511.03740",
+    "authors": [
+      "Xinyi Wang",
+      "Devansh R. Agrawal",
+      "Dimitra Panagou"
+    ],
+    "subjectives": [
+      "Systems and Control (eess.SY)",
+      "Multiagent Systems (cs.MA)"
+    ]
+  },
+  {
+    "id": "arXiv:2511.04473",
+    "title": "Ground-Truth Subgraphs for Better Training and Evaluation of Knowledge Graph Augmented LLMs",
+    "abstract": "           Retrieval of information from graph-structured knowledge bases represents a promising direction for improving the factuality of LLMs. While various solutions have been proposed, a comparison of methods is difficult due to the lack of challenging QA datasets with ground-truth targets for graph retrieval. We present SynthKGQA, an LLM-powered framework for generating high-quality Knowledge Graph Question Answering datasets from any Knowledge Graph, providing the full set of ground-truth facts in the KG to reason over questions. To demonstrate its utility, we apply SynthKGQA to ogbl-wikikg2, a Wikidata-derived KG, and validate generated items against an up-to-date dump of Wikidata to create GTSQA. This new dataset is specifically designed to test zero-shot generalization with respect to unseen graph structures and relation types, enabling us to analyze the abilities and limitations of SOTA graph retrieval approaches at an unprecedented level of granularity. We also show that KG retrievers trained on GTSQA can transfer to a human-curated benchmark, and that the ground-truth subgraphs produced by SynthKGQA provide a better training supervision signal than previously-used heuristics.         ",
+    "url": "https://arxiv.org/abs/2511.04473",
+    "authors": [
+      "Alberto Cattaneo",
+      "Carlo Luschi",
+      "Daniel Justus"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Artificial Intelligence (cs.AI)",
+      "Computation and Language (cs.CL)",
+      "Information Retrieval (cs.IR)"
+    ]
+  },
+  {
+    "id": "arXiv:2512.07384",
+    "title": "On the Impact of Graph Neural Networks in Recommender Systems: A Topological Perspective",
+    "abstract": "           In recommender systems, user-item interactions can be modeled as a bipartite graph, where user and item nodes are connected by undirected edges. This graph-based view has motivated the rapid adoption of graph neural networks (GNNs), which often outperform collaborative filtering (CF) methods such as latent factor models, deep neural networks, and generative strategies. Yet, despite their empirical success, the reasons why GNNs offer systematic advantages over other CF approaches remain only partially understood. This monograph advances a topology-centered perspective on GNN-based recommendation. We argue that a comprehensive understanding of these models' performance should consider the structural properties of user-item graphs and their interaction with GNN architectural design. To support this view, we introduce a formal taxonomy that distills common modeling patterns across eleven representative GNN-based recommendation approaches and consolidates them into a unified conceptual pipeline. We further formalize thirteen classical and topological characteristics of recommendation datasets and reinterpret them through the lens of graph machine learning. Using these definitions, we analyze the considered GNN-based recommender architectures to assess how and to what extent they encode such properties. Building on this analysis, we derive an explanatory framework that links measurable dataset characteristics to model behavior and performance. Taken together, this monograph re-frames GNN-based recommendation through its topological underpinnings and outlines open theoretical, data-centric, and evaluation challenges for the next generation of topology-aware recommender systems.         ",
+    "url": "https://arxiv.org/abs/2512.07384",
+    "authors": [
+      "Daniele Malitesta",
+      "Alberto Carlo Maria Mancino",
+      "Claudio Pomo",
+      "Vito Walter Anelli",
+      "Alejandro Bellog\u00edn",
+      "Tommaso Di Noia"
+    ],
+    "subjectives": [
+      "Information Retrieval (cs.IR)"
+    ]
+  },
+  {
+    "id": "arXiv:2512.20622",
+    "title": "How Feasible are Passive Network Attacks on 5G Networks and Beyond? A Survey",
+    "abstract": "           Privacy concerns around 5G, the latest generation of mobile networks, are growing, with fears that its deployment may increase exposure to privacy risks. This perception is largely driven by the use of denser deployments of small antenna systems, which enable highly accurate data collection at higher speeds and closer proximity to mobile users. At the same time, 5G's unique radio communication features can make the reproduction of known network attacks more challenging. In particular, passive network attacks, which do not involve direct interaction with the target network and are therefore nearly impossible to detect, remain a pressing concern. Such attacks can reveal sensitive information about users, their devices, and active applications, which may then be exploited through known vulnerabilities or spear-phishing schemes. This survey examines the feasibility of passive network attacks in 5G and beyond (B5G/6G) networks, with emphasis on two major categories: information extraction (system identification, website and application fingerprinting) and geolocation (user identification and position tracking). These attacks are well documented and reproducible in existing wireless and mobile systems, including short-range networks (IEEE 802.11) and, to a lesser extent, LTE. Current evidence suggests that while such attacks remain theoretically possible in 5G, their practical execution is significantly constrained by directional beamforming, high-frequency propagation characteristics, and encryption mechanisms. For B5G and early 6G networks, the lack of public tools and high hardware cost currently renders these attacks infeasible in practice, which highlights a critical gap in our understanding of future network threat models.         ",
+    "url": "https://arxiv.org/abs/2512.20622",
+    "authors": [
+      "Atmane Ayoub Mansour Bahar",
+      "Andr\u00e9s Alay\u00f3n Glazunov",
+      "Romaric Duvignau"
+    ],
+    "subjectives": [
+      "Networking and Internet Architecture (cs.NI)",
+      "Cryptography and Security (cs.CR)"
+    ]
+  },
+  {
+    "id": "arXiv:2602.08353",
+    "title": "TKGB: A Comprehensive Benchmark for Temporal Knowledge Graph Forecasting",
+    "abstract": "           Temporal knowledge graph (TKG) forecasting has advanced remarkably in recent years. Yet we found existing benchmarks inadvertently introduce a shortcut: For a subset of test queries, models can achieve optimal evaluation metrics without using any time information. We trace this to two pieces of evidence: inherent dataset biases and an overly simplistic task formulation that allows models to exploit biases, revealing fundamental flaws in current evaluation protocols for differentiating true forecasting ability. Moreover, existing datasets rely on fixed history that poorly reflects real-world dynamics, lack semantic context, and fail to explicitly mitigate shortcut, preventing thorough assessment of forecasting abilities. To address these, we propose TKGB, a comprehensive benchmark for evaluating the capability of TKG forecasting models. By integrating four complementary tasks with an automatic pipeline for constructing up-to-date and context-enriched TKG datasets with controllable shortcuts, TKGB reveals capability differences and failure modes hidden under conventional evaluation.         ",
+    "url": "https://arxiv.org/abs/2602.08353",
+    "authors": [
+      "Jiasheng Zhang",
+      "Zhengpin Li",
+      "Hao Li",
+      "Jie Shao",
+      "Hui Li",
+      "Jiangtao Cui"
+    ],
+    "subjectives": [
+      "Artificial Intelligence (cs.AI)"
+    ]
+  },
+  {
+    "id": "arXiv:2602.08519",
+    "title": "Bridging Academia and Industry: A Comprehensive Benchmark for Attributed Graph Clustering",
+    "abstract": "           Attributed Graph Clustering (AGC) is a fundamental unsupervised task that integrates structural topology and node attributes to uncover latent patterns in graph-structured data. Despite its significance in industrial applications such as fraud detection and user segmentation, a significant chasm persists between academic research and real-world deployment. Current evaluation protocols suffer from the small-scale, high-homophily citation datasets, non-scalable full-batch training paradigms, and a reliance on supervised metrics that fail to reflect performance in label-scarce environments. To bridge these gaps, we present PyAGC, a comprehensive, production-ready benchmark and library designed to stress-test AGC methods across diverse scales and structural properties. We unify existing methodologies into a modular Encode-Cluster-Optimize framework and, for the first time, provide memory-efficient, mini-batch implementations for a wide array of state-of-the-art AGC algorithms. Our benchmark curates 12 diverse datasets, ranging from 2.7K to 111M nodes, specifically incorporating industrial graphs with complex tabular features and low homophily. Furthermore, we advocate for a holistic evaluation protocol that mandates unsupervised structural metrics and efficiency profiling alongside traditional supervised metrics. Battle-tested in high-stakes industrial workflows at Ant Group, this benchmark offers the community a robust, reproducible, and scalable platform to advance AGC research towards realistic deployment. The code and resources are publicly available via GitHub (this https URL), PyPI (this https URL), and Documentation (this https URL). We invite readers to our latest survey (https://arxiv.org/abs/2603.20829) for the unified framework and industrial perspective that complement this benchmark.         ",
+    "url": "https://arxiv.org/abs/2602.08519",
+    "authors": [
+      "Yunhui Liu",
+      "Pengyu Qiu",
+      "Yu Xing",
+      "Yongchao Liu",
+      "Peng Du",
+      "Chuntao Hong",
+      "Jiajun Zheng",
+      "Tao Zheng",
+      "Tieke He"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2602.09009",
+    "title": "ANCRe: Adaptive Neural Connection Reassignment for Efficient Depth Scaling",
+    "abstract": "           Scaling network depth has been a central driver behind the success of modern foundation models, yet recent investigations suggest that deep layers are often underutilized. This paper revisits the default mechanism for deepening neural networks, namely residual connections, from an optimization perspective. Rigorous analysis proves that the layout of residual connections can fundamentally shape convergence behavior, and even induces an exponential gap in convergence rates. Prompted by this insight, we introduce adaptive neural connection reassignment (ANCRe), a principled and lightweight framework that parameterizes and learns residual connectivities from the data. ANCRe adaptively reassigns residual connections with negligible computational and memory overhead ($<1\\%$), while enabling more effective utilization of network depth. Extensive numerical tests across pre-training of large language models, diffusion models, and deep ResNets demonstrate consistently accelerated convergence, boosted performance, and enhanced depth efficiency over conventional residual connections.         ",
+    "url": "https://arxiv.org/abs/2602.09009",
+    "authors": [
+      "Yilang Zhang",
+      "Bingcong Li",
+      "Niao He",
+      "Georgios B. Giannakis"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Artificial Intelligence (cs.AI)"
+    ]
+  },
+  {
+    "id": "arXiv:2603.12468",
+    "title": "Selective Prediction Forgetting for Adaptation of Weakly Supervised Localization of Histology Images",
+    "abstract": "           Under strong cross-domain shifts, weakly supervised object localization (WSOL) models often lose their capacity to discriminate and develop a strong prediction bias toward a subset of classes. As a result, the majority of target samples are assigned to these dominant classes. Since source-free (unsupervised) domain adaptation (SFDA) methods typically rely on pseudo-labels, inaccurate pseudo-label estimation causes suboptimal adaptation and poor classification and localization performance. This issue is particularly challenging in computational histopathology, where shifts in organ-specific morphology, staining protocols, and acquisition conditions can significantly impact class-discriminative visual cues. This paper introduces SFDA with selective prediction forgetting (SFDA-SPF), a method designed to mitigate excessive concentration of predictions for dominant classes during target-domain adaptation. SFDA-SPF identifies prediction-dominant classes based on the model's target predictions and selectively revises uncertain samples assigned to them. Importantly, this procedure does not require knowledge of the true target class distribution. In contrast with previous SFDA methods, SFDA-SPF introduces a 'forget set' composed of uncertain samples from dominant classes near their decision boundaries, enabling the classification boundaries to shift away from biased predictions. A second 'retain set' is used to anchor certain and accurate samples. To forget the predictions of dominant classes, SFDA-SPF introduces a complementary optimization objective that reduces their probability while allowing alternative class assignments to emerge. This iterative optimization process reassesses target images for forget and retain sets at regular intervals. In addition to improving image-level pseudo-label estimation, the pixel-level classifier is jointly optimized, further enhancing localization.         ",
+    "url": "https://arxiv.org/abs/2603.12468",
+    "authors": [
+      "Alexis Guichemerre",
+      "Banafsheh Karimian",
+      "Soufiane Belharbi",
+      "Natacha Gillet",
+      "Nicolas Thome",
+      "Pourya Shamsolmoali",
+      "Mohammadhadi Shateri",
+      "Luke McCaffrey",
+      "Eric Granger"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)"
+    ]
+  },
+  {
+    "id": "arXiv:2603.25216",
+    "title": "A Wireless World Model for AI-Native 6G Networks",
+    "abstract": "           Integrating AI into the physical layer is a cornerstone of 6G networks. However, current data-driven approaches struggle to generalize across dynamic environments because they lack an intrinsic understanding of electromagnetic wave propagation. We introduce the Wireless World Model (WWM), a multi-modal foundation framework predicting the spatiotemporal evolution of wireless channels by internalizing the causal relationship between 3D geometry and signal dynamics. Pre-trained on a massive ray-traced multi-modal dataset, WWM overcomes the data authenticity gap, further validated under real-world measurement data. Using a joint-embedding predictive architecture with a multi-modal mixture-of-experts Transformer, WWM fuses channel state information, 3D point clouds, and user trajectories into a unified representation. Across the five key downstream tasks supported by WWM, it achieves remarkable performance in seen environments, unseen generalization scenarios, and real-world measurements, consistently outperforming SOTA uni-modal foundation models and task-specific models. This paves the way for physics-aware 6G intelligence that adapts to the physical world.         ",
+    "url": "https://arxiv.org/abs/2603.25216",
+    "authors": [
+      "Ziqi Chen",
+      "Yi Ren",
+      "Yixuan Huang",
+      "Qi Sun",
+      "Nan Li",
+      "Yuhong Huang",
+      "Yifan Li",
+      "Liang Xia"
+    ],
+    "subjectives": [
+      "Networking and Internet Architecture (cs.NI)",
+      "Artificial Intelligence (cs.AI)",
+      "Signal Processing (eess.SP)"
+    ]
+  },
+  {
+    "id": "arXiv:2604.05516",
+    "title": "Coupling Macro Dynamics and Micro States for Long-Horizon Social Simulation",
+    "abstract": "           Social network simulation aims to model collective opinion dynamics in large populations, but existing LLM-based simulators mainly focus on aggregate dynamics while largely ignoring individual internal states. This limits their ability to capture opinion reversals driven by gradual individual shifts and makes them unreliable in long-horizon simulations. We propose MF-MDP, a social simulation framework that tightly couples macro-level collective dynamics with micro-level individual states. MF-MDP explicitly models per-agent latent opinion states with a state transition mechanism, combining individual Markov Decision Processes at the micro level with a mean-field collective framework at the macro level. This allows individual behaviors to change internal states gradually rather than trigger instant reactions, enabling the simulator to distinguish agents that are close to switching from those that are far from switching, capture opinion reversals, and maintain accuracy over long horizons. Across real-world events, MF-MDP supports stable simulation of long-horizon social processes with up to 40,000 interactions, compared with about 300 in the baseline MF-LLM, while reducing long-horizon KL divergence by 75.3% (1.2490 to 0.3089) and reversal KL by 66.9% (1.6425 to 0.5434), significantly mitigating the drift observed in MF-LLM. Code is available at this http URL.         ",
+    "url": "https://arxiv.org/abs/2604.05516",
+    "authors": [
+      "Yunyao Zhang",
+      "Yihao Ai",
+      "Zuocheng Ying",
+      "Qirui Mi",
+      "Junqing Yu",
+      "Wei Yang",
+      "Zikai Song"
+    ],
+    "subjectives": [
+      "Social and Information Networks (cs.SI)"
+    ]
+  },
+  {
+    "id": "arXiv:2604.06163",
+    "title": "Relevance Supervision Can Teach Neural Retrievers to Prefer LLM-Generated Text",
+    "abstract": "           Recent studies show that neural retrievers often exhibit source bias, ranking LLM-generated passages above semantically similar human-written ones, which threatens the reliability of modern information access systems. While this bias is often viewed as a model-level property, we show that relevance supervision itself can induce it. Empirically, source bias is clearest in relevance-supervised retrievers, and the same encoders become more LLM-preferring after relevance fine-tuning. We trace this effect to surface-level artifacts in supervised retrieval data: annotated positives and negatives differ systematically in properties such as fluency and lexical specificity, and these differences parallel those between LLM-generated and human-written passages. As a result, retrievers can learn artifact-based shortcuts for relevance. We further show theoretically that, under contrastive learning, artifacts that reliably separate positives from negatives can be encoded into learned relevance scores. Motivated by this mechanism, we propose complementary strategies that reduce source bias during training and at inference: balancing artifact distributions in negative sampling and removing the artifact-aligned embedding component, respectively. Overall, our findings support a data-centric view of source bias: retrievers may prefer LLM-generated text not merely because of inherent model properties, but because relevance supervision teaches them to rely on surface-level artifacts.         ",
+    "url": "https://arxiv.org/abs/2604.06163",
+    "authors": [
+      "Wei Huang",
+      "Keping Bi",
+      "Yinqiong Cai",
+      "Wei Chen",
+      "Jiafeng Guo",
+      "Xueqi Cheng"
+    ],
+    "subjectives": [
+      "Information Retrieval (cs.IR)"
+    ]
+  },
+  {
+    "id": "arXiv:2604.11390",
+    "title": "Beyond Reconstruction: Reconstruction-to-Vector Diffusion for Hyperspectral Anomaly Detection",
+    "abstract": "           While Hyperspectral Anomaly Detection (HAD) excels at identifying sparse targets in complex scenes, existing models remain trapped in a scalar \"reconstruction-as-endpoint\" paradigm. This reliance on ambiguous scalar residuals consistently triggers sub-pixel anomaly vanishing during spatial downsampling, alongside severe confirmation bias when unpurified anomalies corrupt training weights. In this paper, we propose Reconstruction-to-Vector Diffusion (R2VD), which fundamentally redefines reconstruction as a manifold purification origin to establish a novel residual-guided generative dynamics paradigm. Our framework introduces a four-stage pipeline: (1) a Physical Prior Extraction (PPE) stage that mitigates early confirmation bias via dual-stream statistical guidance; (2) a Guided Manifold Purification (GMP) stage utilizing an OmniContext Autoencoder (OCA) to extract purified residual maps while preserving fragile sub-pixel topologies; (3) a Residual Score Modeling (RSM) stage where a Diffusion Transformer (DiT), guarded by a Physical Spectral Firewall (PSF), effectively isolates cross-spectral leakage; and (4) a Vector Dynamics Inference (VDI) stage that robustly decouples targets from backgrounds by evaluating high-dimensional vector interference patterns instead of conventional scalar errors. Comprehensive evaluations on eight datasets confirm that R2VD establishes a new state-of-the-art, delivering exceptional target detectability and background suppression. The code is available at this https URL.         ",
+    "url": "https://arxiv.org/abs/2604.11390",
+    "authors": [
+      "Jijun Xiang",
+      "Tao Wang",
+      "Jiayi Wang",
+      "Pengxiang Wang",
+      "Cheng Chen",
+      "Nian Wang"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)"
+    ]
+  },
+  {
+    "id": "arXiv:2604.17998",
+    "title": "Causally-Constrained Probabilistic Forecasting for Time-Series Anomaly Detection",
+    "abstract": "           Anomaly detection in multivariate time series is a central challenge in industrial monitoring, as failures frequently arise from complex temporal dynamics and cross-sensor interactions. While recent deep learning models, including graph neural networks and Transformers, have demonstrated strong empirical performance, most approaches remain primarily correlational and offer limited support for causal interpretation and root-cause localization. This study introduces a causally-constrained probabilistic forecasting framework which is a Causally Guided Transformer (CGT) model for multivariate time-series anomaly detection, integrating an explicit time-lagged causal graph prior with deep sequence modeling. For each target variable, a dedicated forecasting block employs a hard parent mask derived from causal discovery to restrict the main prediction pathway to graph-supported causes, while a latent Gaussian head captures predictive uncertainty. To leverage residual correlational information without compromising the causal representation, a shadow auxiliary path with stop-gradient isolation and a safety-gated blending mechanism is incorporated to suppress non-causal contributions when reliability is low. Anomalies are identified using negative log-likelihood scores with adaptive streaming thresholding, and root-cause variables are determined through per-dimension probabilistic attribution and counterfactual clamping. Experiments on the ASD and SMD benchmarks indicate that the proposed method achieves state-of-the-art detection performance, with F1-scores of 96.19% on ASD and 95.32% on SMD, and enhances variable-level attribution quality. These findings suggest that causal structural priors can improve both robustness and interpretability in detecting deep anomalies in multivariate sensor systems.         ",
+    "url": "https://arxiv.org/abs/2604.17998",
+    "authors": [
+      "Pooyan Khosravinia",
+      "Jo\u00e3o Gama",
+      "Bruno Veloso"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2604.18344",
+    "title": "DiffTSP: A Conditional Discrete Diffusion Model for Knowledge Graph Triple Set Prediction",
+    "abstract": "           Triple set prediction (TSP) aims to discover missing facts from an incomplete knowledge graph without predefined queries. Existing approaches typically construct the predicted set through triple-level scoring, sometimes preceded by entity pair filtering that can exclude valid missing facts. We propose DiffTSP, a conditional discrete diffusion model that formulates missing fact discovery as conditional subgraph generation. In each subgraph, DiffTSP directly predicts the missing relational structure without a separate entity pair selection stage. The model learns to generate masked target relation states at different corruption levels, with the observed support subgraph retained as conditioning context. Our structure-aware denoising network integrates a Relational Context Encoder, which captures local relational patterns through relation-guided message passing, and a Relational Graph Diffusion Transformer, which models broader structural interactions through relational attention. During generation, partially generated relations can also serve as provisional context for subsequent predictions. Experiments on three public datasets demonstrate improved TSP performance over strong baselines. Additional analyses show lower conflict rates in the predicted triple sets relative to the evaluated baselines. Code: this https URL.         ",
+    "url": "https://arxiv.org/abs/2604.18344",
+    "authors": [
+      "Jihong Guan",
+      "Jiaqi Wang",
+      "Han Cai",
+      "Wengen Li",
+      "Hanchen Yang",
+      "Yichao Zhang",
+      "Jinzhi Dong",
+      "Shuigeng Zhou"
+    ],
+    "subjectives": [
+      "Artificial Intelligence (cs.AI)"
+    ]
+  },
+  {
+    "id": "arXiv:2604.18360",
+    "title": "Omni-Embed-Audio: Leveraging Multimodal LLMs for Robust Audio-Text Retrieval",
+    "abstract": "           Audio-text retrieval systems based on Contrastive Language-Audio Pretraining (CLAP) achieve strong performance on traditional benchmarks; however, these benchmarks rely on caption-style queries that differ substantially from real-world search behavior, limiting their assessment of practical retrieval robustness. We present Omni-Embed-Audio (OEA), a retrieval-oriented encoder leveraging multimodal LLMs with native audio understanding. To systematically evaluate robustness beyond caption-style queries, we introduce User-Intent Queries (UIQs) - five formulations reflecting natural search behaviors: questions, commands, keyword tags, paraphrases, and exclusion-based negative queries. For negative queries, we develop a hard negative mining pipeline and propose discrimination metrics (HNSR, TFR) assessing models' ability to suppress acoustically similar distractors. Experiments on AudioCaps, Clotho, and MECAT show that OEA achieves comparable text-to-audio retrieval performance to state-of-the-art M2D-CLAP, while demonstrating clear advantages in two critical areas: (1) dominant text-to-text retrieval (+22% relative improvement), and (2) substantially superior hard negative discrimination (+4.3%p HNSR@10, +34.7% relative TFR@10), revealing that LLM backbones provide superior semantic understanding of complex queries.         ",
+    "url": "https://arxiv.org/abs/2604.18360",
+    "authors": [
+      "HaeJun Yoo",
+      "Yongseop Shin",
+      "Insung Lee",
+      "Myoung-Wan Koo",
+      "Du-Seong Chang"
+    ],
+    "subjectives": [
+      "Sound (cs.SD)",
+      "Computation and Language (cs.CL)"
+    ]
+  },
+  {
+    "id": "arXiv:2604.21334",
+    "title": "Ideological Bias in LLMs' Economic Causal Reasoning",
+    "abstract": "           Do large language models (LLMs) exhibit systematic ideological bias when reasoning about economic causal effects? As LLMs are increasingly used in policy analysis and economic reporting, where directionally correct causal judgments are essential, this question has direct practical stakes. We present a systematic evaluation by extending the EconCausal benchmark with ideology-contested cases - instances where intervention-oriented (pro-government) and market-oriented (pro-market) perspectives predict divergent causal signs. From 10,490 causal triplets (treatment-outcome pairs with empirically verified effect directions) derived from top-tier economics and finance journals, we identify 1,056 ideology-contested instances and evaluate 20 state-of-the-art LLMs on their ability to predict empirically supported causal directions. We find that ideology-contested items are consistently harder than non-contested ones, and that across 17 of 20 models, accuracy is systematically higher when the empirically verified causal sign aligns with intervention-oriented expectations than with market-oriented ones. Moreover, when models err, their incorrect predictions disproportionately lean intervention-oriented, and this directional skew is not eliminated by one-shot in-context prompting. These results highlight that LLMs are not only less accurate on ideologically contested economic questions, but systematically less reliable in one ideological direction than the other, underscoring the need for direction-aware evaluation in high-stakes economic and policy settings.         ",
+    "url": "https://arxiv.org/abs/2604.21334",
+    "authors": [
+      "Donggyu Lee",
+      "Hyeok Yun",
+      "Jungwon Kim",
+      "Junsik Min",
+      "Sungwon Park",
+      "Sangyoon Park",
+      "Jihee Kim"
+    ],
+    "subjectives": [
+      "Artificial Intelligence (cs.AI)",
+      "Computational Engineering, Finance, and Science (cs.CE)",
+      "Computation and Language (cs.CL)",
+      "Machine Learning (cs.LG)",
+      "General Economics (econ.GN)"
+    ]
+  },
+  {
+    "id": "arXiv:2604.26370",
+    "title": "Topology-Aware Representation Alignment for Semi-Supervised Vision-Language Learning",
+    "abstract": "           Vision-language models have shown strong performance, but they often generalize poorly to specialized domains. While semi-supervised vision-language learning mitigates this limitation by leveraging a small set of labeled image-text pairs together with abundant unlabeled images, existing methods remain fundamentally pairwise and fail to model the global structure of multimodal representation manifolds. Most existing topology-based alignment methods rely on persistence diagram matching, which neither guarantees geometric alignment nor uses the image-text pairing information central to vision-language learning. We propose Topology-Aware Representation Alignment for Semi-Supervised Vision-Language Learning (ToMA), a framework that uses persistent homology to decompose pairwise relations into $H_0$-death and $H_1$-birth relations and aligns them across modalities through available cross-modal correspondences. This lightweight decomposition captures both connectivity and cycle-closing structure without constructing 2-simplices. Experiments show clear improvements on remote sensing, while fashion results reveal strong gains in classification and particularly strong retrieval improvements for difficult queries. Additional analysis shows that ToMA provides more consistent gains than alternative topology-based objectives and that lightweight $H_1$-birth edges provide useful higher-order structural signals.         ",
+    "url": "https://arxiv.org/abs/2604.26370",
+    "authors": [
+      "Junwon You",
+      "Mihyun Jang",
+      "Sangwoo Mo",
+      "Jae-Hun Jung"
+    ],
+    "subjectives": [
+      "Computer Vision and Pattern Recognition (cs.CV)",
+      "Machine Learning (cs.LG)",
+      "Algebraic Topology (math.AT)"
+    ]
+  },
+  {
+    "id": "arXiv:2604.27666",
+    "title": "VOW: Verifiable and Oblivious Watermark Detection for Large Language Models",
+    "abstract": "           Regulation requires generated text to be marked and detectable, but symmetric-key watermarks leave detection to the key-holding provider. We study first-party provenance audit (FPA), where an organization examines sensitive content in its custody. Such an audit should not disclose the audited text and should provide a verifiable result and checkable record. We present VOW, which uses a verifiable oblivious pseudorandom function to evaluate the detector's keyed component without revealing its inputs to the detection service, while the provider retains the watermarking key. A signed setup record published before use fixes the public key and detector specification, and a proof binds returned evaluations to that key. The auditor computes the statistic and decision locally, so the service may refuse but cannot make an incorrect result pass verification. Given the text, transcript, and setup record, a reviewer can reconstruct the prescribed result without the watermarking key or provider interaction. With the detector configured for a nominal false-positive rate of $10^{-5}$, VOW detects 99.4% of 200-token watermarked texts with competitive text quality and practical overhead. Under explicit conditions, our oracle-assisted text construction produces detector-positive text for all three Green-Red detectors evaluated. Paraphrasing substantially weakens every scheme evaluated, limiting watermark-based FPA to relatively intact content.         ",
+    "url": "https://arxiv.org/abs/2604.27666",
+    "authors": [
+      "Xiaokun Luan",
+      "Yihao Zhang",
+      "Pengcheng Su",
+      "Feiran Lei",
+      "Kailong Wang",
+      "Guangdong Bai",
+      "Meng Sun"
+    ],
+    "subjectives": [
+      "Cryptography and Security (cs.CR)"
+    ]
+  },
+  {
+    "id": "arXiv:2605.06812",
+    "title": "Towards Security-Auditable LLM Agents: A Unified Graph Representation",
+    "abstract": "           LLM-based agentic systems are rapidly evolving to perform complex autonomous tasks through dynamic tool invocation, stateful memory management, and multi-agent collaboration. However, this semantics-driven execution paradigm creates a severe semantic gap between low-level physical events and high-level execution intent, making post-hoc security auditing fundamentally difficult. Existing representation mechanisms, including static SBOMs and runtime logs, provide only fragmented evidence and fail to capture cognitive-state evolution, capability bindings, persistent memory contamination, and cascading risk propagation across interacting agents. To bridge this gap, we propose Agent-BOM, a unified structural representation for agent security auditing. Agent-BOM models an agentic system as a hierarchical attributed directed graph that separates static capability bases, such as models, tools, and long-term memory, from dynamic runtime semantic states, such as goals, reasoning trajectories, and actions. These layers are connected through semantic edges and security attributes, transforming fragmented execution traces into queryable audit paths. Building on Agent-BOM, we develop a graph-query-based paradigm for path-level risk assessment and instantiate it with the OWASP Agentic Top 10. We further implement an auditing plugin in the OpenClaw environment to construct Agent-BOM from live executions. Evaluation on representative real-world agentic attack scenarios shows that Agent-BOM can reconstruct stealthy attack chains, including cross-session memory poisoning and tool misuse, capability supply-chain hijacking and unexpected code execution, multi-agent ecosystem hijacking, and privilege and trust abuse. These results demonstrate that Agent-BOM provides a unified and auditable foundation for root-cause analysis and security adjudication in complex agentic ecosystems.         ",
+    "url": "https://arxiv.org/abs/2605.06812",
+    "authors": [
+      "Chaofan Li",
+      "Lyuye Zhang",
+      "Jintao Zhai",
+      "Siyue Feng",
+      "Xichun Yang",
+      "Huahao Wang",
+      "Shihan Dou",
+      "Yu Ji",
+      "Yutao Hu",
+      "Yueming Wu",
+      "Yang Liu",
+      "Deqing Zou"
+    ],
+    "subjectives": [
+      "Artificial Intelligence (cs.AI)"
+    ]
+  },
+  {
+    "id": "arXiv:2605.07057",
+    "title": "From Causal Graphs to Markovian States: Multi-Order State Exposure for Deep RL",
+    "abstract": "           Online reinforcement learning (RL) relies on the Markov property for guaranteed performance, but real-world applications often lack well-defined states given raw observed variables. While causal RL has attracted growing interest, existing work typically assumes Markovian states are provided and uses causality only to accelerate learning. This leaves a fundamental gap: \\emph{given a longitudinal causal graph over observed variables, how does one construct MDP states that provably satisfy the Markov property?} We provide a procedure that constructs a provably minimal such state. In deep RL, the minimal representation alone empirically fails to improve performance, indicating that neural networks cannot automatically exploit Markovian minimality. We therefore propose \\textbf{MOSE} (Multi-Order State Exposure), which exposes a single shared Q-function to history-based state constructions of orders 1 through $W$ simultaneously. An attention-based selection layer scores the dimensions of this combined input by their estimated relevance to value-function estimation and selects the high-scoring ones. Causal MOSE further constrains the selection layer to retain every variable of the minimal state, guaranteeing sufficiency while leaving the model free to admit useful redundancy. MOSE consistently outperforms both the minimal state construction and single-window policies on common benchmarks and synthetic datasets. Including the minimal representation alongside MOSE can further improve performance. Our results establish a core principle for causal deep RL: minimal sufficiency is not enough. \\emph{Controlled redundancy} gives the model flexibility to learn its state representation end-to-end. Causal state information provides structural guidance that can make this learning more efficient.         ",
+    "url": "https://arxiv.org/abs/2605.07057",
+    "authors": [
+      "Jiamin Xu",
+      "Jacqueline Maasch",
+      "Kyra Gan"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2605.10337",
+    "title": "CORTEG: Foundation Models Enable Cross-Modality Representation Transfer from Scalp to Intracranial Brain Recordings",
+    "abstract": "           Intracranial electrocorticography (ECoG) offers high signal-to-noise access to cortical activity for brain-computer interfaces, yet limited per-patient data has led most prior work to rely on small, subject-specific decoders that neglect information shared across patients. We investigate whether large pretrained scalp-EEG foundation models (EEG FMs) can be adapted to ECoG, enabling cross-patient learning and competitive decoding performance while calibrating to a held-out patient in 10-30 minutes on a single GPU. We introduce CORTEG, a cross-modality transfer framework that combines a pretrained EEG FM backbone, an electrode-aware KNNSoftFourier spatial adapter, a dual-stream tokenizer for low-frequency and high-gamma activity, and a leave-one-subject-out fine-tuning strategy. We evaluate CORTEG on two challenging regression tasks: public finger-trajectory regression ($n=9$) and private audio-envelope regression ($n=16$). CORTEG achieves state-of-the-art mean performance on both tasks, achieving the highest mean correlation among the compared methods on the public finger benchmark and larger, statistically significant gains on the audio task and in low-data-per-patient calibration. We further validate CORTEG on the public BrainTreebank stereo-EEG classification tasks, where it also performs strongly. Furthermore, CORTEG outperforms the compared intracranial-EEG foundation models across the continuous regression tasks. Feature analyses align with neurophysiology, and latent representations capture low-dimensional finger-movement structure. Together, these results provide systematic evidence that scalp-EEG pretraining can be repurposed across intracranial recording modalities and tasks, enabling data-efficient neural decoders that can adapt to new patients.         ",
+    "url": "https://arxiv.org/abs/2605.10337",
+    "authors": [
+      "Liuyin Yang",
+      "Qiang Sun",
+      "Bob Van Dyck",
+      "Eva Calvo Merino",
+      "Marc M. Van Hulle"
+    ],
+    "subjectives": [
+      "Artificial Intelligence (cs.AI)",
+      "Signal Processing (eess.SP)"
+    ]
+  },
+  {
+    "id": "arXiv:2605.10980",
+    "title": "LEAP: Unlocking dLLM Parallelism via Lookahead Early-Convergence Token Detection",
+    "abstract": "           Diffusion Language Models (dLLMs) have garnered significant attention for their potential in highly parallel processing. The parallel capabilities of existing dLLMs stem from the assumption of conditional independence at high confidence levels, which ensures negligible discrepancy between the marginal and joint distributions. However, the stringent confidence thresholds required to preserve accuracy severely constrain the scalability of parallelism. Through systematic token-level statistical analysis, we reveal that a substantial proportion of tokens converge to their correct predictions early in the denoising process yet fail to reach standard confidence thresholds, confirming that current confidence-based criteria are overly conservative. In response, we introduce LEAP (Lookahead Early-Convergence Token Detection for Accelerated Parallel Decoding). LEAP is a training-free, plug-and-play method that leverages future context filtering and multi-sequence superposition to detect early-converging tokens. By validating the alignment between early convergence and correctness, we enable reliable early decoding of these tokens. Benchmarking across diverse domains demonstrates that LEAP significantly lowers inference latency and decoding steps. Compared to confidence-based decoding, the average number of denoising steps is reduced by about 30%. On the GSM8K dataset, combining LEAP with dParallel accelerates decoding to 7.2 tokens per step while preserving model precision. LEAP effectively breaks the reliance on high-confidence priors, offering a novel paradigm for parallel decoding.         ",
+    "url": "https://arxiv.org/abs/2605.10980",
+    "authors": [
+      "Haohui Zhang",
+      "Zhiye Wang",
+      "Xiaoying Gan",
+      "Xinbing Wang",
+      "Bo Jiang"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Artificial Intelligence (cs.AI)"
+    ]
+  },
+  {
+    "id": "arXiv:2605.10998",
+    "title": "Few-Shot Truly Benign DPO Attack for Jailbreaking LLMs",
+    "abstract": "           Fine-tuning APIs make frontier LLMs easy to customize, but they can also weaken safety alignment during fine-tuning. While prior work shows that benign supervised fine-tuning (SFT) can reduce refusal behavior, deployed fine-tuning pipelines increasingly support preference-based objectives, whose safety risks remain less understood. We show that Direct Preference Optimization (DPO) introduces a stronger and harder-to-audit failure mode. We propose a truly benign DPO attack using only 10 harmless preference pairs, the minimum data scale accepted by OpenAI's fine-tuning service. Each pair contains a benign prompt, a normal helpful answer as the preferred response, and a refusal as the dispreferred response. Unlike prior benign fine-tuning attacks, our data exhibits no suspicious behavior: it is practically indistinguishable from the fine-tuning request of a legitimate user seeking to reduce over-refusal, making harmful intent almost impossible to infer from the request alone. Nevertheless, because DPO directly optimizes the model to prefer helpful answers over refusals, this seemingly benign objective broadly suppresses refusal behavior and transfers to harmful prompts outside the fine-tuning data. Across OpenAI models supporting DPO fine-tuning, our attack achieves attack success rates of 59.13% on GPT-4o, 70.20% on GPT-4.1, 54.80% on GPT-4.1-mini, and 81.73% on GPT-4.1-nano, at costs of only \\$1.7, \\$1.7, \\$0.3, and \\$0.1. Moreover, on open-weight models that do not impose minimum data requirements, we find that this effect can emerge from even a single benign preference pair.         ",
+    "url": "https://arxiv.org/abs/2605.10998",
+    "authors": [
+      "Sangyeon Yoon",
+      "Wonje Jeung",
+      "Yoonjun Cho",
+      "Dongjae Jeon",
+      "Albert No"
+    ],
+    "subjectives": [
+      "Cryptography and Security (cs.CR)",
+      "Artificial Intelligence (cs.AI)"
+    ]
+  },
+  {
+    "id": "arXiv:2605.15470",
+    "title": "Njord: A Probabilistic Graph Neural Network for Ensemble Ocean Forecasting",
+    "abstract": "           Ocean dynamics are inherently chaotic, yet existing machine learning ocean models produce only deterministic forecasts. We introduce Njord, a probabilistic data-driven model for ocean forecasting, applicable to both global and regional domains. Njord combines a deep latent variable framework with a graph neural network architecture, enabling sampling each forecast step in a single forward pass. We apply Njord globally at 0.25\u00b0 resolution and regionally to the Baltic Sea at 2 km resolution. To scale to these large ocean grids we introduce K-means cluster meshes that adapt to irregular sea surface geometry. Experiments demonstrate strong performance on both domains compared to deterministic machine learning baselines, while also providing uncertainty estimates from the sampled ensemble forecasts. On the global OceanBench benchmark, Njord achieves the lowest errors on average across upper-ocean variables when evaluated against real-world observations, with the largest improvements in surface temperature prediction.         ",
+    "url": "https://arxiv.org/abs/2605.15470",
+    "authors": [
+      "Daniel Holmberg",
+      "Joel Oskarsson",
+      "Erik Wikingsson",
+      "Fredrik Lindsten",
+      "Teemu Roos"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Atmospheric and Oceanic Physics (physics.ao-ph)"
+    ]
+  },
+  {
+    "id": "arXiv:2605.15959",
+    "title": "When and Why Adversarial Training Improves PINNs: A Neural Tangent Kernel Perspective",
+    "abstract": "           Physics-informed neural networks (PINNs) are powerful surrogates for differential equations but are notoriously difficult to train due to spectral bias, stiffness, and poor accuracy on high-frequency or multiscale solutions. Adversarial training based on generative adversarial networks (GANs) has recently gained surprisingly strong empirical results in improving training, but the underlying mechanisms remain elusive. To this end, we propose a new analysis framework for adversarially trained PINNs, based on the key observation of how the discriminator in GANs can influence the training dynamics of PINNs. The framework first provides a much needed theoretical grounding to why and when adversarial training is effective in PINNs, then presents a unified analysis of GANs variants in such training, and finally leads to a new, practical, efficient training algorithm for PINNs. Empirical results demonstrate that our method can significantly reduce the pathology of PINNs training, thereby providing better models with superior performances, often several magnitudes more accurate than alternative methods.         ",
+    "url": "https://arxiv.org/abs/2605.15959",
+    "authors": [
+      "Yuan-dong Cao",
+      "Chi Chiu SO",
+      "Jun-Min Wang",
+      "He Wang"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)",
+      "Artificial Intelligence (cs.AI)"
+    ]
+  },
+  {
+    "id": "arXiv:2605.19324",
+    "title": "BrainDyn: A Sheaf Neural ODE for Forecasting and Generating Brain Dynamics",
+    "abstract": "           Brain activity unfolds as coordinated patterns across regions over time, and modeling these dynamics is a central goal in computational neuroscience. Because activity is distributed over connected brain regions, it is naturally represented on a graph whose nodes are brain regions or recording electrodes and whose edges capture relationships between these nodes, with message-passing modeling regional communication. However, standard message-passing networks place every node in a single shared feature space and typically aggregate messages from neighbors by scalar summation, which does not align with neurobiological evidence of brain communication. In order to model the heterogeneous nature of the brain, we introduce BrainDyn, a graph ordinary differential equation (ODE) network built on a cellular sheaf with dynamic restriction maps, recomputed from the forecasting context window rather than fixed once, mediating region-to-region communication through learned linear transformations that drive the time evolution of neural activity. We evaluate BrainDyn on resting-state fMRI, EEG, and simulated activity from the NEST simulator. Across these modalities, we test multi-region forecasting and autoregressive generation of brain transients, and, using NEST, prediction of altered transients following controlled perturbations. BrainDyn outperforms competing models across modalities, while analysis of the learned features shows that they are expressive, interpretable, and biologically aligned.         ",
+    "url": "https://arxiv.org/abs/2605.19324",
+    "authors": [
+      "Siddharth Viswanath",
+      "Panayiotis Ketonis",
+      "Cassidy All",
+      "William Dai",
+      "Gabriel Escobedo",
+      "Christine Gao",
+      "Jeffrey Lee",
+      "Joao Felipe Rocha",
+      "Andrew J Steindl",
+      "Ian Adelstein",
+      "Michael Perlmutter",
+      "Dhananjay Bhaskar",
+      "Smita Krishnaswamy"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2605.21054",
+    "title": "DeTox-Fed: Detecting Toxic Conversations in the Fediverse with Federated Graph Neural Networks",
+    "abstract": "           The rise of decentralized social networks (DSNs), and in particular the rapid uptake of the Fediverse (e.g., Pleroma, Mastodon, Lemmygrad), introduces new challenges in content moderation. Independent instances host their own data, follow different moderation policies, and often observe only partial views of conversations. We present DeTox-Fed, a federated graph-learning framework for detecting toxic conversations in DSNs without requiring instances to share raw conversations or moderation labels. Each instance constructs a local conversation graph, where nodes represent conversation trees and edges capture shared user participation across conversations. A Graph Neural Network is then trained in a federated learning setup, allowing instances to collaboratively learn a toxicity classifier while preserving data locality. Unlike text-only moderation approaches, DeTox-Fed combines conversational structure, user-interaction patterns, conversation-level statistics, and aggregate sentiment signals. We evaluate the framework on a large Pleroma conversation dataset and a second one from Mastodon, showing that it achieves stable toxic conversation detection under limited local labels, partial client participation, and varying moderation thresholds. Our results indicate that federated graph-based moderation is a promising direction for semi-automated moderation in decentralized social networks.         ",
+    "url": "https://arxiv.org/abs/2605.21054",
+    "authors": [
+      "Pantelitsa Leonidou",
+      "Nikos Salamanos",
+      "Sotiris Gypsiotis",
+      "Michael Sirivianos"
+    ],
+    "subjectives": [
+      "Social and Information Networks (cs.SI)",
+      "Computers and Society (cs.CY)"
+    ]
+  },
+  {
+    "id": "arXiv:2605.22845",
+    "title": "A finite-element-inspired bipartite graph learned simulator for manufacturability assessment in large-deformation sheet forming",
+    "abstract": "           Explicit dynamic finite element (FE) simulations are widely used for large-deformation analysis but remain expensive for design-space exploration. In explicit FE analysis, nodal kinematics and element-level deformation measures evolve through a coupled node-element update process. An FE-inspired learned simulator can preserve this structure and learn nodal kinematics and elemental deformation on their native domains. Nodal displacement describes geometry evolution, while elemental thinning identifies local deformation and critical regions. Feeding both outputs back during rollout allows each field to inform subsequent updates of the other. This work proposes CAtt-BiGNN, a cross-attention-based bipartite graph neural network for coupled nodal-elemental learning. The bipartite graph encodes FE-guided state organisation and information flow without imposing equilibrium or constitutive constraints. Mesh nodes and elements are represented as distinct graph entities connected by directed node-element edges, enabling prediction of nodal displacement increments and elemental deformation on their native domains. An edge-aware cross-attention processor dynamically updates edge representations and weights messages using the receiving state and evolving local relations. For larger graphs, CAtt-BiUGNN uses separate nodal and elemental downsampling and upsampling to enhance long-range propagation while preserving their interaction across graph levels. The method is evaluated on dome-shaped cold-forming and corner-shaped hot-forming benchmarks. Comparisons with node-centred baselines, an FE-inspired hypergraph model, a Physics-Attention-based neural operator, a graph Transformer, and attention ablations show improved joint accuracy in nodal displacement and elemental thinning prediction during autoregressive rollout.         ",
+    "url": "https://arxiv.org/abs/2605.22845",
+    "authors": [
+      "Yingxue Zhao",
+      "Haoran Li",
+      "Haosu Zhou",
+      "Tobias Pfaff",
+      "Nan Li"
+    ],
+    "subjectives": [
+      "Computational Engineering, Finance, and Science (cs.CE)",
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2605.28165",
+    "title": "Unification and Optimization of Robust Supervised Learning",
+    "abstract": "           Robust learning methods such as distributionally robust optimization, vicinal risk minimization, Mixup, and label smoothing address different sources of uncertainty, including distribution shift, finite-sample effects, and label uncertainty. In practice, however, several such sources may occur simultaneously, and it remains unclear which robust method or combination of methods to use. We introduce a unified framework that organizes a broad class of robustness methods along explicit design axes and makes their relations and combinations explicit within a shared formulation. Within this framework, we analyze how robustness methods interact: some are redundant under particular modeling assumptions, whereas others yield genuinely distinct solution families, and these relationships can change with the model class or loss. We further derive a tractable training procedure that exposes the design choices and their strengths as tunable hyperparameters. Across vision and reward-modeling tasks, the preferred robustness method depends on the task, target metric, and validation data, while suitably selected combinations often outperform the best single method.         ",
+    "url": "https://arxiv.org/abs/2605.28165",
+    "authors": [
+      "Jonas Hanselle",
+      "Valentin Margraf",
+      "Clemens Damke",
+      "Eyke H\u00fcllermeier"
+    ],
+    "subjectives": [
+      "Machine Learning (cs.LG)"
+    ]
+  },
+  {
+    "id": "arXiv:2606.00981",
+    "title": "Robust Asynchronous Planning via Auto-Formalization",
+    "abstract": "           LLMs can plan by generating schedules directly as a Planner, or by translating a task into a formal specification for a solver as a Formalizer. Most real-world tasks are asynchronous, with non-uniform durations, concurrency, and execution-time changes, yet existing benchmarks hardly cover them. We unify asynchronous planning under one formulation and release three benchmarks spanning task-graph scale, grounded state and resource constraints, and execution-time events. Surprisingly, PDDL2.1, the formalism built for temporal planning, is the weakest pipeline. On AsyncPlan-XXL it averages 30.8% plan accuracy, against 81.7% for the Planner and 94.0% for a CP-SAT Formalizer. The gap widens with scale, and at 100 actions the three pipelines reach 9.0%, 44.5%, and 82.5%, respectively. The formalism is not to blame. Compiled from the same model-extracted intermediate representation, PDDL2.1 and CP-SAT reach nearly identical accuracy (81.6% vs. 81.5%), and gold task graphs reach 100% for both. What remains is a bottleneck shared by every pipeline: recovering the task graph from language. Execution-time events further degrade every pipeline, yet updating only event-induced constraints reaches 81.6% versus 41.6% for full regeneration. Robust asynchronous planning thus hinges not on the expressiveness of the target formalism but on how reliably a model can write and edit it, and a well-chosen interface can let a weaker model match a stronger one.         ",
+    "url": "https://arxiv.org/abs/2606.00981",
+    "authors": [
+      "Jiayi Zhang",
+      "Jianing Yin",
+      "Ben Zhou",
+      "Li Zhang"
+    ],
+    "subjectives": [
+      "Computation and Language (cs.CL)"
+    ]
+  },
+  {
+    "id": "arXiv:2606.02212",
+    "title": "C2GA: A Class-Controllable Generative Augmentation Framework for Respiratory Sound Classification",
+    "abstract": "           Background: Respiratory sound classification plays a critical role in the clinical identification of pulmonary pathologies. However, its performance is often hindered by the limited size, severe noise, and class imbalance of real-world auscultation datasets. Although conventional audio augmentation techniques are easy to implement, they may inadvertently distort subtle pathological characteristics. Meanwhile, existing Variational Autoencoder (VAE)- or Generative Adversarial Network (GAN)-based generative approaches often suffer from limited sample fidelity and insufficient controllability over class semantics, particularly under conditions of scarce supervision. Methods: To overcome these limitations, we propose C2GA, a class-controllable generative augmentation framework. C2GA first constructs a semantically rich discrete latent space using a conditional Vector-Quantized Variational Autoencoder (VQ-VAE), in which local acoustic tokens are explicitly decoupled from global class prototypes. Subsequently, a Transformer-based autoregressive prior is trained to generate label-consistent token sequences. These generated tokens are then fused with the corresponding class prototypes and decoded into high-fidelity Mel-spectrograms for data augmentation. Conclusion: These results indicate that C2GA provides an effective and semantically reliable augmentation strategy for respiratory sound analysis. By enabling controllable and high-quality data generation, the proposed framework offers a promising solution for improving the robustness and generalization of respiratory sound classification in realistic clinical scenarios.         ",
+    "url": "https://arxiv.org/abs/2606.02212",
+    "authors": [
+      "Ziqi Ma",
+      "Mengyu Han",
+      "Anteng Cai",
+      "Zhanchong Liu",
+      "Bowen Feng",
+      "Hang Yu",
+      "Sheng Hu"
+    ],
+    "subjectives": [
+      "Sound (cs.SD)"
+    ]
+  },
+  {
+    "id": "arXiv:2010.05779",
+    "title": "Sparse universal graphs for planarity",
+    "abstract": "           We show that for every integer $n\\geq 1$ there exists a graph $G_n$ with $(1+o(1))n$ vertices and $n^{1 + o(1)}$ edges such that every $n$-vertex planar graph is isomorphic to a subgraph of $G_n$. The best previous bound on the number of edges was $O(n^{3/2})$, proved by Babai, Chung, Erd\u0151s, Graham, and Spencer in 1982. We then show that for every integer $n\\geq 1$ there is a graph $U_n$ with $n^{1 + o(1)}$ vertices and edges that contains induced copies of every $n$-vertex planar graph. This significantly reduces the number of edges in a recent construction of the authors with Dujmovi\u0107, Gavoille, and Micek.         ",
+    "url": "https://arxiv.org/abs/2010.05779",
+    "authors": [
+      "Louis Esperet",
+      "Gwena\u00ebl Joret",
+      "Pat Morin"
+    ],
+    "subjectives": [
+      "Combinatorics (math.CO)",
+      "Discrete Mathematics (cs.DM)",
+      "Data Structures and Algorithms (cs.DS)"
+    ]
+  },
+  {
+    "id": "arXiv:2305.16354",
+    "title": "On composition and decomposition operations for vector spaces, graphs and matroids",
+    "abstract": "           In this paper, we study the ideas of composition and decomposition in the context of vector spaces, graphs and matroids. For vector spaces $\\V_{AB},$ treated as collection of row vectors, with specified column set $A\\uplus B,$ we define $\\V_{SP}\\lrarv \\V_{PQ}, S\\cap Q= \\emptyset, $ to be the collection of all vectors $(f_S,f_Q)$ such that $(f_S,f_P)\\in \\V_{SP}, (f_P,f_Q)\\in \\V_{PQ}$. An analogous operation $\\G_{SP}\\lrarg \\G_{PQ}\\equivd \\G_{PQ}$ can be defined in relation to graphs $\\G_{SP}, \\G_{PQ},$ on edge sets $S\\uplus P, P\\uplus Q,$ respectively in terms of an overlapping subgraph $\\G_P$ which gets deleted in the right side graph (see for instance the notion of $k-sum$ \\cite{oxley}). For matroids we define the `linking' $\\M_{SP}\\lrarm \\M_{PQ} \\equivd (\\M_{SP}\\vee \\M_{PQ})\\times (S\\uplus Q)$, denoting the contraction operation by '$\\times$'. In each case, we examine how to minimize the size of the `overlap' set $P,$ without affecting the right side entity. In the case of vector spaces, there is a polynomial time algorithm for achieving the minimum, which we present. Similar ideas work for graphs and for matroids under appropriate conditions. Next we consider the problem of decomposition. Here, in the case of vector spaces, the problem is to decompose $\\V_{SQ}$ as $\\V_{SP}\\lrarv \\V_{PQ},$ with minimum size $P.$ We give a polynomial time algorithm for this purpose. In the case of graphs and matroids we give a solution to this problem under certain restrictions.         ",
+    "url": "https://arxiv.org/abs/2305.16354",
+    "authors": [
+      "H. Narayanan"
+    ],
+    "subjectives": [
+      "Combinatorics (math.CO)",
+      "Systems and Control (eess.SY)"
+    ]
+  },
+  {
+    "id": "arXiv:2506.03441",
+    "title": "Conjectured Bounds for 2-Local Hamiltonians via Token Graphs",
+    "abstract": "           We explain how the maximum energy of the Quantum MaxCut, XY, and EPR Hamiltonians on a graph $G$ are related to the spectral radii of the token graphs of $G$. From numerical study, we conjecture new bounds for these spectral radii based on properties of $G$. We show how these conjectures tighten the analysis of existing algorithms, implying state-of-the-art approximation ratios for all three Hamiltonians. Our conjectures also provide simple combinatorial bounds on the ground state energy of the antiferromagnetic Heisenberg model, which we prove for bipartite graphs.         ",
+    "url": "https://arxiv.org/abs/2506.03441",
+    "authors": [
+      "Anuj Apte",
+      "Ojas Parekh",
+      "James Sud"
+    ],
+    "subjectives": [
+      "Quantum Physics (quant-ph)",
+      "Data Structures and Algorithms (cs.DS)"
+    ]
+  },
+  {
+    "id": "arXiv:2510.06225",
+    "title": "Generalized Multi-agent Social Simulation Framework",
+    "abstract": "           Multi-agent social interaction has clearly benefited from Large Language Models. However, current simulation systems still face challenges such as difficulties in scaling to diverse scenarios and poor reusability due to a lack of modular design. To address these issues, we designed and developed a modular, object-oriented framework that organically integrates various base classes through a hierarchical structure, harvesting scalability and reusability. We inherited the framework to realize common derived classes. Additionally, a memory summarization mechanism is proposed to filter and distill relevant information from raw memory data, prioritizing contextually salient events and interactions. By selecting and combining some necessary derived classes, we customized a specific simulated environment. Utilizing this simulated environment, we successfully simulated human interactions on social media, replicating real-world online social behaviors. The source code for the project will be released and evolve.         ",
+    "url": "https://arxiv.org/abs/2510.06225",
+    "authors": [
+      "Gang Li",
+      "Jie Lin",
+      "Yining Tang",
+      "Ziteng Wang",
+      "Yirui Huang",
+      "Junyu Zhang",
+      "Shuang Luo",
+      "Yike Guo",
+      "Chao Wu"
+    ],
+    "subjectives": [
+      "Physics and Society (physics.soc-ph)",
+      "Artificial Intelligence (cs.AI)"
+    ]
+  },
+  {
+    "id": "arXiv:2512.10309",
+    "title": "Tracking large chemical reaction networks and rare events by neural networks",
+    "abstract": "           Chemical reaction networks are widely used to model stochastic dynamics in biophysical processes. Their exact probabilistic description via the chemical master equation becomes intractable for high-dimensional systems due to the exponential growth of the state space. This difficulty is further exacerbated when metastable transitions and rare events dominate the dynamics. Here, we present an advanced neural-network approach that effectively tackles large reaction networks and rare-event dynamics within a unified framework. Building on autoregressive representations of the full joint probability distribution, we achieve efficient training through second-order optimization methods, including natural gradient descent and the time-dependent variational principle. We leverage enhanced-sampling strategies that enable accurate resolution of low-probability regions governing rare transitions. We demonstrate the method on a multistable genetic toggle switch and a mitogen-activated protein kinase (MAPK) cascade consisting of 16 species and 35 reactions with dense coupling. We further quantify rare events in spatially extended Schl\u00f6gl models in both one- and two-dimensional lattices, reaching system sizes with extremely large state spaces up to $3\\times10^{15}$. These results highlight the potential of neural modeling as a flexible and scalable framework for studying high-dimensional chemical reaction networks and rare events.         ",
+    "url": "https://arxiv.org/abs/2512.10309",
+    "authors": [
+      "Jiayu Weng",
+      "Xinyi Zhu",
+      "Jing Liu",
+      "Linyuan L\u00fc",
+      "Pan Zhang",
+      "Ying Tang"
+    ],
+    "subjectives": [
+      "Molecular Networks (q-bio.MN)",
+      "Machine Learning (cs.LG)",
+      "Biological Physics (physics.bio-ph)"
+    ]
+  },
+  {
+    "id": "arXiv:2603.23305",
+    "title": "Sharp Statistical Thresholds for Attributed Gaussian Graph Matching",
+    "abstract": "           We investigate the problem of matching networks where both edge weights and node features are correlated following a specific node correspondence. While prior work has established sharp thresholds for matching either graphs or features individually, the joint setting has been significantly less explored. In this study, we derive precise information-theoretic thresholds for exact recovery, almost-exact recovery, and partial recovery of the underlying alignment. These are expressed in terms of graph and feature correlation strengths, the number of nodes, and the dimension of the features. Interestingly, whereas an all-or-nothing phase transition is observed in the standard graph-matching scenario, the inclusion of contextual information at the node level introduces a richer structure: the exact-recovery threshold separates from the shared threshold for almost-exact and partial recovery. Closing gaps left by prior works, we provide a sharp characterization of the thresholds governing how structural and contextual information interact in graph matching, and thereby establish a benchmark for designing efficient algorithms in the high-dimensional setting.         ",
+    "url": "https://arxiv.org/abs/2603.23305",
+    "authors": [
+      "Mohammad Hassan Ahmad Yarandi",
+      "Luca Ganassali"
+    ],
+    "subjectives": [
+      "Machine Learning (stat.ML)",
+      "Machine Learning (cs.LG)"
+    ]
+  }
+]
